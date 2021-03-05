@@ -397,7 +397,7 @@
   align-items: center;
 }
 .dashboard__document {
-  width: 28rem;
+  width: 80%;
   padding: 3.2rem;
   background-color: #fff;
   text-align: center;
