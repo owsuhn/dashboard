@@ -1,4 +1,12 @@
 $(document).ready(function(){
+    // check media query
+    var mediaQueryCheck = (function(){
+        var mediaQuery = window.matchMedia('(min-width: 1060px)');
+        if (mediaQuery.matches === false) $('.dashboard__dialog').addClass('-active');
+        else $('.dashboard__dialog').removeClass('-active');
+    });
+    mediaQueryCheck();
+    $(window).resize(function(){ mediaQueryCheck(); });
     // componant.zip
     var db = '.dashboard',
         dbAligner = $(db + '__aligner'),
