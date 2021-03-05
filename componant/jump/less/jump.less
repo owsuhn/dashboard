@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+.jump {
+    @this: .jump;
+
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #222429;
+
+    &__list {
+        margin-top: 5.6rem;
+    }
+
+    &__item {
+        & + & {
+            margin-top: 5.6rem;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        color: #999;
+        line-height: 2rem;
+    }
+
+    &__court {
+        display: inline-block;
+        vertical-align: top;
+        width: 3.2rem;
+        height: 6.6rem;
+        margin-top: 1.2rem;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
+    }
+
+    &__ball {
+        display: block;
+        width: 3.2rem;
+        height: 3.2rem;
+        font-style: normal;
+        font-size: 2rem;
+        line-height: 3.2rem;
+        text-align: center;
+
+        &.-slowdown {
+            animation: slowdown 1s linear infinite;
+        }
+
+        &.-jump {
+            animation: jump 1s linear alternate infinite;
+        }
+
+        &.-bounce {
+            animation: bounce 1s linear alternate infinite;
+        }
+
+        &.-heavybounce {
+            animation: heavybounce 1s linear alternate infinite;
+        }
+    }
+}
+
+// animation.zip
+@keyframes slowdown {
+    0%      {
+        transform: translate(0, 0);
+    }
+
+    75%     {
+        transform: translate(0, 100%);
+    }
+
+    100%    {
+        transform: translate(0, 100%);
+    }
+}
+
+@keyframes jump {
+    0%      {
+        transform: translate(0, 0);
+    }
+
+    75%     {
+        transform: translate(0, 25%);
+    }
+
+    100%    {
+        transform: translate(0, 100%);
+    }
+}
+
+@keyframes bounce {
+    0%      {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50%     {
+        transform: translate3d(0, 25%, 0);
+    }
+
+    100%    {
+        transform: translate3d(0, 100%, 0) scale3d(1.5, .5, 1);
+    }
+}
+
+@keyframes heavybounce {
+    0%      {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+
+    50%     {
+        transform: translate3d(0, 25%, 0) scale3d(.5, 1.5, 1);
+    }
+
+    100%    {
+        transform: translate3d(0, 100%, 0) scale3d(1.5, .5, 1);
+    }
+}

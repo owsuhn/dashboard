@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="../../resource/css/style.css" rel="stylesheet" />
+    <link href="css/dangle.css" rel="stylesheet" />
+
+    <script src="../../common/js/jquery-1.11.0.min.js"></script>
+    <script src="js/dangle.js"></script>
+</head>
+<body>
+    <div class="dangle">
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">wind chime</h4>
+            <p class="dashboard__publish-date">2021.2.25 11:00 am</p>
+            <ul class="dangle__list">
+                <li class="dangle__item">
+                    <h3 class="dangle__title">dangling at constant speed, infinite</h3>
+                    <div class="dangle__eaves">
+                        <i aria-hidden="true" class="dangle__wind-chime -constant">🔔</i>
+                    </div>
+                </li>
+                <li class="dangle__item">
+                    <h3 class="dangle__title">dangling with bounce, infinite</h3>
+                    <div class="dangle__eaves">
+                        <i aria-hidden="true" class="dangle__wind-chime -bounce">🔔</i>
+                    </div>
+                </li>
+                <li class="dangle__item">
+                    <h3 class="dangle__title">dangling and stop gradual, finite, re-run on action button click</h3>
+                    <div class="dangle__eaves">
+                        <i aria-hidden="true" class="dangle__wind-chime -finite -gradual -active">🔔</i>
+                    </div>
+                    <button type="button" class="dangle__button">re action</button>
+                </li>
+                <li class="dangle__item">
+                    <h3 class="dangle__title">dangling and stop quake, finite, re-run on action button click</h3>
+                    <div class="dangle__eaves">
+                        <i aria-hidden="true" class="dangle__wind-chime -finite -quake -active">🔔</i>
+                    </div>
+                    <button type="button" class="dangle__button">re action</button>
+                </li>
+                <li class="dangle__item">
+                    <h3 class="dangle__title">dangling and stop quake, auto repeat n(4)second</h3>
+                    <div class="dangle__eaves">
+                        <i aria-hidden="true" class="dangle__wind-chime -repeat -quake -active">🔔</i>
+                    </div>
+                    <p class="dangle__desc">automatically repeat animation after <span>4</span> seconds</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
