@@ -1,0 +1,141 @@
+@charset "utf-8";
+.count-down {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #222429;
+}
+.count-down__list {
+  margin-top: 3.2rem;
+}
+.count-down__item + .count-down__item {
+  margin-top: 3.2rem;
+}
+.count-down__title {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: #999;
+  line-height: 1.6rem;
+}
+.count-down__date-calc,
+.count-down__date-diff,
+.count-down__fieldset {
+  margin-top: 1.2rem;
+}
+.count-down__date {
+  font-size: 1.6rem;
+  color: #fff;
+}
+.count-down__date:before {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.4rem 0 0;
+  text-transform: capitalize;
+  color: #666;
+}
+.count-down__date.-base:before {
+  content: "base date:";
+}
+.count-down__date.-compare:before {
+  content: "compare date:";
+}
+.count-down__date.-present:before {
+  content: "present date:";
+}
+.count-down__date.-result:before {
+  content: "result date:";
+}
+.count-down__date.-result:after {
+  content: "days difference";
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 0.4rem;
+  text-transform: capitalize;
+  color: #666;
+}
+.count-down__date + .count-down__date {
+  margin-top: 0.4rem;
+}
+.count-down__form {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  height: auto;
+}
+.count-down__form + .count-down__form {
+  margin-left: 1.2rem;
+}
+.count-down__input {
+  width: 100%;
+  height: 4.4rem;
+  padding: 0 1.2rem;
+  outline: 0;
+  border: 0;
+  background: none;
+  background-color: #333;
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 4.4rem;
+}
+.count-down__input::placeholder {
+  text-transform: capitalize;
+  color: #666;
+}
+.count-down__set {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0.4rem;
+  padding: 0.4rem 0.8rem 0.4rem 0.4rem;
+  background-color: #0f0f13;
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+}
+.count-down__set:before {
+  content: "↑";
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 0;
+}
+.count-down__set + .count-down__set {
+  margin-left: 0.4rem;
+}
+.count-down__set:hover,
+.count-down__set:focus {
+  box-shadow: 0 0 0 0.2rem #222429, 0 0 0 0.4rem #0f0f13;
+}
+.count-down__button {
+  display: inline-block;
+  vertical-align: top;
+  height: 4.4rem;
+  padding: 0 2rem;
+  background-color: #0f0f13;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 4.4rem;
+  letter-spacing: 1px;
+}
+.count-down__button.-diff {
+  margin-left: 1.2rem;
+}
+.count-down__button:hover,
+.count-down__button:focus {
+  box-shadow: 0 0 0 0.2rem #222429, 0 0 0 0.4rem #0f0f13;
+}
+.count-down__result {
+  margin-top: 1.2rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.count-down__result:after {
+  content: "days difference";
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 0.4rem;
+  text-transform: capitalize;
+  color: #666;
+}

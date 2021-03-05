@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+.mask {
+    @this: .mask;
+    
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #222429;
+
+    &__list {
+        margin-top: 3.2rem;
+    }
+
+    &__item {
+        & + & {
+            margin-top: 3.2rem;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        color: #999;
+        line-height: 1.6rem;
+    }
+
+    &__form {
+        margin-top: 1.2rem;
+    }
+
+    // &__label {}
+
+    &__input {
+        display: inline-block;
+        vertical-align: top;
+        width: 25%;
+        height: 4.4rem;
+        padding: 0 1.2rem;
+        outline: 0;
+        border: 0;
+        background: none;
+        background-color: #333;
+        font-size: 1.6rem;
+        color: #fff;
+        line-height: 4.4rem;        
+
+        &::placeholder {
+            text-transform: capitalize;
+            color: #666;
+        }
+
+        & + & {
+            margin-left: 1.2rem;
+        }
+    }
+
+    &__select {
+        display: inline-block;
+        vertical-align: top;
+        width: 25%;
+        height: 4.4rem;
+        margin-left: 1.2rem;
+        padding: 0 3.2rem 0 1.2rem;
+        outline: 0;
+        border: 0;
+        background: none;
+        background-color: #333;
+        font-size: 1.6rem;
+        color: #fff;
+        line-height: 4.4rem;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        & option {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__select-arrow {
+        display: inline-block;
+        vertical-align: top;
+        border-top: .4rem solid #fff;
+        border-right: .4rem solid transparent;
+        border-left: .4rem solid transparent;
+        margin: 2rem 0 0 -2rem;
+    }
+
+    &__data {
+        margin-top: 1.2rem;        
+
+        & + & {
+            margin-top: .4rem;
+        }
+    }
+
+    &__data-original,
+    &__data-masking {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1.6rem;
+        color: #fff;
+        line-height: 2rem;
+    }
+
+    &__data-original {
+        &:before {
+            content: "original data:";
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 .4rem 0 0;
+            text-transform: capitalize;
+            color: #666;
+        }
+    }
+
+    &__data-masking {
+        position: relative;
+
+        &:before {
+            content: "masking data:";
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 .4rem 0 0;
+            text-transform: capitalize;
+            color: #666;
+        }
+
+        @{this}__data-original + & {
+            &:before {
+                margin-left: 4rem;
+            }
+
+            &:after {
+                content: "→";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 1rem;
+                width: 2rem;
+                height: 2rem;
+                color: #666;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.time {
+    @this: .time;
+
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #222429;
+
+    &__list {
+        margin-top: 3.2rem;
+    }
+
+    &__item {
+        & + & {
+            margin-top: 3.2rem;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        color: #999;
+        line-height: 1.6rem;
+    }
+
+    &__content {
+        margin-top: 1.2rem;
+    }
+}

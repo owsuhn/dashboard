@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    
+    <link href="common/css/common.css" rel="stylesheet" />
+    <link href="resource/css/style.css" rel="stylesheet" />
+
+    <script src="common/js/jquery-1.11.0.min.js"></script>
+    <script src="resource/js/script.js"></script>
+</head>
+<body>
+    <!--
+        - 왔다 갔다
+        - 캐러셀
+        - 클릭 + 애니메이션 화면 스크롤 이동
+        - 스크롤 특정 위치에서 등장/사라짐/내려옴
+        - full to refreash
+        - fade
+        - like
+    -->
+    <div class="dashboard">
+        <div class="dashboard__aligner -aside">
+            <header class="dashboard__header -offscreen">
+                <h1 class="dashboard__heading">owsuhn's workspace storage dashboard</h1>
+                <p class="dashboard__desc">from 2018.6 to now</p>
+            </header>
+            <div class="dashboard__current" data-toggle="group">
+                <span class="dashboard__current-label">current componant</span>
+                <span class="dashboard__current-componant">componant</span>
+                <button type="button" class="dashboard__toggle-button" aria-label="current menu reduce/extend toggle"><span aria-hidden="true" class="-offscreen">*</span></button>
+            </div>
+            <nav class="dashboard__navigation">
+                <ul class="dashboard__nav-list">
+                    <li class="dashboard__nav-item" data-toggle="group">
+                        <h2 class="dashboard__list-title">animation</h2>
+                        <ul class="dashboard__list">
+                            <li class="dashboard__item"><button type="button" class="dashboard__nav-button" data-update="2021.2.24">jump</button></li>
+                            <li class="dashboard__item"><button type="button" class="dashboard__nav-button" data-update="2021.2.25">dangle</button></li>
+                        </ul>
+                        <button type="button" aria-label="current list reduce/extend toggle" class="dashboard__toggle-button"><span aria-hidden="true" class="-offscreen">*</span></button>
+                    </li>
+                    <li class="dashboard__nav-item" data-toggle="group">
+                        <h2 class="dashboard__list-title">interaction</h2>
+                        <ul class="dashboard__list">
+                            <li class="dashboard__item"><button type="button" class="dashboard__nav-button" data-update="2021.2.23">mask</button></li>
+                            <li class="dashboard__item"><button type="button" class="dashboard__nav-button" data-update="2021.2.25">flip</button></li>
+                            <li class="dashboard__item"><button type="button" class="dashboard__nav-button" data-update="2021.2.24">random</button></li>
+                        </ul>
+                        <button type="button" aria-label="current list reduce/extend toggle" class="dashboard__toggle-button"><span aria-hidden="true" class="-offscreen">*</span></button>
+                    </li>
+                    <li class="dashboard__nav-item" data-toggle="group">
+                        <h2 class="dashboard__list-title">widget</h2>
+                        <ul class="dashboard__list">
+                            <li class="dashboard__item"><button type="button" class="dashboard__nav-button" data-update="2021.3.2">count up</button></li>
+                            <li class="dashboard__item"><button type="button" class="dashboard__nav-button" data-update="2021.3.1">count down</button></li>
+                            <li class="dashboard__item"><button type="button" class="dashboard__nav-button -active" data-update="2021.3.4">time</button></li>
+                        </ul>
+                        <button type="button" aria-label="current list reduce/extend toggle" class="dashboard__toggle-button"><span aria-hidden="true" class="-offscreen">*</span></button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="dashboard__nav-controls">
+                <button type="button" class="dashboard__nav-control -remove" aria-label="navigation remove"><span aria-hidden="true" class="-offscreen">*</span></button>
+                <button type="button" class="dashboard__nav-control -reduce" aria-label="navigation reduce"><span aria-hidden="true" class="-offscreen">*</span></button>
+                <button type="button" class="dashboard__nav-control -extend" aria-label="navigation extend"><span aria-hidden="true" class="-offscreen">*</span></button>
+            </div>
+        </div>
+        <div class="dashboard__aligner -container">
+            <div class="dashboard__componant">
+                <h3 class="dashboard__componant-name">componant name</h3>
+                <p class="dashboard__componant-subject">componant subject</p>
+                <p class="dashboard__componant-update">componant update</p>
+            </div>
+            <section class="dashboard__section">
+                <!-- <span class="-offscreen">*</span> -->
+                <iframe src="componant/time/time.html" class="dashboard__iframe"></iframe>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

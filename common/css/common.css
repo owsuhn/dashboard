@@ -1,0 +1,72 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosanskr/v13/PbykFmXiEBPT4ITbgNA5Cgm20A.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosanskr/v13/Pby7FmXiEBPT4ITbgNA5CgmOalvI7g.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHvxk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVew8.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 0;
+  font-weight: normal;
+  color: inherit;
+  text-decoration: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+html,
+body {
+  font-size: 10px;
+}
+a,
+button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+}
+a[aria-disabled="true"],
+button[aria-disabled="true"] {
+  cursor: not-allowed;
+  outline: 0;
+}
+.-offscreen {
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}

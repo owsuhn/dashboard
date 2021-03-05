@@ -1,0 +1,148 @@
+@charset "utf-8";
+.butterfly__counter {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 8rem;
+  height: 12rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.8);
+}
+.butterfly__counter + .butterfly__counter {
+  margin-left: 1.2rem;
+}
+.butterfly__counter * {
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+.butterfly__count {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  perspective: 20rem;
+}
+.butterfly__count:first-child {
+  z-index: 2;
+}
+.butterfly__count.-active {
+  z-index: 2;
+  animation: sequence 0.4s 0.4s linear both;
+}
+.butterfly__count.-passive {
+  z-index: 3;
+}
+.butterfly__card.-upper {
+  top: 0;
+  transform-origin: 50% 100%;
+}
+.butterfly__card.-upper:after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  top: 5.8rem;
+  left: 0;
+  width: 100%;
+  height: 0.4rem;
+  background-color: #000;
+}
+.butterfly__count.-passive .butterfly__card.-upper {
+  z-index: 2;
+  animation: flip-passive 0.4s linear both;
+}
+.butterfly__card.-lower {
+  bottom: 0;
+  transform-origin: 50% 0%;
+}
+.butterfly__count.-active .butterfly__card.-lower {
+  z-index: 2;
+  animation: flip-active 0.4s 0.4s linear both;
+}
+.butterfly__card-shadow {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.butterfly__count.-active .butterfly__card.-upper .butterfly__card-shadow,
+.butterfly__count.-active .butterfly__card.-lower .butterfly__card-shadow {
+  animation: hide-active 0.4s 0.2s linear both;
+}
+.butterfly__count.-passive .butterfly__card.-upper .butterfly__card-shadow,
+.butterfly__count.-passive .butterfly__card.-lower .butterfly__card-shadow {
+  animation: show-passive 0.4s linear both;
+}
+.butterfly__count.-passive .butterfly__card.-upper .butterfly__card-shadow {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), #000000);
+}
+.butterfly__count.-passive .butterfly__card.-lower .butterfly__card-shadow {
+  background: linear-gradient(#000000, rgba(0, 0, 0, 0.2));
+}
+.butterfly__card-value {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-color: #333;
+  font-size: 4.4rem;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  line-height: 12rem;
+}
+.butterfly__card.-upper .butterfly__card-value {
+  top: 0 !important;
+}
+.butterfly__card.-lower .butterfly__card-value {
+  bottom: 0 !important;
+}
+@keyframes sequence {
+  0% {
+    z-index: 2;
+  }
+  5% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 4;
+  }
+}
+@keyframes flip-active {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes flip-passive {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+@keyframes show-passive {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hide-active {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
