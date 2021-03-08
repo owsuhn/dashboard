@@ -10,7 +10,6 @@ $(document).ready(function(){
     // componant.zip
     var db = '.dashboard',
         dbAligner = $(db + '__aligner'),
-        dbCurrent = $(db + '__current'),
         dbCurrentComponant = $(db + '__current-componant'),
         dbToggleButton = $(db + '__toggle-button'),
         dbNav = $(db + '__navigation'),
@@ -74,5 +73,9 @@ $(document).ready(function(){
         else if (_this.hasClass('-reduce')) navReduce();
         else if (_this.hasClass('-extend')) navExtend();
         else return;
+    });
+    // note
+    $('.dashboard__note-button').click(function(){
+        $(this).closest('.dashboard__note').toggleClass('-active');
     });
 });

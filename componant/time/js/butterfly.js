@@ -34,7 +34,6 @@ $(document).ready(function(){
         var beforeCount = butterflyCounter + $('.-digit10').find($(butterfly + '__count.-active')).find(butterflyCardValue).text(),
             afterCount = butterflyCounter + $('.-digit10').find($(butterfly + '__count.-passive')).find(butterflyCardValue).text();
         // digit10 aniamtion
-        console.log(beforeCount, afterCount);
         if (beforeCount != afterCount) butterflyCounter + $('.-digit10').each(function(){
             counter($(this));
         });

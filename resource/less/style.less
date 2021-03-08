@@ -331,6 +331,84 @@
         }
     }
 
+    &__note {
+        overflow: hidden;
+        position: fixed;
+        z-index: 8;
+        top: 18rem;
+        right: 5.6rem;
+        width: 4rem;
+        height: 4rem;
+        padding-top: 4rem;
+        border: 1px solid #666;
+        background-color: #0f0f13;
+        transition: .4s;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4rem;
+            border-bottom: 1px solid #666;
+            background-color: #000;
+        }
+
+        &.-active {
+            overflow: unset;
+            width: 40rem;
+            height: 40rem;
+        }
+    }
+
+    &__note-textarea {
+        resize: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 3.2rem;
+        outline: 0;
+        border: 0;
+        background: none;
+        font-size: 1.6rem;
+        color: #fff;
+        text-align: left;
+        line-height: 2rem;
+
+        &::placeholder {
+            text-transform: uppercase;
+            color: #666;
+        }
+    }
+
+    &__note-button {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4rem;
+        height: 4rem;
+
+        &:before {
+            content: "⇲"; // ⇲ ⇱ ↥ ↧ ⍐ ⍗ ↹
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            line-height: 4rem;
+            transform: rotate(90deg);
+
+            @{this}__note.-active & {
+                content: "⇱";
+            }
+        }
+    }
+
     &__section {
         overflow-y: auto;
         position: absolute;
@@ -442,7 +520,7 @@
             color: #6f96d0;
         }
     }
-    
+
     &__dialog {
         display: none;
         position: fixed;
