@@ -286,9 +286,8 @@
   z-index: 8;
   top: 18rem;
   right: 5.6rem;
-  width: 4rem;
-  height: 4rem;
-  padding-top: 4rem;
+  width: 4.2rem;
+  height: 4.2rem;
   border: 1px solid #666;
   background-color: #0f0f13;
   transition: 0.4s;
@@ -308,23 +307,29 @@
   overflow: unset;
   width: 40rem;
   height: 40rem;
+  padding: 7.2rem 3.2rem 4rem 3.2rem;
 }
 .dashboard__note-textarea {
   resize: none;
   display: block;
   width: 100%;
   height: 100%;
-  padding: 3.2rem;
   outline: 0;
   border: 0;
   background: none;
   font-size: 1.6rem;
-  color: #fff;
+  color: #0f0f13;
   text-align: left;
   line-height: 2rem;
 }
+.dashboard__note.-active .dashboard__note-textarea {
+  color: #fff;
+}
 .dashboard__note-textarea::placeholder {
   text-transform: uppercase;
+  color: #0f0f13;
+}
+.dashboard__note.-active .dashboard__note-textarea::placeholder {
   color: #666;
 }
 .dashboard__note-button {
@@ -334,13 +339,14 @@
   right: 0;
   width: 4rem;
   height: 4rem;
+  background-color: #000;
 }
 .dashboard__note-button:before {
   content: "⇲";
   display: block;
   width: 100%;
   height: 100%;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #fff;
   text-align: center;
@@ -349,6 +355,50 @@
 }
 .dashboard__note.-active .dashboard__note-button:before {
   content: "⇱";
+}
+.dashboard__note-command {
+  display: none;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  font-style: normal;
+  font-size: 1.6rem;
+  color: #fff;
+  text-align: center;
+  line-height: 4rem;
+}
+.dashboard__note-command.-copy {
+  right: 4rem;
+  bottom: 0;
+  border: 1px solid #666;
+  border-bottom: 0;
+  background-color: #000;
+}
+.dashboard__note-command.-cut {
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #666;
+  background-color: #000;
+}
+.dashboard__note.-active .dashboard__note-command {
+  display: block;
+}
+.dashboard__note-alert {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  right: 9rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 4rem;
+}
+.dashboard__note.-active .dashboard__note-alert {
+  display: block;
 }
 .dashboard__section {
   overflow-y: auto;

@@ -21,6 +21,10 @@ $(document).ready(function(){
         dbComponantName = $(db + '__componant-name'),
         dbComponantSubject = $(db + '__componant-subject'),
         dbComponantUpdate = $(db + '__componant-update'),
+        dbNote = $(db + '__note'),
+        dbNoteCommand = $(db + '__note-command'),
+        dbNoteAlert = $(db + '__note-alert'),
+        dbNoteButton = $(db + '__note-button'),
         dbSection = $(db + '__section');
     // click event: toggle button
     dbToggleButton.click(function(){
@@ -74,8 +78,53 @@ $(document).ready(function(){
         else if (_this.hasClass('-extend')) navExtend();
         else return;
     });
-    // note
-    $('.dashboard__note-button').click(function(){
-        $(this).closest('.dashboard__note').toggleClass('-active');
+    // note copy and cut
+    dbNoteCommand.click(function(){
+        var _this = $(this),
+            _value = _this.siblings('textarea').select();
+        if (_this.hasClass('-copy')) {
+            if (!_value.val()) {
+                alert('복사할 노트가 없습니다.');
+            } else {
+                document.execCommand('copy');
+                dbNoteAlert.text('copied!').animate({
+                    'opacity': '1'
+                }, 400, function(){
+                    setTimeout(function(){
+                        dbNoteAlert.animate({
+                            'opacity': '0'
+                        }, 400);
+                    }, 800);
+                });
+            };
+        } else {
+            if (!_value.val()) {
+                alert('잘라낼 노트가 없습니다.');
+            } else {
+                document.execCommand('cut');
+                $('.dashboard__note-alert').text('cuted!').animate({
+                    'opacity': '1'
+                }, 400, function(){
+                    setTimeout(function(){
+                        $('.dashboard__note-alert').animate({
+                            'opacity': '0'
+                        }, 400);
+                    }, 800);
+                });
+            };
+        };
+    });
+    // note toggle button
+    dbNoteButton.click(function(){
+        var _this = $(this),
+            _thisNote = _this.closest(dbNote);
+        _thisNote.toggleClass('-active');
+        if (_thisNote.hasClass('-active')) {
+            _this.attr('aria-label', '노트 토글 펼침');
+            _thisNote.attr('aria-expanded', 'true');
+        } else {
+            _this.attr('aria-label', '노트 토글 닫힘');
+            _thisNote.attr('aria-expanded', 'false');
+        };
     });
 });
