@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="../../common/css/swiper.css" rel="stylesheet" />
+    <link href="../../resource/css/style.css" rel="stylesheet" />
+    <link href="css/swiper.css" rel="stylesheet" />
+
+    <script src="../../common/js/jquery-1.11.0.min.js"></script>
+    <script src="../../common/js/swiper.js"></script>
+    <script src="js/swiper.js"></script>
+</head>
+<body>
+    <div class="swiper">        
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">horizon</h4>
+            <p class="dashboard__publish-date">2021.3.9 18:00 pm</p>
+            <ul class="swiper__list">
+                <li class="swiper__item">
+                    <p class="swiper__title">swipe to one at a one</p>
+                    <div class="swiper__content">
+                        <div class="swiper-container -default">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">A</div>
+                                <div class="swiper-slide">B</div>
+                                <div class="swiper-slide">C</div>
+                                <div class="swiper-slide">D</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="swiper__option">
+                        js option
+                        <span class="swiper__option-tab">
+                            new Swiper ('.swiper-container', {
+                                <span class="swiper__option-tab">
+                                    direction: 'horizontal',<br/>
+                                    speed: 400,<br/>
+                                    slidesPerView: 1,<span class="swiper__option-annotate"> // number of slides to show at a time(value: 'auto' or integer)</span><br/>
+                                    spaceBetween: 40,<span class="swiper__option-annotate"> // interval between slides</span>
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="swiper__item">
+                    <p class="swiper__title">swipe to n(4) at a n(4)</p>
+                    <div class="swiper__content">
+                        <div class="swiper-container -multiple">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">A</div>
+                                <div class="swiper-slide">B</div>
+                                <div class="swiper-slide">C</div>
+                                <div class="swiper-slide">D</div>
+                                <div class="swiper-slide">E</div>
+                                <div class="swiper-slide">F</div>
+                                <div class="swiper-slide">G</div>
+                                <div class="swiper-slide">H</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="swiper__option">
+                        css option
+                        <span class="swiper__option-tab">
+                            .swiper-slide {
+                                <span class="swiper__option-tab">
+                                    width: 25%;<span class="swiper__option-annotate"> /* value: auto or 100/number of slide */</span>
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="swiper__option">
+                        js option
+                        <span class="swiper__option-tab">
+                            new Swiper ('.swiper-container', {
+                                <span class="swiper__option-tab">
+                                    direction: 'horizontal',<br/>
+                                    speed: 400,<br/>
+                                    slidesPerView: 'auto',<br/>
+                                    spaceBetween: 0,<br/>
+                                    slidesPerGroup: 4,<span class="swiper__option-annotate"> // number of slides to swipe at a time</span>
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="swiper__item">
+                    <p class="swiper__title">swipe to n(4) at a n(4) - column alignment</p>
+                    <div class="swiper__content">
+                        <div class="swiper-container -column">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">A</div>
+                                <div class="swiper-slide">B</div>
+                                <div class="swiper-slide">C</div>
+                                <div class="swiper-slide">D</div>
+                                <div class="swiper-slide">E</div>
+                                <div class="swiper-slide">F</div>
+                                <div class="swiper-slide">G</div>
+                                <div class="swiper-slide">H</div>
+                                <div class="swiper-slide">I</div>
+                                <div class="swiper-slide">J</div>
+                                <div class="swiper-slide">K</div>
+                                <div class="swiper-slide">L</div>
+                                <div class="swiper-slide">M</div>
+                                <div class="swiper-slide">N</div>
+                                <div class="swiper-slide">O</div>
+                                <div class="swiper-slide">P</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="swiper__option">
+                        css option
+                        <span class="swiper__option-tab">
+                            .swiper-slide {
+                                <span class="swiper__option-tab">
+                                    width: 25%;<span class="swiper__option-annotate"> /* value: auto or 100/number of slide */</span>
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="swiper__option">
+                        js option
+                        <span class="swiper__option-tab">
+                            new Swiper ('.swiper-container', {
+                                <span class="swiper__option-tab">
+                                    direction: 'horizontal',<br/>
+                                    speed: 400,<br/>
+                                    slidesPerView: 4,<span class="swiper__option-annotate"> // horizon alignments</span><br/>
+                                    slidesPerColumn: 2,<span class="swiper__option-annotate"> // vertical alignment</span><br/>
+                                    spaceBetween: 0,<br/>
+                                    slidesPerGroup: 4,
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="swiper__item">
+                    <p class="swiper__title">swipe to n(4) at a one - loop</p>
+                    <div class="swiper__content">
+                        <div class="swiper-container -loop">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">A</div>
+                                <div class="swiper-slide">B</div>
+                                <div class="swiper-slide">C</div>
+                                <div class="swiper-slide">D</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="swiper__option">
+                        css option
+                        <span class="swiper__option-tab">
+                            .swiper-slide {
+                                <span class="swiper__option-tab">
+                                    width: 25%;
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="swiper__option">
+                        js option
+                        <span class="swiper__option-tab">
+                            new Swiper ('.swiper-container', {
+                                <span class="swiper__option-tab">        
+                                    direction: 'horizontal',<br/>
+                                    speed: 400,<br/>
+                                    slidesPerView: 'auto',<br/>
+                                    spaceBetween: 0,<br/>
+                                    slidesPerGroup: 1,<br/>
+                                    centeredSlides: true,<span class="swiper__option-annotate"> // center alignment</span><br/>
+                                    loop: true,<span class="swiper__option-annotate"> // loop</span>
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="swiper__item">
+                    <p class="swiper__title">swipe to n(4) at a one - loop and auto</p>
+                    <div class="swiper__content">
+                        <div class="swiper-container -autoplay">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">A</div>
+                                <div class="swiper-slide">B</div>
+                                <div class="swiper-slide">C</div>
+                                <div class="swiper-slide">D</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="swiper__option">
+                        css option
+                        <span class="swiper__option-tab">
+                            .swiper-slide {
+                                <span class="swiper__option-tab">
+                                    width: 25%;
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="swiper__option">
+                        js option
+                        <span class="swiper__option-tab">
+                            new Swiper ('.swiper-container', {
+                                <span class="swiper__option-tab">
+                                    direction: 'horizontal',<br/>
+                                    speed: 400,<br/>
+                                    slidesPerView: 'auto',<br/>
+                                    spaceBetween: 0,<br/>
+                                    slidesPerGroup: 1,<br/>
+                                    centeredSlides: true,<br/>
+                                    loop: true,<br/>
+                                    <br/>
+                                    autoplay: {
+                                        <span class="swiper__option-tab">
+                                        delay: 2000,<span class="swiper__option-annotate"> // delay milliseconds</span><br/>
+                                        disableOnInteraction: false,<span class="swiper__option-annotate"> // whether to stop auto-play after user manipulation</span>
+                                        </span>
+                                    },
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="swiper__item">
+                    <p class="swiper__title">arrow navigation and dot pagination</p>
+                    <div class="swiper__content">
+                        <div class="swiper-container -controler">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">A</div>
+                                <div class="swiper-slide">B</div>
+                                <div class="swiper-slide">C</div>
+                                <div class="swiper-slide">D</div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="swiper__option">
+                        js option
+                        <span class="swiper__option-tab">
+                            new Swiper ('.swiper-container', {
+                                <span class="swiper__option-tab">
+                                    direction: 'horizontal',<br/>
+                                    speed: 400,<br/>
+                                    slidesPerView: 1,<br/>
+                                    spaceBetween: 0,<br/>
+                                    <br/>
+                                    navigation: {
+                                        <span class="swiper__option-tab">
+                                            nextEl: '.swiper-button-next',<span class="swiper__option-annotate"> // navigation element name</span><br/>
+                                            prevEl: '.swiper-button-prev',
+                                        </span>
+                                    },<br/>
+                                    <br/>
+                                    pagination: {
+                                        <span class="swiper__option-tab">
+                                            el: '.swiper-pagination',<span class="swiper__option-annotate"> // pagination element name</span><br/>
+                                            clickable: true,<span class="swiper__option-annotate"> // presence or not of click</span>
+                                        </span>
+                                    },
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="swiper__item">
+                    <p class="swiper__title">bullet pagination</p>
+                    <div class="swiper__content">
+                        <div class="swiper-container -bullet">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">A</div>
+                                <div class="swiper-slide">B</div>
+                                <div class="swiper-slide">C</div>
+                                <div class="swiper-slide">D</div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="swiper__option">
+                        css option
+                        <span class="swiper__option-tab">
+                            .swiper-pagination,<br/>
+                            .swiper-pagination * {
+                                <span class="swiper__option-tab">
+                                    font-size: 1.6rem;<span class="swiper__option-annotate"> /* set anyway */</span><br/>
+                                    color: #fff;<br/>
+                                    line-height: 2rem;
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="swiper__option">
+                        js option
+                        <span class="swiper__option-tab">
+                            var arr = ['A', 'B', 'C', 'D'];<span class="swiper__option-annotate"> // array to text in bullet</span><br/>
+                            new Swiper ('.swiper-container', {
+                                <span class="swiper__option-tab">
+                                    direction: 'horizontal',<br/>
+                                    speed: 400,<br/>
+                                    slidesPerView: 1,<br/>
+                                    spaceBetween: 0,<br/>
+                                    <br/>
+                                    pagination: {
+                                        <span class="swiper__option-tab">
+                                            el: '.swiper-pagination',<br/>
+                                            clickable: true,<br/>
+                                            renderBullet: function (index, className) {
+                                                <span class="swiper__option-tab">
+                                                    return '&lt;span class="' + className + '"&gt;' + (index + 1) + '&lt;&#47;span&gt;';<span class="swiper__option-annotate"> // integer in bullet</span><br/>
+                                                    <span class="swiper__option-annotate">// return '&lt;span class="' + className + '"&gt;' + (arr[index]) + '&lt;&#47;span&gt;'; // text in bullet</span>
+                                                </span>
+                                            },
+                                        </span>
+                                    },
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="swiper__item">
+                    <p class="swiper__title">progress pagination</p>
+                    <div class="swiper__content">
+                        <div class="swiper-container -progress">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">A</div>
+                                <div class="swiper-slide">B</div>
+                                <div class="swiper-slide">C</div>
+                                <div class="swiper-slide">D</div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="swiper__option">
+                        js option
+                        <span class="swiper__option-tab">
+                            new Swiper ('.swiper-container', {
+                                <span class="swiper__option-tab">
+                                    direction: 'horizontal',<br/>
+                                    speed: 400,<br/>
+                                    slidesPerView: 1,<br/>
+                                    spaceBetween: 0,<br/>
+                                    <br/>
+                                    <br/>
+                                    pagination: {
+                                        <span class="swiper__option-tab">
+                                            el: '.swiper-pagination',<br/>
+                                            type: 'progressbar'<span class="swiper__option-annotate"> // progressbar style</span>
+                                        </span>
+                                    },
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="swiper__item">
+                    <p class="swiper__title">fraction pagination</p>
+                    <div class="swiper__content">
+                        <div class="swiper-container -fraction">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">A</div>
+                                <div class="swiper-slide">B</div>
+                                <div class="swiper-slide">C</div>
+                                <div class="swiper-slide">D</div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="swiper__option">
+                        css option
+                        <span class="swiper__option-tab">
+                            .swiper-pagination,<br/>
+                            .swiper-pagination * {
+                                <span class="swiper__option-tab">
+                                    font-size: 1.6rem;<span class="swiper__option-annotate"> /* set anyway */</span><br/>
+                                    color: #fff;<br/>
+                                    line-height: 2rem;
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="swiper__option">
+                        js option
+                        <span class="swiper__option-tab">
+                            new Swiper ('.swiper-container', {
+                                <span class="swiper__option-tab">
+                                    direction: 'horizontal',<br/>
+                                    speed: 400,<br/>
+                                    slidesPerView: 1,<br/>
+                                    spaceBetween: 0,<br/>
+                                    <br/>
+                                    <br/>
+                                    pagination: {
+                                        <span class="swiper__option-tab">
+                                            el: '.swiper-pagination',<br/>
+                                            type: 'fraction'<span class="swiper__option-annotate"> // fraction style</span>
+                                        </span>
+                                    },
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+            </ul>
+            <!-- <div class="dashboard__article-refer">
+                <a href="https://swiperjs.com/" target="_blank" class="dashboard__refer-link">swiper official site</a>
+            </div> -->
+        </div>
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">vertical</h4> <!-- scroll/inner swiper -->
+            <p class="dashboard__publish-date">2021.3.10 18:00 pm</p>
+            <ul class="swiper__list">
+                <li class="swiper__item">
+                    <p class="swiper__title">111</p>
+                    <div class="swiper__content">
+                        111
+                    </div>
+                </li>
+            </ul>
+            <!-- <div class="dashboard__article-refer">
+                <a href="https://swiperjs.com/" target="_blank" class="dashboard__refer-link">swiper official site</a>
+            </div> -->
+        </div>
+    </div>
+</body> 
+</html>

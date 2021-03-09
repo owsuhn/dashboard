@@ -122,26 +122,28 @@
 .carousel__button:focus {
   box-shadow: 0 0 0 0.2rem #222429, 0 0 0 0.4rem #0f0f13;
 }
-.carousel__desc {
+.carousel__option {
   margin-top: 1.2rem;
-  padding-left: 2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #999;
+  letter-spacing: 1px;
+}
+.carousel__option-tab {
+  display: block;
+  margin-top: 0.4rem;
+  text-transform: initial;
   font-size: 1.6rem;
   color: #fff;
   line-height: 2rem;
 }
-.carousel__desc:before {
-  counter-increment: counter;
-  content: counter(counter) " )";
-  display: inline-block;
-  vertical-align: top;
-  width: 2rem;
-  height: 2rem;
-  margin: 0 0 0 -2rem;
-}
-.carousel__desc-tab {
-  display: block;
+.carousel__option-tab .carousel__option-tab {
+  margin-top: 0;
   padding-left: 4rem;
+}
+.carousel__option-annotate {
   font-size: 1.6rem;
-  color: #fff;
+  color: #666;
   line-height: 2rem;
 }

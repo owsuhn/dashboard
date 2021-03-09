@@ -150,29 +150,32 @@
         }
     }
 
-    &__desc {
+    &__option {
         margin-top: 1.2rem;
-        padding-left: 2rem;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #999;
+        letter-spacing: 1px;
+    }
+
+    &__option-tab {
+        display: block;
+        margin-top: .4rem;
+        text-transform: initial;
         font-size: 1.6rem;
         color: #fff;
         line-height: 2rem;
 
-        &:before {
-            counter-increment: counter;
-            content: counter(counter) " )";
-            display: inline-block;
-            vertical-align: top;
-            width: 2rem;
-            height: 2rem;
-            margin: 0 0 0 -2rem;
+        & & {
+            margin-top: 0;
+            padding-left: 4rem;
         }
     }
-
-    &__desc-tab {
-        display: block;
-        padding-left: 4rem;
+    
+    &__option-annotate {
         font-size: 1.6rem;
-        color: #fff;
+        color: #666;
         line-height: 2rem;
     }
 }

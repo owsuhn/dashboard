@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+.swiper {
+    @this: .swiper;
+
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #222429;
+
+    &__list {
+        margin-top: 5.6rem;
+    }
+
+    &__item {
+        & + & {
+            margin-top: 5.6rem;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        color: #999;
+        line-height: 2rem;
+    }
+
+    &__content {
+        margin-top: 1.2rem;
+        border-top: 1px solid  #666;
+        border-bottom: 1px solid  #666;
+    }
+
+    &__option {
+        margin-top: 1.2rem;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #999;
+        letter-spacing: 1px;
+    }
+
+    &__option-tab {
+        display: block;
+        margin-top: .4rem;
+        text-transform: initial;
+        font-size: 1.6rem;
+        color: #fff;
+        line-height: 2rem;
+
+        & & {
+            margin-top: 0;
+            padding-left: 4rem;
+        }
+    }
+    
+    &__option-annotate {
+        font-size: 1.6rem;
+        color: #666;
+        line-height: 2rem;
+    }
+
+
+
+
+
+
+
+    &-container {    
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+
+        &.-column {
+            height: auto;
+        }
+    }
+    
+    &-slide {
+        display: flex;
+        display: -webkit-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+    
+        padding: 10rem 0;
+        font-size: 4rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        line-height: 0;
+
+        @{this}-container.-multiple &,
+        @{this}-container.-loop &,
+        @{this}-container.-autoplay & {
+            width: 25%;
+        }
+    }
+
+    &-pagination {
+
+        @{this}-container.-fraction &,
+        @{this}-container.-fraction & * {
+            font-size: 1.6rem;
+            color: #fff;
+            line-height: 2rem;
+        }
+
+        @{this}-container.-bullet &,
+        @{this}-container.-bullet & * {
+            background: none;
+            font-size: 1.6rem;
+            color: #fff;
+            line-height: 2rem;
+        }
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+/* .swiper-container{height:auto;} 전체 세로 값 풀어주기
+.swiper-wrapper{height:auto;} 슬라이드 부모 세로 값 풀어주기
+.swiper-slide{height:;} 슬라이드 공통 값 부여하기
+.swiper-slide.클래스명{} 슬라이드 개별 값 부여하기(이전에 html에서 클래스명 생성) */
+
+/* slidesPerColumn을 부여하려면
+.swiper-container{height:auto;} 기존 100% 해제
+.swiper-slide{height:200px;} 높이 지정(가시적 테스트용:어짜피 컨텐츠 들어가면 굳이 부여하지 않아도 되니까) */
+
+
+
+
+
+

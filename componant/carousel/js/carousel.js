@@ -75,13 +75,6 @@ $(document).ready(function(){
             };
         });
     });
-
-
-
-
-
-
-
     // horizon carousel
     slide + $('.-horizon').each(function(){
         var _this = $(this),
