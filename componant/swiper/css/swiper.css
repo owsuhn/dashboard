@@ -19,6 +19,7 @@
   line-height: 2rem;
 }
 .swiper__content {
+  position: relative;
   margin-top: 1.2rem;
   border-top: 1px solid #666;
   border-bottom: 1px solid #666;
@@ -53,8 +54,25 @@
   height: 100%;
   margin: 0 auto;
 }
-.swiper-container.-column {
+.swiper-container.-h.-column {
   height: auto;
+}
+.swiper-container.-v,
+.swiper-container.-connection {
+  height: 20rem;
+}
+.swiper-container.-thumbs {
+  border-top: 1px solid #666;
+}
+.swiper-container.-connected {
+  position: absolute;
+  z-index: 2;
+  top: -5rem;
+  right: 5rem;
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid #666;
+  background-color: #222429;
 }
 .swiper-slide {
   display: flex;
@@ -76,28 +94,67 @@
   text-align: center;
   line-height: 0;
 }
-.swiper-container.-multiple .swiper-slide,
-.swiper-container.-loop .swiper-slide,
-.swiper-container.-autoplay .swiper-slide {
+.swiper-container.-h.-multiple .swiper-slide,
+.swiper-container.-h.-loop .swiper-slide,
+.swiper-container.-h.-autoplay .swiper-slide {
   width: 25%;
 }
-.swiper-container.-fraction .swiper-pagination,
-.swiper-container.-fraction .swiper-pagination * {
+.swiper-container.-v.-complex .swiper-slide,
+.swiper-container.-v.-column .swiper-slide {
+  padding: 0;
+}
+.swiper-container.-v.-column .swiper-slide {
+  flex-wrap: wrap;
+}
+.swiper-container.-thumbs .swiper-slide {
+  padding: 5rem;
+  border-right: 1px solid #666;
+  font-size: 2rem;
+}
+.swiper-container.-thumbs .swiper-slide:first-child {
+  border-left: 1px solid #666;
+}
+.swiper-container.-connected .swiper-slide {
+  padding: 0;
+  font-size: 2rem;
+}
+.swiper-slide__complex-alinger {
+  display: block;
+  width: 25%;
+  height: 20rem;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  line-height: 20rem;
+}
+.swiper-container.-v.-column.-col2 .swiper-slide__complex-alinger {
+  height: 10rem;
+  line-height: 10rem;
+}
+.swiper-container.-h.-fraction .swiper-pagination,
+.swiper-container.-h.-fraction .swiper-pagination * {
   font-size: 1.6rem;
   color: #fff;
   line-height: 2rem;
 }
-.swiper-container.-bullet .swiper-pagination,
-.swiper-container.-bullet .swiper-pagination * {
+.swiper-container.-h.-bullet .swiper-pagination,
+.swiper-container.-h.-bullet .swiper-pagination * {
   background: none;
   font-size: 1.6rem;
   color: #fff;
+  line-height: 0;
+}
+.swiper-container.-v.-fraction .swiper-pagination,
+.swiper-container.-v.-fraction .swiper-pagination * {
+  font-size: 1.6rem;
+  color: #fff;
   line-height: 2rem;
 }
-/* .swiper-container{height:auto;} 전체 세로 값 풀어주기
-.swiper-wrapper{height:auto;} 슬라이드 부모 세로 값 풀어주기
-.swiper-slide{height:;} 슬라이드 공통 값 부여하기
-.swiper-slide.클래스명{} 슬라이드 개별 값 부여하기(이전에 html에서 클래스명 생성) */
-/* slidesPerColumn을 부여하려면
-.swiper-container{height:auto;} 기존 100% 해제
-.swiper-slide{height:200px;} 높이 지정(가시적 테스트용:어짜피 컨텐츠 들어가면 굳이 부여하지 않아도 되니까) */
+.swiper-container.-v.-bullet .swiper-pagination,
+.swiper-container.-v.-bullet .swiper-pagination * {
+  background: none;
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 0;
+}

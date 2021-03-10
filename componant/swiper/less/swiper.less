@@ -27,6 +27,7 @@
     }
 
     &__content {
+        position: relative;
         margin-top: 1.2rem;
         border-top: 1px solid  #666;
         border-bottom: 1px solid  #666;
@@ -61,19 +62,33 @@
         line-height: 2rem;
     }
 
-
-
-
-
-
-
     &-container {    
         width: 100%;
         height: 100%;
         margin: 0 auto;
 
-        &.-column {
+        &.-h.-column {
             height: auto;
+        }
+
+        &.-v,
+        &.-connection {
+            height: 20rem;
+        }
+
+        &.-thumbs {
+            border-top: 1px solid #666;
+        }
+
+        &.-connected {
+            position: absolute;
+            z-index: 2;
+            top: -5rem;
+            right: 5rem;
+            width: 10rem;
+            height: 10rem;
+            border: 1px solid #666;
+            background-color: #222429;
         }
     }
     
@@ -90,7 +105,6 @@
         -webkit-align-items: center;
         -webkit-box-align: center;
         -ms-flex-align: center;
-    
         padding: 10rem 0;
         font-size: 4rem;
         font-weight: bold;
@@ -98,56 +112,82 @@
         text-align: center;
         line-height: 0;
 
-        @{this}-container.-multiple &,
-        @{this}-container.-loop &,
-        @{this}-container.-autoplay & {
+        @{this}-container.-h.-multiple &,
+        @{this}-container.-h.-loop &,
+        @{this}-container.-h.-autoplay & {
             width: 25%;
+        }
+
+        @{this}-container.-v.-complex &,
+        @{this}-container.-v.-column & {
+            padding: 0;
+        }
+
+        @{this}-container.-v.-column & {
+            flex-wrap: wrap;
+        }
+
+        @{this}-container.-thumbs & {
+            padding: 5rem;
+            border-right: 1px solid #666;
+            font-size: 2rem;
+
+            &:first-child {
+                border-left: 1px solid #666;
+            }
+        }
+
+        @{this}-container.-connected & {
+            padding: 0;
+            font-size: 2rem;
+        }
+    }
+
+    &-slide__complex-alinger {
+        display: block;
+        width: 25%;
+        height: 20rem;
+        font-size: 4rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        line-height: 20rem;
+
+        @{this}-container.-v.-column.-col2 & {
+            height: 10rem;
+            line-height: 10rem;
         }
     }
 
     &-pagination {
-
-        @{this}-container.-fraction &,
-        @{this}-container.-fraction & * {
+        @{this}-container.-h.-fraction &,
+        @{this}-container.-h.-fraction & * {
             font-size: 1.6rem;
             color: #fff;
             line-height: 2rem;
         }
 
-        @{this}-container.-bullet &,
-        @{this}-container.-bullet & * {
+        @{this}-container.-h.-bullet &,
+        @{this}-container.-h.-bullet & * {
             background: none;
             font-size: 1.6rem;
             color: #fff;
+            line-height: 0;
+        }
+
+        @{this}-container.-v.-fraction &,
+        @{this}-container.-v.-fraction & * {
+            font-size: 1.6rem;
+            color: #fff;
             line-height: 2rem;
         }
+
+        @{this}-container.-v.-bullet &,
+        @{this}-container.-v.-bullet & * {
+            background: none;
+            font-size: 1.6rem;
+            color: #fff;
+            line-height: 0;
+        }
     }
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-/* .swiper-container{height:auto;} 전체 세로 값 풀어주기
-.swiper-wrapper{height:auto;} 슬라이드 부모 세로 값 풀어주기
-.swiper-slide{height:;} 슬라이드 공통 값 부여하기
-.swiper-slide.클래스명{} 슬라이드 개별 값 부여하기(이전에 html에서 클래스명 생성) */
-
-/* slidesPerColumn을 부여하려면
-.swiper-container{height:auto;} 기존 100% 해제
-.swiper-slide{height:200px;} 높이 지정(가시적 테스트용:어짜피 컨텐츠 들어가면 굳이 부여하지 않아도 되니까) */
-
-
-
-
-
-
