@@ -22,10 +22,11 @@
   display: inline-block;
   vertical-align: top;
   margin-top: 1.2rem;
-  padding: 5.6rem 0 2rem 0;
+  padding: 8rem 0 2rem 0;
   border-top: 1px solid #666;
   border-bottom: 1px solid #666;
 }
+.bloom__like,
 .bloom__like-button {
   display: inline-block;
   vertical-align: top;
@@ -33,6 +34,11 @@
   height: 4rem;
   padding: 0 2rem;
   border-radius: 0.4rem;
+}
+.bloom__like {
+  border: 0.2rem solid #f24445;
+}
+.bloom__like-button {
   background-color: #f24445;
 }
 .bloom__like-button:after {
@@ -45,14 +51,6 @@
   border-top: 1rem solid #f24445;
   border-right: 0.8rem solid transparent;
   border-left: 0.8rem solid transparent;
-}
-.bloom__like-button.-infinite {
-  cursor: auto;
-  border: 0.2rem solid #f24445;
-  background: none;
-}
-.bloom__like-button.-infinite:after {
-  display: none;
 }
 .bloom__like-mark {
   display: block;
@@ -83,7 +81,7 @@
   top: -0.6rem;
   left: 0;
 }
-.bloom__like-button.-infinite .bloom__like-mark {
+.bloom__like .bloom__like-mark {
   display: none;
 }
 .bloom__like-icon {
@@ -99,28 +97,46 @@
   text-align: center;
   line-height: 3.2rem;
 }
-.bloom__like-button.-active .bloom__like-icon {
+.bloom__like-button.-odd .bloom__like-icon:nth-of-type(odd) {
   animation: likey linear 0.8s;
 }
-.bloom__like-button.-odd .bloom__like-icon:nth-of-type(odd) {
-  animation: likey-odd linear 0.8s;
-}
 .bloom__like-button.-even .bloom__like-icon:nth-of-type(even) {
-  animation: likey-even linear 0.8s;
+  animation: likey linear 0.8s;
 }
-.bloom__like-button.-infinite .bloom__like-icon:nth-of-type(odd) {
-  animation: likey-odd linear 1.2s infinite;
+.bloom__like-button.-left .bloom__like-icon:nth-of-type(odd) {
+  animation: likey-left linear 0.8s;
 }
-.bloom__like-button.-infinite .bloom__like-icon:nth-of-type(even) {
-  animation: likey-even linear 1.2s infinite;
+.bloom__like-button.-right .bloom__like-icon:nth-of-type(even) {
+  animation: likey-right linear 0.8s;
 }
-.bloom__like-button.-infinite .bloom__like-icon:nth-of-type(2) {
+.bloom__like.-constant .bloom__like-icon:nth-of-type(odd) {
+  animation: likey linear 1.2s infinite;
+}
+.bloom__like.-constant .bloom__like-icon:nth-of-type(even) {
+  animation: likey linear 1.2s infinite;
+}
+.bloom__like.-constant .bloom__like-icon:nth-of-type(2) {
   animation-delay: 0.2s;
 }
-.bloom__like-button.-infinite .bloom__like-icon:nth-of-type(3) {
+.bloom__like.-constant .bloom__like-icon:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+.bloom__like.-constant .bloom__like-icon:nth-of-type(4) {
+  animation-delay: 1.2s;
+}
+.bloom__like.-unconstant .bloom__like-icon:nth-of-type(odd) {
+  animation: likey-left linear 1.2s infinite;
+}
+.bloom__like.-unconstant .bloom__like-icon:nth-of-type(even) {
+  animation: likey-right linear 1.2s infinite;
+}
+.bloom__like.-unconstant .bloom__like-icon:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+.bloom__like.-unconstant .bloom__like-icon:nth-of-type(3) {
   animation-delay: 0.4s;
 }
-.bloom__like-button.-infinite .bloom__like-icon:nth-of-type(4) {
+.bloom__like.-unconstant .bloom__like-icon:nth-of-type(4) {
   animation-delay: 0.8s;
 }
 .bloom__like-text {
@@ -134,7 +150,7 @@
   color: #fff;
   line-height: 3.8rem;
 }
-.bloom__like-button.-infinite .bloom__like-text {
+.bloom__like .bloom__like-text {
   color: #f24445;
   line-height: 3.6rem;
 }
@@ -147,10 +163,10 @@
   }
   100% {
     opacity: 0;
-    transform: translate(0, -4rem) scale(1.2);
+    transform: translate(0, -8rem) scale(1.2);
   }
 }
-@keyframes likey-odd {
+@keyframes likey-left {
   0% {
     opacity: 0;
   }
@@ -159,10 +175,10 @@
   }
   100% {
     opacity: 0;
-    transform: translate(1rem, -6rem) scale(1.2);
+    transform: translate(0.4rem, -8rem) scale(1.2);
   }
 }
-@keyframes likey-even {
+@keyframes likey-right {
   0% {
     opacity: 0;
   }
@@ -171,6 +187,6 @@
   }
   100% {
     opacity: 0;
-    transform: translate(-2rem, -4rem) scale(1.2);
+    transform: translate(-0.4rem, -8rem) scale(1.2);
   }
 }

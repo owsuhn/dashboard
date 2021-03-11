@@ -1,44 +1,38 @@
 $(document).ready(function(){
     // componant.zip
     var bloom = '.bloom',
-        bloomLikeButton = $(bloom + '__like-button');
-    // option: -default
-    bloomLikeButton + $('.-default').click(function(){
-        var _this = $(this);
-        if (_this.hasClass('-active')) {
-            _this.removeClass('-active');
-            setTimeout(function(){
-                bloomLikeButton + $('.-default').addClass('-active');
-            }, 100);
-        } else {
-            _this.addClass('-active');
-        };
-    });
-    // click count
-    var count = 0;
-    // option: -random
-    bloomLikeButton + $('.-random').click(function(){
-        var _this = $(this);
-            count = count + 1,
-            count = count % 2;
+        bloomLikeButton = $(bloom + '__like-button'),
+        count = 0;
+    // create method
+    function likey (_this, _thisOption1, _thisOption2) {
+        count = count + 1,
+        count = count % 2;
         if (count != 0) {
-            if (_this.hasClass('-odd')) {
-                _this.removeClass('-odd');
+            if (_this.hasClass(_thisOption1)) {
+                _this.removeClass(_thisOption1);
                 setTimeout(function(){
-                    bloomLikeButton + $('.-random').addClass('-odd');
+                    _this.addClass(_thisOption1);
                 }, 100);
             } else {
-                _this.addClass('-odd');
+                _this.addClass(_thisOption1);
             };
         } else {
-            if (_this.hasClass('-even')) {
-                _this.removeClass('-even');
+            if (_this.hasClass(_thisOption2)) {
+                _this.removeClass(_thisOption2);
                 setTimeout(function(){
-                    bloomLikeButton + $('.-random').addClass('-even');
+                    _this.addClass(_thisOption2);
                 }, 100);
             } else {
-                _this.addClass('-even');
+                _this.addClass(_thisOption2);
             };
         };
+    };
+    // option: -constant
+    bloomLikeButton + $('.-constant').click(function(){
+        likey($(this), '-odd', '-even');
+    });
+    // option: -unconstant
+    bloomLikeButton + $('.-unconstant').click(function(){
+        likey($(this), '-left', '-right');
     });
 });

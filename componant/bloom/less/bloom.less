@@ -30,11 +30,12 @@
         display: inline-block;
         vertical-align: top;
         margin-top: 1.2rem;
-        padding: 5.6rem 0 2rem 0;
+        padding: 8rem 0 2rem 0;
         border-top: 1px solid #666;
         border-bottom: 1px solid #666;
     }
 
+    &__like,
     &__like-button {
         display: inline-block;
         vertical-align: top;
@@ -42,6 +43,13 @@
         height: 4rem;
         padding: 0 2rem;
         border-radius: .4rem;
+    }
+
+    &__like {
+        border: .2rem solid #f24445;
+    }
+
+    &__like-button {
         background-color: #f24445;
 
         &:after {
@@ -54,16 +62,6 @@
             border-top: 1rem solid #f24445;
             border-right: .8rem solid transparent;
             border-left: .8rem solid transparent;
-        }
-
-        &.-infinite {
-            cursor: auto;
-            border: .2rem solid #f24445;
-            background: none;
-
-            &:after {
-                display: none;
-            }
         }
     }
 
@@ -99,7 +97,7 @@
             left: 0;
         }
 
-        @{this}__like-button.-infinite & {
+        @{this}__like & {
             display: none;
         }
     }
@@ -117,36 +115,64 @@
         text-align: center;
         line-height: 3.2rem;
 
-        @{this}__like-button.-active & {
+        @{this}__like-button.-odd &:nth-of-type(odd) {
             animation: likey linear .8s;
         }
 
-        @{this}__like-button.-odd &:nth-of-type(odd) {
-            animation: likey-odd linear .8s;
+        @{this}__like-button.-even &:nth-of-type(even) {
+            animation: likey linear .8s;
+        }
+
+        @{this}__like-button.-left &:nth-of-type(odd) {
+            animation: likey-left linear .8s;
         }
         
-        @{this}__like-button.-even &:nth-of-type(even) {
-            animation: likey-even linear .8s;
+        @{this}__like-button.-right &:nth-of-type(even) {
+            animation: likey-right linear .8s;
         }
 
-        @{this}__like-button.-infinite &:nth-of-type(odd) {
-            animation: likey-odd linear 1.2s infinite;
+        @{this}__like.-constant & {
+            &:nth-of-type(odd) {
+                animation: likey linear 1.2s infinite;
+            }
+
+            &:nth-of-type(even) {
+                animation: likey linear 1.2s infinite;
+            }
+
+            &:nth-of-type(2) {
+                animation-delay: .2s;
+            }
+
+            &:nth-of-type(3) {
+                animation-delay: .8s;
+            }
+
+            &:nth-of-type(4) {
+                animation-delay: 1.2s;
+            }
         }
 
-        @{this}__like-button.-infinite &:nth-of-type(even) {
-            animation: likey-even linear 1.2s infinite;
-        }
+        @{this}__like.-unconstant & {
+            &:nth-of-type(odd) {
+                animation: likey-left linear 1.2s infinite;
+            }
 
-        @{this}__like-button.-infinite &:nth-of-type(2) {
-            animation-delay: .2s;
-        }
+            &:nth-of-type(even) {
+                animation: likey-right linear 1.2s infinite;
+            }
 
-        @{this}__like-button.-infinite &:nth-of-type(3) {
-            animation-delay: .4s;
-        }
+            &:nth-of-type(2) {
+                animation-delay: .2s;
+            }
 
-        @{this}__like-button.-infinite &:nth-of-type(4) {
-            animation-delay: .8s;
+            &:nth-of-type(3) {
+                animation-delay: .4s;
+            }
+
+            &:nth-of-type(4) {
+                animation-delay: .8s;
+            }
         }
     }
 
@@ -161,7 +187,7 @@
         color: #fff;
         line-height: 3.8rem;
 
-        @{this}__like-button.-infinite & {
+        @{this}__like & {
             color: #f24445;
             line-height: 3.6rem;
         }
@@ -180,11 +206,11 @@
 
     100%    {
         opacity: 0;
-        transform: translate(0, -4rem) scale(1.2);
+        transform: translate(0, -8rem) scale(1.2);
     }
 }
 
-@keyframes likey-odd {
+@keyframes likey-left {
     0%      {
         opacity: 0;
     }
@@ -195,11 +221,11 @@
 
     100%    {
         opacity: 0;
-        transform: translate(1rem, -6rem) scale(1.2);
+        transform: translate(.4rem, -8rem) scale(1.2);
     }
 }
 
-@keyframes likey-even {
+@keyframes likey-right {
     0%      {
         opacity: 0;
     }
@@ -210,6 +236,6 @@
 
     100%    {
         opacity: 0;
-        transform: translate(-2rem, -4rem) scale(1.2);
+        transform: translate(-.4rem, -8rem) scale(1.2);
     }
 }
