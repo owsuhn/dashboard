@@ -36,7 +36,6 @@ $(document).ready(function(){
         };
     });
     // wheel
-    // document.getElementById('wheel-area').addEventListener('wheel', function(e){
     document.querySelector('.roll__content.-wheel').addEventListener('wheel', function(e){
         document.body.style.overflow = 'hidden';
         var _this = $(this),
@@ -44,20 +43,19 @@ $(document).ready(function(){
         // wheel down
         if (_wheelDetect > 0) {
             _wheelValue += 10;
-            _this.addClass('-active');
+            _this.removeClass('-passive').addClass('-active');
         // wheel up
         } else {
             _wheelValue -= 10;
-            _this.removeClass('-active');
+            _this.removeClass('-active').addClass('-passive');
         };
         _this.find(rollDice).css({
             'transition': '.2s',
             'transform': 'rotate3d(-1, 1, 0, ' + _wheelValue + 'deg)'
         });
-        // _this.siblings($(roll + '__guide')).find('.-emphasis').addClass('-active');
         $(window).click(function(){
             document.body.style.overflow = 'auto';
-            // _this.siblings($(roll + '__guide')).find('.-emphasis').removeClass('-active');
+            _this.removeClass('-active -passive');
         });
     });
 });

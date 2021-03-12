@@ -182,7 +182,8 @@
   font-weight: bold;
   color: red;
 }
-.roll__content.-active ~ .roll__guide .-emphasis {
+.roll__content.-active ~ .roll__guide .-emphasis,
+.roll__content.-passive ~ .roll__guide .-emphasis {
   animation: emphasis-blink 2s steps(2, end) infinite;
 }
 @keyframes wheel-down {

@@ -218,7 +218,8 @@
             color: red;
         }
 
-        @{this}__content.-active ~ & .-emphasis {
+        @{this}__content.-active ~ & .-emphasis,
+        @{this}__content.-passive ~ & .-emphasis {
             animation: emphasis-blink 2s steps(2, end) infinite;
         }
     }
