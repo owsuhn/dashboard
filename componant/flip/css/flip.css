@@ -36,7 +36,6 @@
   width: 12rem;
   height: 18rem;
   background-color: #333;
-  font-style: normal;
   transition: 0.2s;
   transform: scaleX(-1);
 }

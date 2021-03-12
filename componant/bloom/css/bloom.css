@@ -60,7 +60,6 @@
   width: 1.2rem;
   height: 1.2rem;
   background-color: #222429;
-  font-style: normal;
   transform: rotate(45deg);
 }
 .bloom__like-mark:before,
@@ -92,7 +91,6 @@
   left: 1.2rem;
   width: 3.2rem;
   height: 3.2rem;
-  font-style: normal;
   font-size: 2rem;
   text-align: center;
   line-height: 3.2rem;
