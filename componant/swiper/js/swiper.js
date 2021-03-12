@@ -44,10 +44,10 @@ $(document).ready(function(){
 		centeredSlides: true,
         loop: true,
 
-		autoplay: {
-			delay: 2000,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 2000,
+		// 	disableOnInteraction: false,
+		// },
 	});
     new Swiper('.swiper-container.-h.-controler', {
 		direction: 'horizontal',
@@ -149,10 +149,10 @@ $(document).ready(function(){
 		spaceBetween: 0,
         loop: true,
 
-		autoplay: {
-			delay: 2000,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 2000,
+		// 	disableOnInteraction: false,
+		// },
 	});
 	new Swiper('.swiper-container.-v.-controler', {
 		direction: 'vertical',
@@ -208,23 +208,63 @@ $(document).ready(function(){
 		},
 	});
 	// combination and development
-	var galleryThumbs = new Swiper('.swiper-container.-thumbs', {
+	var galleryList = new Swiper('.swiper-container.-gallery.-list', {
 		slidesPerView: 4,
 		watchSlidesProgress: true,
 		watchSlidesVisibility: true,
 	});
-	new Swiper('.swiper-container.-gallery', {
+	new Swiper('.swiper-container.-gallery.-item', {
 		thumbs: {
-			swiper: galleryThumbs,
+			swiper: galleryList,
 		},
 	});
-	var connected = new Swiper('.swiper-container.-connected', {
+	var connectEd = new Swiper('.swiper-container.-connect.-ed', {
 		direction: 'vertical',
 	});
-	var connection = new Swiper('.swiper-container.-connection', {
+	var connectTion = new Swiper('.swiper-container.-connect.-ion', {
 		direction: 'vertical',
 		mousewheel: true,
 	});
-	connection.controller.control = connected;
-	connected.controller.control = connection;
+	connectTion.controller.control = connectEd;
+	connectEd.controller.control = connectTion;
+	// mismatch - n(2) column horizon
+	var mismatchHTop = new Swiper('.swiper-container.-mismatch.-h.-top', {
+		direction: 'horizontal',
+	});
+	var mismatchHBottom = new Swiper('.swiper-container.-mismatch.-h.-bottom', {
+		direction: 'horizontal',
+	});
+	mismatchHTop.controller.control = mismatchHBottom;
+	mismatchHBottom.controller.control = mismatchHTop;
+	// mismatch - n(2) row horizon
+	var mismatchHLeft = new Swiper('.swiper-container.-mismatch.-h.-left', {
+		direction: 'horizontal',
+	});
+	var mismatchHRight = new Swiper('.swiper-container.-mismatch.-h.-right', {
+		direction: 'horizontal',
+	});
+	mismatchHLeft.controller.control = mismatchHRight;
+	mismatchHRight.controller.control = mismatchHLeft;
+	// mismatch - n(2) column vertical
+	var mismatchVTop = new Swiper('.swiper-container.-mismatch.-v.-top', {
+		direction: 'vertical',
+		mousewheel: true,
+	});
+	var mismatchVBottom = new Swiper('.swiper-container.-mismatch.-v.-bottom', {
+		direction: 'vertical',
+		mousewheel: true,
+	});
+	mismatchVTop.controller.control = mismatchVBottom;
+	mismatchVBottom.controller.control = mismatchVTop;
+	// mismatch - n(2) row vertical
+	var mismatchVLeft = new Swiper('.swiper-container.-mismatch.-v.-left', {
+		direction: 'vertical',
+		mousewheel: true,
+	});
+	var mismatchVRight = new Swiper('.swiper-container.-mismatch.-v.-right', {
+		direction: 'vertical',
+		mousewheel: true,
+	});
+	mismatchVLeft.controller.control = mismatchVRight;
+	mismatchVRight.controller.control = mismatchVLeft;
 });

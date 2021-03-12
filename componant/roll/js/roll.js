@@ -39,8 +39,8 @@ $(document).ready(function(){
     document.getElementById('wheel-area').addEventListener('wheel', function(e){
         document.body.style.overflow = 'hidden';
         var wheelDetect = Math.sign(e.deltaY);
-        if (wheelDetect > 0) _wheelValue -= 10; // wheel down
-        else _wheelValue += 10; // wheel up
+        if (wheelDetect > 0) _wheelValue += 10; // wheel down
+        else _wheelValue -= 10; // wheel up
         $(this).find(rollDice).css({
             'transition': '.2s',
             'transform': 'rotate3d(1, -1, 0, ' + _wheelValue + 'deg)'

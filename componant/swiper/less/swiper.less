@@ -42,24 +42,55 @@
             height: auto;
         }
 
-        &.-v,
-        &.-connection {
+        &.-v {
             height: 20rem;
         }
 
-        &.-thumbs {
+        &.-gallery.-list {
             border-top: 1px solid #666;
         }
 
-        &.-connected {
-            position: absolute;
-            z-index: 2;
-            top: -5rem;
-            right: 5rem;
-            width: 10rem;
-            height: 10rem;
-            border: 1px solid #666;
-            background-color: #222429;
+        &.-connect {
+            &.-ion {
+                height: 20rem;
+            }
+
+            &.-ed {
+                position: absolute;
+                z-index: 2;
+                top: -5rem;
+                right: 5rem;
+                width: 10rem;
+                height: 10rem;
+                border: 1px solid #666;
+                background-color: #222429;
+            }
+        }
+
+        &.-mismatch {
+            &.-top {
+                transform: rotate(180deg);
+            }
+
+            &.-top + &.-bottom {
+                border-top: 1px solid #666;
+            }
+
+            &.-left,
+            &.-right {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+                height: 20rem;
+            }
+
+            &.-left + &.-right {
+                border-left: 1px solid #666;
+            }
+
+            &.-left {
+                transform: rotate(180deg);
+            }
         }
     }
     
@@ -98,7 +129,7 @@
             flex-wrap: wrap;
         }
 
-        @{this}-container.-thumbs & {
+        @{this}-container.-gallery.-list & {
             padding: 5rem;
             border-right: 1px solid #666;
             font-size: 2rem;
@@ -108,13 +139,21 @@
             }
         }
 
-        @{this}-container.-connected & {
+        @{this}-container.-connect.-ed & {
             padding: 0;
             font-size: 2rem;
         }
+
+        @{this}-container.-mismatch.-top & {
+            transform: rotate(180deg)
+        }
+
+        @{this}-container.-mismatch.-left & {
+            transform: rotate(180deg)
+        }
     }
 
-    &-slide__complex-alinger {
+    &-slide__alinger {
         display: block;
         width: 25%;
         height: 20rem;

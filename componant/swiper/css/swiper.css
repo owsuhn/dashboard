@@ -32,14 +32,16 @@
 .swiper-container.-h.-column {
   height: auto;
 }
-.swiper-container.-v,
-.swiper-container.-connection {
+.swiper-container.-v {
   height: 20rem;
 }
-.swiper-container.-thumbs {
+.swiper-container.-gallery.-list {
   border-top: 1px solid #666;
 }
-.swiper-container.-connected {
+.swiper-container.-connect.-ion {
+  height: 20rem;
+}
+.swiper-container.-connect.-ed {
   position: absolute;
   z-index: 2;
   top: -5rem;
@@ -48,6 +50,25 @@
   height: 10rem;
   border: 1px solid #666;
   background-color: #222429;
+}
+.swiper-container.-mismatch.-top {
+  transform: rotate(180deg);
+}
+.swiper-container.-mismatch.-top + .swiper-container.-mismatch.-bottom {
+  border-top: 1px solid #666;
+}
+.swiper-container.-mismatch.-left,
+.swiper-container.-mismatch.-right {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  height: 20rem;
+}
+.swiper-container.-mismatch.-left + .swiper-container.-mismatch.-right {
+  border-left: 1px solid #666;
+}
+.swiper-container.-mismatch.-left {
+  transform: rotate(180deg);
 }
 .swiper-slide {
   display: flex;
@@ -81,19 +102,25 @@
 .swiper-container.-v.-column .swiper-slide {
   flex-wrap: wrap;
 }
-.swiper-container.-thumbs .swiper-slide {
+.swiper-container.-gallery.-list .swiper-slide {
   padding: 5rem;
   border-right: 1px solid #666;
   font-size: 2rem;
 }
-.swiper-container.-thumbs .swiper-slide:first-child {
+.swiper-container.-gallery.-list .swiper-slide:first-child {
   border-left: 1px solid #666;
 }
-.swiper-container.-connected .swiper-slide {
+.swiper-container.-connect.-ed .swiper-slide {
   padding: 0;
   font-size: 2rem;
 }
-.swiper-slide__complex-alinger {
+.swiper-container.-mismatch.-top .swiper-slide {
+  transform: rotate(180deg);
+}
+.swiper-container.-mismatch.-left .swiper-slide {
+  transform: rotate(180deg);
+}
+.swiper-slide__alinger {
   display: block;
   width: 25%;
   height: 20rem;
@@ -103,7 +130,7 @@
   text-align: center;
   line-height: 20rem;
 }
-.swiper-container.-v.-column.-col2 .swiper-slide__complex-alinger {
+.swiper-container.-v.-column.-col2 .swiper-slide__alinger {
   height: 10rem;
   line-height: 10rem;
 }
