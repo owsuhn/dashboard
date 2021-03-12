@@ -65,10 +65,10 @@
   margin: 0 auto;
   transform-style: preserve-3d;
 }
-.roll__dice.-passive {
+.roll__content.-wheel .roll__dice {
   transform: rotate3d(-1, 1, 0, 45deg);
 }
-.roll__dice.-passive:before {
+.roll__content.-wheel .roll__dice:before {
   content: "";
   display: block;
   position: absolute;
@@ -105,7 +105,7 @@
   background-color: purple;
   transform: rotateY(180deg) translateZ(5rem);
 }
-.roll__dice.-passive .roll__dice-face {
+.roll__content.-wheel .roll__dice-face {
   opacity: 0.4;
 }
 .roll__buttons {
@@ -182,8 +182,8 @@
   font-weight: bold;
   color: red;
 }
-.roll__guide .-emphasis.-active {
-  animation: blinks 2s steps(2, end) infinite;
+.roll__content.-active ~ .roll__guide .-emphasis {
+  animation: emphasis-blink 2s steps(2, end) infinite;
 }
 @keyframes wheel-down {
   0% {
@@ -205,7 +205,7 @@
     transform: translateY(-2rem);
   }
 }
-@keyframes blinks {
+@keyframes emphasis-blink {
   0% {
     color: red;
   }

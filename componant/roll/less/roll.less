@@ -78,7 +78,7 @@
         margin: 0 auto;
         transform-style: preserve-3d;
         
-        &.-passive {
+        @{this}__content.-wheel & {
             transform: rotate3d(-1, 1, 0, 45deg);
 
             &:before {
@@ -127,7 +127,7 @@
             transform: rotateY(180deg) translateZ(5rem);
         }
 
-        @{this}__dice.-passive & {
+        @{this}__content.-wheel & {
             opacity: .4;
         }
     }
@@ -216,10 +216,10 @@
             font-size: 1.2rem;
             font-weight: bold;
             color: red;
-            
-            &.-active {
-                animation: blinks 2s steps(2, end) infinite;
-            }
+        }
+
+        @{this}__content.-active ~ & .-emphasis {
+            animation: emphasis-blink 2s steps(2, end) infinite;
         }
     }
 }
@@ -249,7 +249,7 @@
     }
 }
 
-@keyframes blinks {
+@keyframes emphasis-blink {
     0%  {
         color: red;
     }

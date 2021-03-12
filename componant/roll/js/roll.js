@@ -4,7 +4,7 @@ $(document).ready(function(){
         rollDice = $(roll + '__dice'),
         rollButton = $(roll + '__button'),
         _clickCount = 0,
-        _wheelValue = 0;
+        _wheelValue = 45;
     // click
     rollButton.click(function(){
         var _this = $(this),
@@ -36,7 +36,8 @@ $(document).ready(function(){
         };
     });
     // wheel
-    document.getElementById('wheel-area').addEventListener('wheel', function(e){
+    // document.getElementById('wheel-area').addEventListener('wheel', function(e){
+    document.querySelector('.roll__content.-wheel').addEventListener('wheel', function(e){
         document.body.style.overflow = 'hidden';
         var _this = $(this),
             _wheelDetect = Math.sign(e.deltaY);
@@ -51,16 +52,12 @@ $(document).ready(function(){
         };
         _this.find(rollDice).css({
             'transition': '.2s',
-            'transform': 'rotate3d(1, -1, 0, ' + _wheelValue + 'deg)'
+            'transform': 'rotate3d(-1, 1, 0, ' + _wheelValue + 'deg)'
         });
-        
-
-        _this.siblings($(roll + '__guide')).find('.-emphasis').addClass('-active');
-
-
+        // _this.siblings($(roll + '__guide')).find('.-emphasis').addClass('-active');
         $(window).click(function(){
             document.body.style.overflow = 'auto';
-            _this.siblings($(roll + '__guide')).find('.-emphasis').removeClass('-active');
+            // _this.siblings($(roll + '__guide')).find('.-emphasis').removeClass('-active');
         });
     });
 });
