@@ -44,10 +44,10 @@ $(document).ready(function(){
 		centeredSlides: true,
         loop: true,
 
-		// autoplay: {
-		// 	delay: 2000,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
 	});
     new Swiper('.swiper-container.-h.-controler', {
 		direction: 'horizontal',
@@ -149,10 +149,10 @@ $(document).ready(function(){
 		spaceBetween: 0,
         loop: true,
 
-		// autoplay: {
-		// 	delay: 2000,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
 	});
 	new Swiper('.swiper-container.-v.-controler', {
 		direction: 'vertical',
