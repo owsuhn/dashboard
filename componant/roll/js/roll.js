@@ -14,8 +14,8 @@ $(document).ready(function(){
         if (_this.hasClass('-view')) {
             _clickCount += 1,
             _clickCount %= 2 ;
-            if (_clickCount !=0) _thisDiceFace.css('opacity', '.4');
-            else _thisDiceFace.css('opacity', '1');
+            if (_clickCount !=0) _thisDiceFace.css('opacity', '1');
+            else _thisDiceFace.css('opacity', '.4');
         } else {
             if (_thisDice.hasClass('-active')) {
                 alert('애니메이션이 이미 진행 중입니다.\n애니메이션 총 진행 시간(2초) 후에 다시 시도하여 주십시오.');
@@ -38,15 +38,29 @@ $(document).ready(function(){
     // wheel
     document.getElementById('wheel-area').addEventListener('wheel', function(e){
         document.body.style.overflow = 'hidden';
-        var wheelDetect = Math.sign(e.deltaY);
-        if (wheelDetect > 0) _wheelValue += 10; // wheel down
-        else _wheelValue -= 10; // wheel up
-        $(this).find(rollDice).css({
+        var _this = $(this),
+            _wheelDetect = Math.sign(e.deltaY);
+        // wheel down
+        if (_wheelDetect > 0) {
+            _wheelValue += 10;
+            _this.addClass('-active');
+        // wheel up
+        } else {
+            _wheelValue -= 10;
+            _this.removeClass('-active');
+        };
+        _this.find(rollDice).css({
             'transition': '.2s',
             'transform': 'rotate3d(1, -1, 0, ' + _wheelValue + 'deg)'
         });
+        
+
+        _this.siblings($(roll + '__guide')).find('.-emphasis').addClass('-active');
+
+
         $(window).click(function(){
             document.body.style.overflow = 'auto';
+            _this.siblings($(roll + '__guide')).find('.-emphasis').removeClass('-active');
         });
     });
 });

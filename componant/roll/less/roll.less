@@ -31,6 +31,42 @@
         padding: 10rem 0;
         border-top: 1px solid #666;
         border-bottom: 1px solid #666;
+
+        &.-wheel {
+            position: relative;
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 4rem;
+                width: 4rem;
+                height: 8rem;
+                margin: -4rem 0 0 0;
+                border: .4rem solid #fff;
+                border-radius: 2rem;
+                box-sizing: border-box;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 6rem;
+                width: .8rem;
+                height: .8rem;
+                margin: -.4rem -.4rem 0 0;
+                border-radius: 100%;
+                background-color: #fff;
+                animation: wheel-down .8s linear infinite;
+            }
+
+            &.-active:after {
+                animation: wheel-up .8s linear infinite;
+            }
+        }
     }
 
     &__dice {
@@ -41,11 +77,22 @@
         height: 10rem;
         margin: 0 auto;
         transform-style: preserve-3d;
-        transform: rotate3d(-1, 1, 0, 45deg);
+        
+        &.-passive {
+            transform: rotate3d(-1, 1, 0, 45deg);
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                border: 1px solid red;
+            }
+        }
     }
 
     &__dice-face {
-        opacity: .4;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -78,6 +125,10 @@
         &.-back {
             background-color: purple;
             transform: rotateY(180deg) translateZ(5rem);
+        }
+
+        @{this}__dice.-passive & {
+            opacity: .4;
         }
     }
 
@@ -165,6 +216,45 @@
             font-size: 1.2rem;
             font-weight: bold;
             color: red;
+            
+            &.-active {
+                animation: blinks 2s steps(2, end) infinite;
+            }
         }
+    }
+}
+
+// animation.zip
+@keyframes wheel-down {
+    0%  {
+        opacity: 1;
+        transform: translateY(-2rem);
+    }
+
+    100%    {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+}
+
+@keyframes wheel-up {
+    0%  {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    100%    {
+        opacity: 1;
+        transform: translateY(-2rem);
+    }
+}
+
+@keyframes blinks {
+    0%  {
+        color: red;
+    }
+
+    100%    {
+        color: rgba(255, 0, 0, .2);
     }
 }

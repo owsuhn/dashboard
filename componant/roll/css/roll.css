@@ -24,6 +24,38 @@
   border-top: 1px solid #666;
   border-bottom: 1px solid #666;
 }
+.roll__content.-wheel {
+  position: relative;
+}
+.roll__content.-wheel:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 4rem;
+  width: 4rem;
+  height: 8rem;
+  margin: -4rem 0 0 0;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  box-sizing: border-box;
+}
+.roll__content.-wheel:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 6rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: -0.4rem -0.4rem 0 0;
+  border-radius: 100%;
+  background-color: #fff;
+  animation: wheel-down 0.8s linear infinite;
+}
+.roll__content.-wheel.-active:after {
+  animation: wheel-up 0.8s linear infinite;
+}
 .roll__dice {
   display: flex;
   justify-content: center;
@@ -32,10 +64,19 @@
   height: 10rem;
   margin: 0 auto;
   transform-style: preserve-3d;
+}
+.roll__dice.-passive {
   transform: rotate3d(-1, 1, 0, 45deg);
 }
+.roll__dice.-passive:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid red;
+}
 .roll__dice-face {
-  opacity: 0.4;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -63,6 +104,9 @@
 .roll__dice-face.-back {
   background-color: purple;
   transform: rotateY(180deg) translateZ(5rem);
+}
+.roll__dice.-passive .roll__dice-face {
+  opacity: 0.4;
 }
 .roll__buttons {
   margin-top: 10rem;
@@ -137,4 +181,35 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: red;
+}
+.roll__guide .-emphasis.-active {
+  animation: blinks 2s steps(2, end) infinite;
+}
+@keyframes wheel-down {
+  0% {
+    opacity: 1;
+    transform: translateY(-2rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+}
+@keyframes wheel-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-2rem);
+  }
+}
+@keyframes blinks {
+  0% {
+    color: red;
+  }
+  100% {
+    color: rgba(255, 0, 0, 0.2);
+  }
 }
