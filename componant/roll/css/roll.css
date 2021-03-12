@@ -1,0 +1,139 @@
+@charset "utf-8";
+.roll {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #222429;
+}
+.roll__list {
+  margin-top: 5.6rem;
+}
+.roll__item + .roll__item {
+  margin-top: 5.6rem;
+}
+.roll__title {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  color: #999;
+  line-height: 2rem;
+}
+.roll__content {
+  margin-top: 1.2rem;
+  padding: 10rem 0;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+.roll__dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  font-style: normal;
+  transform-style: preserve-3d;
+}
+.roll__dice-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.roll__dice-face.-front {
+  background-color: red;
+  transform: translateZ(5rem);
+}
+.roll__dice-face.-top {
+  background-color: orange;
+  transform: rotateX(90deg) translateZ(5rem);
+}
+.roll__dice-face.-right {
+  background-color: yellow;
+  transform: rotateY(90deg) translateZ(5rem);
+}
+.roll__dice-face.-bottom {
+  background-color: green;
+  transform: rotateX(-90deg) translateZ(5rem);
+}
+.roll__dice-face.-left {
+  background-color: blue;
+  transform: rotateY(-90deg) translateZ(5rem);
+}
+.roll__dice-face.-back {
+  background-color: purple;
+  transform: rotateY(180deg) translateZ(5rem);
+}
+.roll__buttons {
+  margin-top: 10rem;
+  text-align: center;
+}
+.roll__buttons:before {
+  content: "roll with";
+  display: inline-block;
+  vertical-align: top;
+  margin: 1.2rem 1.2rem 0 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+  letter-spacing: 1px;
+}
+.roll__button {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 1.2rem;
+  padding: 1.2rem 2rem;
+  background-color: #0f0f13;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.roll__button:before {
+  content: "↺";
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.4rem 0 0;
+}
+.roll__button + .roll__button {
+  margin-left: 1.2rem;
+}
+.roll__button.-view {
+  position: relative;
+  margin-left: 11.6rem;
+}
+.roll__button.-view:before {
+  content: "✻";
+}
+.roll__button.-view:after {
+  content: "and view";
+  display: block;
+  position: absolute;
+  top: 1.2rem;
+  left: -9.2rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+  letter-spacing: 1px;
+}
+.roll__button:hover,
+.roll__button:focus {
+  box-shadow: 0 0 0 0.2rem #222429, 0 0 0 0.4rem #0f0f13;
+}
+.roll__guide {
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #999;
+  letter-spacing: 1px;
+}
+.roll__guide .-emphasis {
+  padding-left: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: red;
+}
