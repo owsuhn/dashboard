@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+.load {
+    @this: .load;
+
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #222429;
+
+    &__list {
+        margin-top: 5.6rem;
+    }
+
+    &__item {
+        & + & {
+            margin-top: 5.6rem;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        color: #999;
+        line-height: 2rem;
+    }
+
+    &__content {
+        margin-top: 1.2rem;
+    }
+
+    // &__dot-list {}
+
+    &__dot-item {
+        display: inline-block;
+        vertical-align: top;
+
+        & + & {
+            margin-left: 1rem;
+        }
+
+        @{this}__dot-list.-regular & {
+            animation: dot-regular .4s alternate infinite;
+        
+            &:nth-of-type(1) {
+                animation-delay: -.4s;
+            }
+    
+            &:nth-of-type(2) {
+                animation-delay: -.3s;
+            }
+    
+            &:nth-of-type(3) {
+                animation-delay: -.2s;
+            }
+    
+            &:nth-of-type(4) {
+                animation-delay: -.1s;
+            }
+        }
+
+        // @{this}__dot-list.-muster & {
+        //     animation: dot-muster .4s alternate infinite;
+        
+        //     &:nth-of-type(1) {
+        //         animation-delay: -.4s;
+        //     }
+    
+        //     &:nth-of-type(2) {
+        //         animation-delay: -.3s;
+        //     }
+    
+        //     &:nth-of-type(3) {
+        //         animation-delay: -.2s;
+        //     }
+    
+        //     &:nth-of-type(4) {
+        //         animation-delay: -.1s;
+        //     }
+        // }
+    }
+
+    &__dot {
+        display: inline-block;
+        vertical-align: top;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        background-color: #fff;
+    }
+}
+
+// animation.zip
+@keyframes dot-regular {
+    0%      {
+        transform: translateY(0);
+    }
+
+    100%    {
+        transform: translateY(1rem);
+    }
+}
+
+// @keyframes dot-muster {
+//     0%      {
+//         transform: translateY(0);
+//     }
+
+//     100%    {
+//         transform: translateY(1rem);
+//     }
+// }
