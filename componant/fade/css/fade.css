@@ -1,0 +1,23 @@
+@charset "utf-8";
+.fade {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #222429;
+}
+.fade__list {
+  margin-top: 5.6rem;
+}
+.fade__item + .fade__item {
+  margin-top: 5.6rem;
+}
+.fade__title {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  color: #999;
+  line-height: 2rem;
+}
+.fade__content {
+  margin-top: 1.2rem;
+}
