@@ -107,6 +107,30 @@
                 0 0 0 .4rem #0f0f13;
         }
     }
+
+    &__content {
+        margin-top: 1.2rem;
+
+        &.-track {
+            width: 40rem;
+            border-bottom: 1px dashed  #666;
+        }
+    }
+
+    &__runner {
+        display: inline-block;
+        vertical-align: top;
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 3.2rem;
+        transform: rotateY(180deg);
+
+        @{this}__content.-bnf & {
+            animation: bnf 4s linear infinite;
+        }
+    }
 }
 
 // animation.zip
@@ -167,5 +191,27 @@
     
     100%	{
         transform: scaleX(-1);
+    }
+}
+
+@keyframes bnf {
+    0%      {
+        margin-left: 0rem;
+        transform: rotateY(180deg);
+    }
+
+    50%      {
+        margin-left: 36.8rem;
+        transform: rotateY(180deg);
+    }
+
+    51%      {
+        margin-left: 36.8rem;
+        transform: rotateY(0deg);
+    }
+
+    100%      {
+        margin-left: 0rem;
+        transform: rotateY(0deg);
     }
 }

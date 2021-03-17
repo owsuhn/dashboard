@@ -14,15 +14,46 @@
     <script src="js/fade.js"></script>
 </head>
 <body>
+    <!-- 
+        순차적으로 등장 + 순차적으로 퇴장(바로)
+        순차적으로 등장 + 순차적으로 퇴장(딜레이)
+
+        순차적으로 등장 + 순차적으로 퇴장(깜빡거리며)
+        
+        순차적으로 등장 + 일괄 퇴장(깜빡/부드럽게)
+        일괄 등장 + 순차적으로 퇴장(깜빡/부드럽게)
+
+        controler
+            scroll
+            click
+     -->
     <div class="fade">
         <div class="dashboard__article">
-            <h4 class="dashboard__article-title">111</h4>
+            <h4 class="dashboard__article-title">fireworks</h4>
             <p class="dashboard__publish-date">2021.3.16 23:59 pm</p>
             <ul class="fade__list">
                 <li class="fade__item">
-                    <p class="fade__title">111</p>
+                    <p class="fade__title">regular</p>
                     <div class="fade__content">
-                        111
+                        <ul aria-hidden="true" class="fade__bird-list -regular">
+                            <li class="fade__bird-item"><i class="fade__bird">🔥</i></li> <!-- 🤡👹👻👽👾 -->
+                            <li class="fade__bird-item"><i class="fade__bird">🔥</i></li>
+                            <li class="fade__bird-item"><i class="fade__bird">🔥</i></li>
+                            <li class="fade__bird-item"><i class="fade__bird">🔥</i></li>
+                            <li class="fade__bird-item"><i class="fade__bird">🔥</i></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fade__item">
+                    <p class="fade__title">regular</p>
+                    <div class="fade__content">
+                        <ul aria-hidden="true" class="fade__bird-list -irregular">
+                            <li class="fade__bird-item"><i class="fade__bird">🔥</i></li>
+                            <li class="fade__bird-item"><i class="fade__bird">🔥</i></li>
+                            <li class="fade__bird-item"><i class="fade__bird">🔥</i></li>
+                            <li class="fade__bird-item"><i class="fade__bird">🔥</i></li>
+                            <li class="fade__bird-item"><i class="fade__bird">🔥</i></li>
+                        </ul>
                     </div>
                 </li>
             </ul>

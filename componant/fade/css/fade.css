@@ -21,3 +21,63 @@
 .fade__content {
   margin-top: 1.2rem;
 }
+.fade__bird-item {
+  display: inline-block;
+  vertical-align: top;
+}
+.fade__bird-list.-regular .fade__bird-item {
+  animation: fade-regular 1s linear infinite;
+}
+.fade__bird-list.-regular .fade__bird-item:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+.fade__bird-list.-regular .fade__bird-item:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+.fade__bird-list.-regular .fade__bird-item:nth-of-type(4) {
+  animation-delay: 0.3s;
+}
+.fade__bird-list.-regular .fade__bird-item:nth-of-type(5) {
+  animation-delay: 0.4s;
+}
+.fade__bird-list.-irregular .fade__bird-item {
+  animation: fade-irregular 1s linear infinite;
+}
+.fade__bird-list.-irregular .fade__bird-item:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+.fade__bird-list.-irregular .fade__bird-item:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+.fade__bird-list.-irregular .fade__bird-item:nth-of-type(4) {
+  animation-delay: 0.3s;
+}
+.fade__bird-list.-irregular .fade__bird-item:nth-of-type(5) {
+  animation-delay: 0.4s;
+}
+.fade__bird {
+  display: inline-block;
+  vertical-align: top;
+  width: 3.2rem;
+  height: 3.2rem;
+  font-size: 2rem;
+  line-height: 3.2rem;
+}
+@keyframes fade-regular {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes fade-regular {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

@@ -29,4 +29,83 @@
     &__content {
         margin-top: 1.2rem;
     }
+
+    // &__bird-list {}
+
+    &__bird-item {
+        display: inline-block;
+        vertical-align: top;
+
+        @{this}__bird-list.-regular & {
+            animation: fade-regular 1s linear infinite;
+
+            &:nth-of-type(2) {
+                animation-delay: .1s;
+            }
+
+            &:nth-of-type(3) {
+                animation-delay: .2s;
+            }
+
+            &:nth-of-type(4) {
+                animation-delay: .3s;
+            }
+
+            &:nth-of-type(5) {
+                animation-delay: .4s;
+            }
+        }
+
+        @{this}__bird-list.-irregular & {
+            animation: fade-irregular 1s linear infinite;
+
+            &:nth-of-type(2) {
+                animation-delay: .1s;
+            }
+
+            &:nth-of-type(3) {
+                animation-delay: .2s;
+            }
+
+            &:nth-of-type(4) {
+                animation-delay: .3s;
+            }
+
+            &:nth-of-type(5) {
+                animation-delay: .4s;
+            }
+        }
+    }
+
+    &__bird {
+        display: inline-block;
+        vertical-align: top;
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 2rem;
+        line-height: 3.2rem;
+    }
+}
+
+// animation.zip
+@keyframes fade-regular {
+    0%,
+    100%      {
+        opacity: 0;
+    }
+
+    50%    {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-regular {
+    0%,
+    100%      {
+        opacity: 0;
+    }
+
+    50%    {
+        opacity: 1;
+    }
 }
