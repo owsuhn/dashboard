@@ -9,9 +9,6 @@
     <link href="../../common/css/common.css" rel="stylesheet" />
     <link href="../../resource/css/style.css" rel="stylesheet" />
     <link href="css/load.css" rel="stylesheet" />
-
-    <script src="../../common/js/jquery-1.11.0.min.js"></script>
-    <script src="js/load.js"></script>
 </head>
 <body>
     <div class="load">
@@ -19,6 +16,35 @@
             <h4 class="dashboard__article-title">dot</h4>
             <p class="dashboard__publish-date">2021.3.15 23:59 pm</p>
             <ul class="load__list">
+                <li class="load__item">
+                    <p class="load__title">blink(duration > delay)</p>
+                    <div class="load__content">
+                        <ul aria-hidden="true" class="load__dot-list -blink">
+                            <li class="load__dot-item"><span class="-offscreen">*</span></li>
+                            <li class="load__dot-item"><span class="-offscreen">*</span></li>
+                            <li class="load__dot-item"><span class="-offscreen">*</span></li>
+                            <li class="load__dot-item"><span class="-offscreen">*</span></li>
+                            <li class="load__dot-item"><span class="-offscreen">*</span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="load__item">
+                    <p class="load__title">blink(duration = delay && duration &lt; delay) - triple</p>
+                    <div class="load__content">
+                        <ul aria-hidden="true" class="load__dot-list -triple">
+                            <li class="load__dot-item"><span class="-offscreen">*</span></li>
+                        </ul>
+                    </div>
+                    <!--
+                        듀레이션이 각 딜레이의 총 합보다 크면 문제 없이 작동
+                        단, 각 딜레이가 일정해야 부드럽게 구동 가능
+                        그러나, 듀레이션이 각 딜레이의 총 합과 같거나 작을 경우 어중띄는 경우 발생
+                        그럴 경우(특히 3개의 경우 심각한 문제 발생, 3/100이 딱 떨어지지 않기 때문)
+                        이 때에는 하나의 아이템과 해당 아이템의 가상 선택자 2개를 동일한 형태로 생성하여
+                        기본 값을 각각 부여한 후 듀레이션이나 딜레이를 조정하지 않고
+                        애니메이션 진행 %로 컨트롤하는 것이 오류를 줄이는 방법
+                    -->
+                </li>
                 <li class="load__item">
                     <p class="load__title">wave</p>
                     <div class="load__content">
@@ -115,11 +141,78 @@
                         </div>
                     </div>
                 </li>
+                <li class="load__item">
+                    <p class="load__title">parallax</p>
+                    <div class="load__content -space -small">
+                        <div aria-hidden="true" class="load__ring-list -parallax">
+                            <div class="load__ring-item"><span class="-offscreen">*</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="load__item">
+                    <p class="load__title">wave</p>
+                    <div class="load__content">
+                        <div aria-hidden="true" class="load__ring-list -wave">
+                            <div class="load__ring-item"><span class="-offscreen">*</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="load__item">
+                    <p class="load__title">volume</p>
+                    <div class="load__content ">
+                        <div aria-hidden="true" class="load__ring-list -volume">
+                            <div class="load__ring-item"><span class="-offscreen">*</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="load__item">
+                    <p class="load__title">rotate of a planet</p>
+                    <div class="load__content">
+                        <div aria-hidden="true" class="load__ring-list -rotate">
+                            <div class="load__ring-item"><span class="-offscreen">*</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="load__item">
+                    <p class="load__title">revolve of a planet</p>
+                    <div class="load__content">
+                        <div aria-hidden="true" class="load__ring-list -revolve">
+                            <div class="load__ring-item"><span class="-offscreen">*</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="load__item">
+                    <p class="load__title">swimming fish</p>
+                    <div class="load__content">
+                        <div aria-hidden="true" class="load__ring-list -fish">
+                            <div class="load__ring-item"><span class="-offscreen">*</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="load__item">
+                    <p class="load__title">light a lamp</p>
+                    <div class="load__content -space -medium">
+                        <ul aria-hidden="true" class="load__ring-list -lamp">
+                            <li class="load__ring-item"><span class="-offscreen">*</span></li>
+                            <li class="load__ring-item"><span class="-offscreen">*</span></li>
+                            <li class="load__ring-item"><span class="-offscreen">*</span></li>
+                            <li class="load__ring-item"><span class="-offscreen">*</span></li>
+                            <li class="load__ring-item"><span class="-offscreen">*</span></li>
+                            <li class="load__ring-item"><span class="-offscreen">*</span></li>
+                            <li class="load__ring-item"><span class="-offscreen">*</span></li>
+                            <li class="load__ring-item"><span class="-offscreen">*</span></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
             <div class="dashboard__article-refer">
-                <a href="https://codepen.io/vineethtrv/pen/NWxZqMM" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading</a>
-                <a href="https://codepen.io/saadeghi/pen/IBhfJ" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading</a>
-                <a href="https://codepen.io/saadeghi/pen/IBhfJ" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading</a>
+                <a href="https://codepen.io/vineethtrv/pen/NWxZqMM" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading</a><br/>
+                <a href="https://codepen.io/saadeghi/pen/IBhfJ" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading</a><br/>
+                <a href="https://codepen.io/saadeghi/pen/IBhfJ" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading</a><br/>
+                <a href="https://codepen.io/marvick/pen/NAozzy" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading parallax</a><br/>
+                <a href="https://codepen.io/bernethe/pen/dorozd" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading</a><br/>
+                <a href="https://codepen.io/rickzanutta/pen/yjaeB" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading</a><br/>
+                <a href="https://codepen.io/Keyamoon/pen/aHxuq" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading</a>
             </div>
         </div>
         <div class="dashboard__article">
@@ -139,9 +232,23 @@
                         </div>
                     </div>
                 </li>
+                <li class="load__item">
+                    <p class="load__title">spin</p>
+                    <div class="load__content">
+                        <div aria-hidden="true" class="load__text-list -spin">
+                            <div class="load__text-item">o</div>
+                            <div class="load__text-item">w</div>
+                            <div class="load__text-item">s</div>
+                            <div class="load__text-item">u</div>
+                            <div class="load__text-item">h</div>
+                            <div class="load__text-item">n</div>
+                        </div>
+                    </div>
+                </li>
             </ul>
             <div class="dashboard__article-refer">
-                <a href="https://codepen.io/dissimulate/pen/vlfyA" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading</a>
+                <a href="https://codepen.io/dissimulate/pen/vlfyA" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading</a><br/>
+                <a href="https://codepen.io/hll33r/pen/vqzgE" target="_blank" class="dashboard__refer-link">codepen - search keyword: loading text</a>
             </div>
         </div>
     </div>

@@ -28,6 +28,17 @@
 
     &__content {
         margin-top: 1.2rem;
+
+        &.-space {
+            &.-small {
+                min-height: 4rem;
+            }
+
+            &.-medium {
+                padding: 1.5rem;
+            }
+            
+        }
     }
 
     &__dot-list {
@@ -38,6 +49,75 @@
     }
 
     &__dot-item {
+        @{this}__dot-list.-blink & {
+            display: inline-block;
+            opacity: 0;
+            vertical-align: top;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 100%;
+            background-color: #fff;
+            animation: dot-blink 1s linear infinite;
+
+            &:nth-of-type(2) {
+                animation-delay: .2s;
+            }
+
+            &:nth-of-type(3) {
+                animation-delay: .4s;
+            }
+
+            &:nth-of-type(4) {
+                animation-delay: .6s;
+            }
+
+            &:nth-of-type(5) {
+                animation-delay: .8s;
+            }
+        }
+
+        @{this}__dot-list.-blink & + &,
+        @{this}__dot-list.-wave & + &,
+        @{this}__dot-list.-scale & + & {
+            margin-left: 1rem;
+        }
+
+        @{this}__dot-list.-triple & {
+            display: inline-block;
+            vertical-align: top;
+            opacity: 1;
+            position: relative;
+            width: 1rem;
+            height: 1rem;
+            margin: 0 2rem;
+            border-radius: 100%;
+            background-color: #fff;
+            animation: dot-blink 1s linear infinite;
+            
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                opacity: .25;
+                position: absolute;
+                top: 0;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 100%;
+                background-color: #fff;
+            }
+
+            &:before {
+                left: -2rem;
+                animation: dot-blink-before 1s linear infinite;
+            }
+
+            &:after {
+                right: -2rem;
+                animation: dot-blink-after 1s linear infinite;
+            }
+        }
+
         @{this}__dot-list.-wave &,
         @{this}__dot-list.-scale & {
             display: inline-block;
@@ -46,11 +126,6 @@
             height: 1rem;
             border-radius: 100%;
             background-color: #333;
-        }
-
-        @{this}__dot-list.-wave & + &,
-        @{this}__dot-list.-scale & + & {
-            margin-left: 1rem;
         }
 
         @{this}__dot-list.-wave & {
@@ -221,6 +296,50 @@
             border-radius: 100%;
             animation: ring-spin 2s linear infinite;
         }
+
+        &.-parallax {
+            clip: rect(0, 4rem, 4rem, 2rem);
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            animation: ring-spin 2s linear infinite;
+        }
+
+        &.-revolve {
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 1.5rem;
+                left: 1.5rem;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 100%;
+                background-color: #fff;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: -2rem;
+                bottom: -1rem;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 100%;
+                background-color: #fff;
+            }
+        }
+
+        &.-lamp {
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+        }
     }
     
     &__ring-item {
@@ -280,6 +399,212 @@
             height: 2rem;
             background-color: #222429;
         }
+
+        @{this}__ring-list.-parallax & {
+            clip: rect(0, 4rem, 4rem, 2rem);
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            box-shadow: inset #fff 0 0 0 .5rem;
+            animation: ring-parallax 2s ease-in-out infinite;
+        }
+
+        @{this}__ring-list.-wave & {
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+            
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 1px solid #fff;
+                border-radius: 50%;
+            }
+
+            &:before {
+                opacity: 1;
+                transform: scale(.5, .5);
+                animation: ring-wave-outside .6s infinite linear;
+            }
+
+            &:after {
+                opacity: 0;
+                transform: scale(.25, .25);
+                animation: ring-wave-inside .6s infinite linear;
+            }
+        }
+
+        @{this}__ring-list.-volume & {
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 100%;
+            background-color: #fff;
+            animation: ring-spin 1s linear infinite;
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 1rem;
+                left: 1rem;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 100%;
+                background-color: #222429;
+            }
+        }
+
+        @{this}__ring-list.-rotate & {
+            width: 4rem;
+            height: 4rem;
+            border-right: 0 solid #fff;
+            border-left: 0 solid #fff;
+            border-radius: 50%;
+            animation: ring-rotate 1s infinite linear;
+        }
+
+        @{this}__ring-list.-revolve & {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            animation: ring-spin 1s linear infinite;
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 100%;
+                background-color: #fff;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: .5rem;
+                width: .5rem;
+                height: .5rem;
+                border-radius: 100%;
+                background-color: #fff;
+            }
+        }
+
+        @{this}__ring-list.-fish & {
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+            border: 1px solid transparent;
+            border-top-color: #fff;
+            border-radius: 100%;
+            transform: rotate(0deg);
+            animation: ring-spin 1s linear infinite;
+
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                border: 1px solid transparent;
+                border-top-color: #fff;
+                border-radius: 100%;
+            }
+
+            &:before {
+                top: .3rem;
+                left: .3rem;
+                width: 3rem;
+                height: 3rem;
+                transform: rotate(180deg);
+                animation: ring-fish-outside 1s linear infinite;
+            }
+
+            &:after {
+                top: .8rem;
+                left: .8rem;
+                width: 2rem;
+                height: 2rem;
+                transform: rotate(45deg);
+                animation: ring-fish-inside 1s linear infinite;
+            }
+        }
+
+        @{this}__ring-list.-lamp & {
+            position: absolute;
+            width: 1rem;
+            height: 2rem;
+            border-radius: 5rem;
+            // animation: ring-lamp 1.6s steps(8) infinite;
+            animation: ring-lamp 1.6s linear infinite;
+
+            &:nth-of-type(1) {
+                top: -1rem;
+                left: -.4rem;
+                transform: rotate(-45deg);
+                animation-delay: 0s;
+            }
+
+            &:nth-of-type(2) {
+                top: -1.5rem;
+                left: 1.5rem;
+                transform: rotate(0deg);
+                animation-delay: .2s;
+            }
+            
+            &:nth-of-type(3) {
+                top: -1rem;
+                right: -.4rem;
+                transform: rotate(45deg);
+                animation-delay: .4s;
+            }
+
+            &:nth-of-type(4) {
+                top: .9rem;
+                right: -1rem;
+                transform: rotate(90deg);
+                animation-delay: .6s;
+            }
+
+            &:nth-of-type(5) {
+                right: -.5rem;
+                bottom: -1rem;
+                transform: rotate(135deg);
+                animation-delay: .8s;
+            }
+            
+            &:nth-of-type(6) {
+                bottom: -1.5rem;
+                left: 1.5rem;
+                transform: rotate(180deg);
+                animation-delay: 1s;
+            }
+
+            &:nth-of-type(7) {
+                bottom: -1rem;
+                left: -.5rem;
+                transform: rotate(-135deg);
+                animation-delay: 1.2s;
+            }
+
+            &:nth-of-type(8) {
+                top: .9rem;
+                left: -1rem;
+                transform: rotate(-90deg);
+                animation-delay: 1.4s;
+            }
+        }
     }
 
     &__text-list {
@@ -326,10 +651,98 @@
                 animation-delay: 0s;
             }
         }
+
+        @{this}__text-list.-spin & {
+            display: inline-block;
+            vertical-align: top;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #fff;
+            line-height: 2rem;
+            animation: text-spin 1s linear infinite;
+
+            
+            &:nth-of-type(2) {
+                animation-delay: .1s;
+            }
+
+            &:nth-of-type(3) {
+                animation-delay: .2s;
+            }
+
+            &:nth-of-type(4) {
+                animation-delay: .3s;
+            }
+
+            &:nth-of-type(5) {
+                animation-delay: .4s;
+            }
+
+            &:nth-of-type(6) {
+                animation-delay: .5s;
+            }
+        }
     }
 }
 
 // animation.zip
+@keyframes dot-blink {
+    0%      {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dot-blink {
+    0%      {
+        opacity: 1;
+    }
+
+    33%     {
+        opacity: .25;
+    }
+
+    66%     {
+        opacity: .25;
+    }
+
+    100%    {
+        opacity: 1;
+    }
+}
+
+@keyframes dot-blink-before {
+    33%     {
+        opacity: 0.25;
+    }
+
+    66%     {
+        opacity: 1;
+    }
+
+    100%    {
+        opacity: 0.25;
+    }
+}
+
+@keyframes dot-blink-after {
+    0%      {
+        opacity: .25;
+    }
+
+    33%     {
+        opacity: 1;
+    }
+
+    66%     {
+        opacity: .25;
+    }
+}
+
 @keyframes dot-wave {
     0%      {
         transform: translateY(0);
@@ -456,6 +869,94 @@
     }
 }
 
+@keyframes ring-parallax {
+    0%      {
+        transform: rotate(-180deg);
+    }
+
+    100%    {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes ring-wave-outside {
+    from {
+        opacity: 1;
+        transform: scale(.5, .5);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes ring-wave-inside {
+    from {
+        opacity: 0;
+        transform: scale(.25, .25);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(.5, .5);
+    }
+}
+
+@keyframes ring-rotate {
+    0% {
+        border-right: 0 solid #fff;
+        border-left: 0 solid #fff;
+    }
+
+    49% {
+        border-right: 0 solid #fff;
+        border-left: 4rem solid #fff;
+    }
+
+    51% {
+        border-right: 4rem solid #fff;
+        border-left: 0 solid #fff;
+    }
+
+    100% {
+        border-right: 0 solid #fff;
+        border-left: 0 solid #fff;
+    }
+}
+
+@keyframes ring-fish-outside {
+    0%      {
+        transform: rotate(360deg);
+    }
+
+    100%    {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes ring-fish-inside {
+    0%      {
+        transform: rotate(45deg);
+    }
+
+    100%    {
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes ring-lamp {
+    0%      {
+        background: none;
+        box-shadow: none;
+    }
+
+    100%    {
+        background-color: #fff;
+        box-shadow: 0 0 1rem #fff;
+    }
+}
+
 @keyframes text-fly {
     0%      {
         opacity: 0;
@@ -478,5 +979,19 @@
         opacity: 0;
         left: 100%;
         transform: rotate(-180deg);
+    }
+}
+
+@keyframes text-spin {
+    0%      {
+        transform: rotate(0deg);
+    }
+
+    50%     {
+        transform: rotate(360deg);
+    }
+
+    100%    {
+        transform: rotate(360deg);
     }
 }
