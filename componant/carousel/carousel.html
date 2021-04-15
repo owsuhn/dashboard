@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="../../resource/css/style.css" rel="stylesheet" />
+    <link href="css/carousel.css" rel="stylesheet" />
+
+    <script src="../../common/js/jquery-1.11.0.min.js"></script>
+    <script src="js/carousel.js"></script>
+</head>
+<body>
+    <div class="carousel">        
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">vertical</h4>
+            <p class="dashboard__publish-date">2021.3.7 23:59</p>
+            <ul class="carousel__list">
+                <li class="carousel__item">
+                    <p class="carousel__title">one at a one</p>
+                    <div class="carousel__content -v">
+                        <div id="vertical-carousel" class="carousel__slide -vertical">
+                            <ul class="carousel__slide-track">
+                                <li class="carousel__slide-item -active">A</li>
+                                <li class="carousel__slide-item">B</li>
+                            </ul>
+                            <p class="carousel__slide-alert">auto play has <span>stop</span></p>
+                        </div>
+                    </div>
+                    <div class="carousel__buttons">
+                        <button type="button" aria-controls="vertical-carousel" aria-disabled="false" class="carousel__button -stop">stop</button>
+                        <button type="button" aria-controls="vertical-carousel" aria-disabled="true" class="carousel__button -play">play</button>
+                    </div>
+                    <p aria-hidden="ture" class="carousel__option">
+                        n(4) at a one - css option
+                        <span class="carousel__option-tab">
+                            .slide-item {
+                                <span class="carousel__option-tab">
+                                    height: slide-track.height() / n;
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="carousel__option">
+                        slide up of n(4) - js option
+                        <span class="carousel__option-tab">
+                            .aniamate.({
+                                <span class="carousel__option-tab">
+                                    'margin-*', n(4).height()
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">horizon</h4>
+            <p class="dashboard__publish-date">2021.3.8 17:15</p>
+            <ul class="carousel__list">
+                <li class="carousel__item">
+                    <p class="carousel__title">one at a one</p>
+                    <div class="carousel__content -h">
+                        <div id="horizon-carousel" class="carousel__slide -horizon">
+                            <ul class="carousel__slide-track">
+                                <li class="carousel__slide-item -active">A</li>
+                                <li class="carousel__slide-item">B</li>
+                            </ul>
+                            <p class="carousel__slide-alert">auto play has <span>stop</span></p>
+                        </div>
+                    </div>
+                    <div class="carousel__buttons">
+                        <button type="button" aria-controls="horizon-carousel" aria-disabled="false" class="carousel__button -stop">stop</button>
+                        <button type="button" aria-controls="horizon-carousel" aria-disabled="true" class="carousel__button -play">play</button>
+                    </div>
+                    <p aria-hidden="ture" class="carousel__option">
+                        n(4) at a one - css option
+                        <span class="carousel__option-tab">
+                            .slide-item {
+                                <span class="carousel__option-tab">
+                                    height: slide-track.height() / n;
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="carousel__option">
+                        slide up of n(4) - js option
+                        <span class="carousel__option-tab">
+                            .aniamate.({
+                                <span class="carousel__option-tab">
+                                    'margin-*', n(4).height()
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

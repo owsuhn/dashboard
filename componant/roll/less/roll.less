@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+.roll {
+    @this: .roll;
+
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #222429;
+
+    &__list {
+        margin-top: 5.6rem;
+    }
+
+    &__item {
+        & + & {
+            margin-top: 5.6rem;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        color: #999;
+        line-height: 2rem;
+    }
+
+    &__content {
+        margin-top: 1.2rem;
+        padding: 10rem 0;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
+
+        &.-wheel {
+            position: relative;
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 4rem;
+                width: 4rem;
+                height: 8rem;
+                margin: -4rem 0 0 0;
+                border: .4rem solid #fff;
+                border-radius: 2rem;
+                box-sizing: border-box;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 6rem;
+                width: .8rem;
+                height: .8rem;
+                margin: -.4rem -.4rem 0 0;
+                border-radius: 100%;
+                background-color: #fff;
+                animation: wheel-down .8s linear infinite;
+            }
+
+            &.-active:after {
+                animation: wheel-up .8s linear infinite;
+            }
+        }
+    }
+
+    &__dice {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        height: 10rem;
+        margin: 0 auto;
+        transform-style: preserve-3d;
+        
+        @{this}__content.-wheel & {
+            transform: rotate3d(-1, 1, 0, 45deg);
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                border: 1px solid red;
+            }
+        }
+    }
+
+    &__dice-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        &.-front {
+            background-color: red;
+            transform: translateZ(5rem);
+        }
+
+        &.-top {
+            background-color: orange;
+            transform: rotateX(90deg) translateZ(5rem);
+        }
+
+        &.-right {
+            background-color: yellow;
+            transform: rotateY(90deg) translateZ(5rem);
+        }
+
+        &.-bottom {
+            background-color: green;
+            transform: rotateX(-90deg) translateZ(5rem);
+        }
+
+        &.-left {
+            background-color: blue;
+            transform: rotateY(-90deg) translateZ(5rem);
+        }
+
+        &.-back {
+            background-color: purple;
+            transform: rotateY(180deg) translateZ(5rem);
+        }
+
+        @{this}__content.-wheel & {
+            opacity: .4;
+        }
+    }
+
+    &__buttons {
+        margin-top: 10rem;
+        text-align: center;
+
+        &:before {
+            content: "roll with";
+            display: inline-block;
+            vertical-align: top;
+            margin: 1.2rem 1.2rem 0 0;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #666;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 1.2rem;
+        padding: 1.2rem 2rem;
+        background-color: #0f0f13;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 1px;
+
+        &:before {
+            content: "↺";
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 .4rem 0 0;
+        }
+
+        & + & {
+            margin-left: 1.2rem;
+        }
+
+        &.-view {
+            position: relative;
+            margin-left: 11.6rem;
+
+            &:before {
+                content: "✻";
+            }
+            
+            &:after {
+                content: "and view";
+                display: block;
+                position: absolute;
+                top: 1.2rem;
+                left: -9.2rem;
+                margin: 0;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #666;
+                letter-spacing: 1px;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow:
+                0 0 0 .2rem #222429,
+                0 0 0 .4rem #0f0f13;
+        }
+    }
+
+    &__guide {
+        margin-top: .4rem;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #999;
+        letter-spacing: 1px;
+
+        & .-emphasis {
+            padding-left: .4rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: red;
+        }
+
+        @{this}__content.-active ~ & .-emphasis,
+        @{this}__content.-passive ~ & .-emphasis {
+            animation: emphasis-blink 2s steps(2, end) infinite;
+        }
+    }
+}
+
+// animation.zip
+@keyframes wheel-down {
+    0%      {
+        opacity: 1;
+        transform: translateY(-2rem);
+    }
+
+    100%    {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+}
+
+@keyframes wheel-up {
+    0%      {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    100%    {
+        opacity: 1;
+        transform: translateY(-2rem);
+    }
+}
+
+@keyframes emphasis-blink {
+    0%      {
+        color: red;
+    }
+
+    100%    {
+        color: rgba(255, 0, 0, .2);
+    }
+}

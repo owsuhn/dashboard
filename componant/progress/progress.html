@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="../../resource/css/style.css" rel="stylesheet" />
+    <link href="css/progress.css" rel="stylesheet" />
+
+    <script src="../../common/js/jquery-1.11.0.min.js"></script>
+    <script src="js/progress.js"></script>
+</head>
+<body>
+    <div class="progress">        
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">bar</h4>
+            <p class="dashboard__publish-date">2021.4.13 18:00</p>
+            <ul class="progress__list">
+                <li class="progress__item">
+                    <p class="progress__title">basic</p>
+                    <div class="progress__content -bar">
+                        <label for="progress1" class="progress__label">
+                            <span class="-offscreen">progress1</span>
+                            <progress min="0" max="100" value="27" id="progress1" class="progress__bar"></progress>
+                            <span aria-hidden="true" class="progress__range">
+                                <span><span class="-offscreen">*</span></span>
+                                <span><span class="-offscreen">*</span></span>
+                            </span>
+                            <span aria-hidden="true" class="progress__flag"><span class="-offscreen">*</span></span>
+                        </label>
+                    </div>
+                    <p class="progress__desc">minimum value of the progress markup is <span>0</span>, which cannot be changed.</p>
+                </li>
+                <li class="progress__item">
+                    <p class="progress__title">landing event</p>
+                    <div class="progress__content -bar -event">
+                        <label for="progress2" class="progress__label">
+                            <span class="-offscreen">progress2</span>
+                            <progress min="0" max="9189" value="6709" id="progress2" class="progress__bar"></progress>
+                            <span aria-hidden="true" class="progress__range">
+                                <span><span class="-offscreen">*</span></span>
+                                <span><span class="-offscreen">*</span></span>
+                            </span>
+                            <span aria-hidden="true" class="progress__flag"><span class="-offscreen">*</span></span>
+                        </label>
+                    </div>
+                </li>
+                <li class="progress__item">
+                    <p class="progress__title">input</p>
+                    <div class="progress__content -bar -event -input">
+                        <label for="progress3" class="progress__label">
+                            <span class="-offscreen">progress3</span>
+                            <progress min="0" max="9189" value="6709" id="progress3" class="progress__bar"></progress>
+                            <span aria-hidden="true" class="progress__range">
+                                <span><span class="-offscreen">*</span></span>
+                                <span><span class="-offscreen">*</span></span>
+                            </span>
+                            <span aria-hidden="true" class="progress__flag"><span class="-offscreen">*</span></span>
+                        </label>
+                        <div class="progress__field">
+                            <div class="progress__form">
+                                <label for="progress3-1" class="progress__form-label">
+                                    <span class="-offscreen">progress3-1</span>
+                                    <input type="text" placeholder="placeholder" id="progress3-1" class="progress__form-input -value" />
+                                </label>
+                            </div>
+                            <div class="progress__form">
+                                <label for="progress3-2" class="progress__form-label">
+                                    <span class="-offscreen">progress3-2</span>
+                                    <input type="text" placeholder="placeholder" id="progress3-2" class="progress__form-input -percentage" />
+                                </label>
+                            </div>
+                            <button type="button" class="progress__field-button">apply</button>
+                        </div>
+                        <p class="progress__desc">calculates the entered value, rounds it up, and outputs it.</p>
+                        <p class="progress__desc">therefore, <span>errors</span> may exist even if you enter the same value and percentage.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="dashboard__article-refer">
+                <a href="https://www.w3schools.com/tags/tag_progress.asp" target="_blank" class="dashboard__refer-link">w3c school - search keyword: html progress</a><br />
+                <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/progress" target="_blank" class="dashboard__refer-link">mdn - search keyword: html progress</a><br />
+
+                <a href="https://techbug.tistory.com/214" target="_blank" class="dashboard__refer-link">tistory - search keyword: html progress style</a><br />
+                <a href="https://css-tricks.com/html5-progress-element/" target="_blank" class="dashboard__refer-link">css tricks - search keyword: css progress</a><br />
+
+                <a href="http://mwultong.blogspot.com/2007/03/percent-javascript.html" target="_blank" class="dashboard__refer-link">blog - search keyword: javascript percent</a><br />
+                <a href="https://stackoverflow.com/questions/33574815/why-is-javascript-showing-typeof-as-string-when-its-a-number" target="_blank" class="dashboard__refer-link">stackoverflow - search keyword: javascript input string check</a><br />
+                <a href="https://stackoverflow.com/questions/33574815/why-is-javascript-showing-typeof-as-string-when-its-a-number" target="_blank" class="dashboard__refer-link">tistory - search keyword: javascript input 공백</a><br />
+                <a href="http://www.webmadang.net/javascript/javascript.do?action=read&boardid=8001&page=10&seq=264" target="_blank" class="dashboard__refer-link">webmadang - search keyword: javascript input 공백</a><br />
+                <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank" class="dashboard__refer-link">mdn - search keyword: javascript math</a>
+            </div>
+        </div>
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">ring</h4>
+            <p class="dashboard__publish-date">2021.4.13 18:00</p>
+            <ul class="progress__list">
+                <li class="progress__item">
+                    <p class="progress__title">basic</p>
+                    <div class="progress__content -ring">
+                        <label for="progress4" class="-offscreen">
+                            <span>progress4</span>
+                            <progress min="0" max="100" value="27" id="progress4"></progress>
+                        </label>
+                        <div aria-hidden="true" class="progress__ring" data-percentage="27">
+                            <i class="progress__ring-center"><span class="-offscreen">*</span></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="progress__item">
+                    <p class="progress__title">landing event</p>
+                    <div class="progress__content -ring -event">
+                        <label for="progress5" class="-offscreen">
+                            <span>progress5</span>
+                            <progress min="0" max="100" value="54" id="progress5"></progress>
+                        </label>
+                        <div aria-hidden="true" class="progress__ring" data-percentage="81">
+                            <i class="progress__ring-center"><span class="-offscreen">*</span></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="progress__item">
+                    <p class="progress__title">landing event + input form</p>
+                    <div class="progress__content -ring -event -input">
+                        <label for="progress6" class="-offscreen">
+                            <span>progress6</span>
+                            <progress min="0" max="100" value="54" id="progress6"></progress>
+                        </label>
+                        <div aria-hidden="true" class="progress__ring" data-percentage="81">
+                            <i class="progress__ring-center"><span class="-offscreen">*</span></i>
+                        </div>
+                        <div class="progress__form">
+                            <label for="progress6-1" class="progress__form-label">
+                                <span class="-offscreen">progress6-1</span>
+                                <input type="text" placeholder="placeholder" id="progress6-1" class="progress__form-input" />
+                            </label>
+                        </div>
+                        <button type="button" class="progress__field-button">apply</button>
+                    </div>
+                </li>
+            </ul>
+            <div class="dashboard__article-refer">
+                <a href="https://codepen.io/JoshuaTyree/pen/MYZepb" target="_blank" class="dashboard__refer-link">codepen - search keyword: progress ring</a>
+            </div>
+        </div>
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">round</h4>
+            <p class="dashboard__publish-date">2021.4.14 18:00</p>
+            <ul class="progress__list">
+                <li class="progress__item">
+                    <p class="progress__title">basic</p>
+                    <div class="progress__content -round">
+                        <label for="progress7" class="-offscreen">
+                            <span>progress7</span>
+                            <progress min="0" max="100" value="27" id="progress7"></progress>
+                        </label>
+                        <div aria-hidden="true" class="progress__round" data-percentage="27">
+                            <i class="progress__round-center"><span class="-offscreen">*</span></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="progress__item">
+                    <p class="progress__title">landing event</p>
+                    <div class="progress__content -round -event">
+                        <label for="progress8" class="-offscreen">
+                            <span>progress8</span>
+                            <progress min="0" max="100" value="54" id="progress8"></progress>
+                        </label>
+                        <div aria-hidden="true" class="progress__round" data-percentage="81">
+                            <i class="progress__round-center"><span class="-offscreen">*</span></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="progress__item">
+                    <p class="progress__title">landing event + input form</p>
+                    <div class="progress__content -round -event -input">
+                        <label for="progress9" class="-offscreen">
+                            <span>progress9</span>
+                            <progress min="0" max="100" value="54" id="progress9"></progress>
+                        </label>
+                        <div aria-hidden="true" class="progress__round" data-percentage="81">
+                            <i class="progress__round-center"><span class="-offscreen">*</span></i>
+                        </div>
+                        <div class="progress__form">
+                            <label for="progress9-1" class="progress__form-label">
+                                <span class="-offscreen">progress9-1</span>
+                                <input type="text" placeholder="placeholder" id="progress9-1" class="progress__form-input" />
+                            </label>
+                        </div>
+                        <button type="button" class="progress__field-button">apply</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
