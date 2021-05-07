@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+.random {
+    @this: .random;
+
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #222429;
+
+    &__list {
+        margin-top: 5.6rem;
+    }
+
+    &__item {
+        & + & {
+            margin-top: 5.6rem;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        color: #999;
+        line-height: 2rem;
+    }
+
+    &__form {
+        margin-top: 1.2rem;
+    }
+
+    &__input {
+        display: inline-block;
+        vertical-align: top;
+        width: 25%;
+        height: 4.4rem;
+        padding: 0 1.2rem;
+        outline: 0;
+        border: 0;
+        border: 1px solid #fff;
+        background: none;
+        font-size: 1.6rem;
+        color: #fff;
+        text-align: center;
+        line-height: 4.4rem;
+
+        &::placeholder {
+            text-transform: capitalize;
+            color: #666;
+        }
+
+        &[readonly="readonly"] {
+            cursor: not-allowed;
+            border: 1px solid #666;
+            background-color: #333;
+            color: #666;
+        }
+
+        &.-validtime {
+            font-weight: bold;
+            color: red;
+        }
+    }
+
+    &__desc {
+        margin-top: .4rem;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 1px;
+        line-height: 1.6rem;
+
+        & span {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: red;
+            line-height: 1.6rem;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        vertical-align: top;
+        width: 7.8rem;
+        height: 4.4rem;
+        margin-left: 1.2rem;
+        background-color: #0f0f13;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        line-height: 4.4rem;
+        letter-spacing: 1px;
+
+        &:hover,
+        &:focus {
+            box-shadow:
+                0 0 0 .2rem #222429,
+                0 0 0 .4rem #0f0f13;
+        }
+    }
+
+    &__re-load {
+        display: block;
+        position: absolute;
+        top: 5.6rem;
+        right: 5.6rem;
+        padding: 1.2rem 2rem;
+        background-color: #0f0f13;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 1px;
+
+        &:before {
+            content: "↻";
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 .4rem 0 0;
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow:
+                0 0 0 .2rem #222429,
+                0 0 0 .4rem #0f0f13;
+        }
+    }
+}

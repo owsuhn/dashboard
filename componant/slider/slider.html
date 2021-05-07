@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="../../resource/css/style.css" rel="stylesheet" />
+    <link href="css/slider.css" rel="stylesheet" />
+
+    <script src="../../common/js/jquery-1.11.0.min.js"></script>
+    <script src="js/slider.js"></script>
+</head>
+<body>
+    <div class="slider">
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">range</h4>
+            <p class="dashboard__publish-date">2021.3.30 17:36</p>
+            <ul class="slider__list">
+                <li class="slider__item">
+                    <h3 class="slider__title">basic</h3>
+                    <div class="slider__content">
+                        <label for="slider1" class="slider__label">
+                            <span class="-offscreen">slider1</span>
+                            <input type="range" min="0" max="100" value="27" id="slider1" class="slider__input" />
+                        </label>
+                        <span aria-hidden="true" class="slider__range">
+                            <span><span class="-offscreen">*</span></span>
+                            <span><span class="-offscreen">*</span></span>
+                        </span>
+                        <div aria-hidden="true" class="slider__track">
+                            <div class="slider__fill"><span class="-offscreen">*</span></div>
+                            <div class="slider__flag"><span class="-offscreen">*</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="slider__item">
+                    <h3 class="slider__title">limit from n(27)</h3>
+                    <div class="slider__content">
+                        <label for="slider2" class="slider__label -from">
+                            <span class="-offscreen">slider2</span>
+                            <input type="range" min="27" max="100" value="27" id="slider2" class="slider__input" />
+                        </label>
+                        <span aria-hidden="true" class="slider__range">
+                            <span><span class="-offscreen">*</span></span>
+                            <span><span class="-offscreen">*</span></span>
+                        </span>
+                        <div aria-hidden="true" class="slider__track">
+                            <div class="slider__fill"><span class="-offscreen">*</span></div>
+                            <div class="slider__flag"><span class="-offscreen">*</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="slider__item">
+                    <h3 class="slider__title">limit to n(81)</h3>
+                    <div class="slider__content">
+                        <label for="slider3" class="slider__label -to">
+                            <span class="-offscreen">slider3</span>
+                            <input type="range" min="0" max="81" value="27" id="slider3" class="slider__input" />
+                        </label>
+                        <span aria-hidden="true" class="slider__range">
+                            <span><span class="-offscreen">*</span></span>
+                            <span><span class="-offscreen">*</span></span>
+                        </span>
+                        <div aria-hidden="true" class="slider__track">
+                            <div class="slider__fill"><span class="-offscreen">*</span></div>
+                            <div class="slider__flag"><span class="-offscreen">*</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="slider__item">
+                    <h3 class="slider__title">limit from n(27) to n(81)</h3>
+                    <div class="slider__content">
+                        <label for="slider4" class="slider__label -limit">
+                            <span class="-offscreen">slider4</span>
+                            <input type="range" min="27" max="81" value="27" id="slider4" class="slider__input" />
+                        </label>
+                        <span aria-hidden="true" class="slider__range">
+                            <span><span class="-offscreen">*</span></span>
+                            <span><span class="-offscreen">*</span></span>
+                        </span>
+                        <div aria-hidden="true" class="slider__track">
+                            <div class="slider__fill"><span class="-offscreen">*</span></div>
+                            <div class="slider__flag"><span class="-offscreen">*</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="slider__item">
+                    <h3 class="slider__title">bidirection(two-way)</h3>
+                    <div class="slider__content -bidirection">
+                        <label for="slider5" class="slider__label">
+                            <span class="-offscreen">slider5</span>
+                            <input type="range" min="0" max="100" value="27" id="slider5" class="slider__input -from" />
+                            <input type="range" min="0" max="100" value="81" id="" class="slider__input -to" />
+                        </label>
+                        <span aria-hidden="true" class="slider__range">
+                            <span><span class="-offscreen">*</span></span>
+                            <span><span class="-offscreen">*</span></span>
+                        </span>
+                        <div aria-hidden="true" class="slider__track">
+                            <div class="slider__fill"><span class="-offscreen">*</span></div>
+                            <div class="slider__flag"><span class="-offscreen">*</span></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="dashboard__article-refer">
+                <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_rangeslider" target="_blank" class="dashboard__refer-link">w3c school - search keyword: html slider</a><br />
+                <a href="https://stackoverflow.com/questions/11189136/fire-oninput-event-with-jquery" target="_blank" class="dashboard__refer-link">stackoverflow - search keyword: jquery oninput event</a><br />
+                <a href="https://stackoverflow.com/questions/46448994/get-the-offset-position-of-an-html5-range-slider-handle" target="_blank" class="dashboard__refer-link">stackoverflow - search keyword: javascript slider min max percent</a><br />
+                <a href="https://codepen.io/mayuMPH/pen/ZjxGEY" target="_blank" class="dashboard__refer-link">codepen - search keyword: range slider</a><br />
+                <a href="https://stackoverflow.com/questions/48880523/how-to-precisely-find-thumb-position-of-input-type-range" target="_blank" class="dashboard__refer-link">codepen - search keyword: range slider</a><br />
+                <a href="https://velog.io/@ordidxzero/bidirectional-html-input-range" target="_blank" class="dashboard__refer-link">codepen - search keyword: slider thumb</a><br />
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft" target="_blank" class="dashboard__refer-link">mdn - search keyword: javascript offset left</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

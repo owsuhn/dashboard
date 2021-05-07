@@ -1,0 +1,174 @@
+@charset "utf-8";
+.switch {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #222429;
+}
+.switch__list {
+  margin-top: 5.6rem;
+}
+.switch__item + .switch__item {
+  margin-top: 5.6rem;
+}
+.switch__title {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  color: #999;
+  line-height: 2rem;
+}
+.switch__content {
+  margin-top: 1.2rem;
+}
+.switch__content.-text.-outer {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.switch__button {
+  display: block;
+  position: relative;
+  width: auto;
+  margin-left: -0.4rem;
+  padding: 0 5.5rem 0 0.4rem;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 2rem;
+}
+.switch__content.-align .switch__button {
+  width: 25%;
+}
+.switch__content.-text.-inner.-button .switch__button {
+  padding-right: 9rem;
+}
+.switch__content.-text.-inner.-track .switch__button {
+  padding-right: 8rem;
+}
+.switch__content.-text.-outer .switch__button {
+  padding-right: 12rem;
+}
+.switch__button + .switch__button {
+  margin-top: 1.2rem;
+}
+.switch__button:hover,
+.switch__button:focus {
+  border-radius: 2rem;
+  box-shadow: 0 0 0 0.2rem #222429, 0 0 0 0.4rem #fff;
+}
+.switch__button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 3rem;
+  height: 1rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222429;
+  letter-spacing: 1px;
+  line-height: 2rem;
+}
+.switch__content.-text.-inner .switch__button:before {
+  width: 6rem;
+}
+.switch__content.-text.-inner.-track .switch__button:before {
+  top: 0;
+  right: 0;
+  height: 2rem;
+}
+.switch__content.-text.-outer .switch__button:before {
+  right: 3.5rem;
+}
+.switch__button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 0 1rem #222429;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222429;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  transition: 0.2s;
+}
+.switch__content.-text.-inner.-button .switch__button:after {
+  width: 4rem;
+  border-radius: 4rem;
+  text-align: center;
+}
+.switch__button[aria-pressed="false"]:before {
+  background-color: #666;
+}
+.switch__content.-text.-inner.-track .switch__button[aria-pressed="false"]:before {
+  content: "off";
+  padding: 0 0.8rem 0 0;
+  text-align: right;
+}
+.switch__button[aria-pressed="false"]:after {
+  right: 2rem;
+}
+.switch__content.-text.-inner.-button .switch__button[aria-pressed="false"]:after {
+  content: "off";
+  right: 3rem;
+}
+.switch__content.-text.-inner.-track .switch__button[aria-pressed="false"]:after {
+  right: 4rem;
+}
+.switch__content.-text.-outer .switch__button[aria-pressed="false"]:after {
+  right: 5rem;
+}
+.switch__button[aria-pressed="true"]:before {
+  background-color: #74d2a8;
+}
+.switch__content.-text.-inner.-track .switch__button[aria-pressed="true"]:before {
+  content: "on";
+  padding: 0 0 0 1.2rem;
+  text-align: left;
+}
+.switch__button[aria-pressed="true"]:after {
+  right: 0;
+}
+.switch__content.-text.-inner.-button .switch__button[aria-pressed="true"]:after {
+  content: "on";
+  right: 0;
+}
+.switch__content.-text.-inner.-track .switch__button[aria-pressed="true"]:after {
+  right: 0;
+}
+.switch__content.-text.-outer .switch__button[aria-pressed="true"]:after {
+  right: 3rem;
+}
+.switch__options {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.switch__option {
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+  letter-spacing: 1px;
+  line-height: 2rem;
+}
+.switch__option:nth-of-type(1) {
+  right: 7.5rem;
+}
+.switch__option:nth-of-type(2) {
+  right: 0;
+}

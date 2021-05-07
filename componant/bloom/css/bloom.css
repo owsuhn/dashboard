@@ -1,0 +1,190 @@
+@charset "utf-8";
+.bloom {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #222429;
+}
+.bloom__list {
+  margin-top: 5.6rem;
+}
+.bloom__item + .bloom__item {
+  margin-top: 5.6rem;
+}
+.bloom__title {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  color: #999;
+  line-height: 2rem;
+}
+.bloom__content {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1.2rem;
+  padding: 8rem 0 2rem 0;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+.bloom__like,
+.bloom__like-button {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  height: 4rem;
+  padding: 0 2rem;
+  border-radius: 0.4rem;
+}
+.bloom__like {
+  border: 0.2rem solid #f24445;
+}
+.bloom__like-button {
+  background-color: #f24445;
+}
+.bloom__like-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  margin-left: -0.8rem;
+  border-top: 1rem solid #f24445;
+  border-right: 0.8rem solid transparent;
+  border-left: 0.8rem solid transparent;
+}
+.bloom__like-mark {
+  display: block;
+  position: absolute;
+  top: 1.5rem;
+  left: 2.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #222429;
+  transform: rotate(45deg);
+}
+.bloom__like-mark:before,
+.bloom__like-mark:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 100%;
+  background-color: #222429;
+}
+.bloom__like-mark:before {
+  top: 0;
+  right: 0.6rem;
+}
+.bloom__like-mark:after {
+  top: -0.6rem;
+  left: 0;
+}
+.bloom__like .bloom__like-mark {
+  display: none;
+}
+.bloom__like-icon {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0.4rem;
+  left: 1.2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 3.2rem;
+}
+.bloom__like-button.-odd .bloom__like-icon:nth-of-type(odd) {
+  animation: likey linear 0.8s;
+}
+.bloom__like-button.-even .bloom__like-icon:nth-of-type(even) {
+  animation: likey linear 0.8s;
+}
+.bloom__like-button.-left .bloom__like-icon:nth-of-type(odd) {
+  animation: likey-left linear 0.8s;
+}
+.bloom__like-button.-right .bloom__like-icon:nth-of-type(even) {
+  animation: likey-right linear 0.8s;
+}
+.bloom__like.-constant .bloom__like-icon:nth-of-type(odd) {
+  animation: likey linear 1.2s infinite;
+}
+.bloom__like.-constant .bloom__like-icon:nth-of-type(even) {
+  animation: likey linear 1.2s infinite;
+}
+.bloom__like.-constant .bloom__like-icon:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+.bloom__like.-constant .bloom__like-icon:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+.bloom__like.-constant .bloom__like-icon:nth-of-type(4) {
+  animation-delay: 1.2s;
+}
+.bloom__like.-unconstant .bloom__like-icon:nth-of-type(odd) {
+  animation: likey-left linear 1.2s infinite;
+}
+.bloom__like.-unconstant .bloom__like-icon:nth-of-type(even) {
+  animation: likey-right linear 1.2s infinite;
+}
+.bloom__like.-unconstant .bloom__like-icon:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+.bloom__like.-unconstant .bloom__like-icon:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+.bloom__like.-unconstant .bloom__like-icon:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+.bloom__like-text {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  margin-left: 2.8rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  line-height: 3.8rem;
+}
+.bloom__like .bloom__like-text {
+  color: #f24445;
+  line-height: 3.6rem;
+}
+@keyframes likey {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -8rem) scale(1.2);
+  }
+}
+@keyframes likey-left {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0.4rem, -8rem) scale(1.2);
+  }
+}
+@keyframes likey-right {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-0.4rem, -8rem) scale(1.2);
+  }
+}

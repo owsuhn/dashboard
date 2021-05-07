@@ -1,0 +1,216 @@
+@charset "utf-8";
+.roll {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #222429;
+}
+.roll__list {
+  margin-top: 5.6rem;
+}
+.roll__item + .roll__item {
+  margin-top: 5.6rem;
+}
+.roll__title {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  color: #999;
+  line-height: 2rem;
+}
+.roll__content {
+  margin-top: 1.2rem;
+  padding: 10rem 0;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+.roll__content.-wheel {
+  position: relative;
+}
+.roll__content.-wheel:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 4rem;
+  width: 4rem;
+  height: 8rem;
+  margin: -4rem 0 0 0;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  box-sizing: border-box;
+}
+.roll__content.-wheel:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 6rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: -0.4rem -0.4rem 0 0;
+  border-radius: 100%;
+  background-color: #fff;
+  animation: wheel-down 0.8s linear infinite;
+}
+.roll__content.-wheel.-active:after {
+  animation: wheel-up 0.8s linear infinite;
+}
+.roll__dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+}
+.roll__content.-wheel .roll__dice {
+  transform: rotate3d(-1, 1, 0, 45deg);
+}
+.roll__content.-wheel .roll__dice:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid red;
+}
+.roll__dice-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.roll__dice-face.-front {
+  background-color: red;
+  transform: translateZ(5rem);
+}
+.roll__dice-face.-top {
+  background-color: orange;
+  transform: rotateX(90deg) translateZ(5rem);
+}
+.roll__dice-face.-right {
+  background-color: yellow;
+  transform: rotateY(90deg) translateZ(5rem);
+}
+.roll__dice-face.-bottom {
+  background-color: green;
+  transform: rotateX(-90deg) translateZ(5rem);
+}
+.roll__dice-face.-left {
+  background-color: blue;
+  transform: rotateY(-90deg) translateZ(5rem);
+}
+.roll__dice-face.-back {
+  background-color: purple;
+  transform: rotateY(180deg) translateZ(5rem);
+}
+.roll__content.-wheel .roll__dice-face {
+  opacity: 0.4;
+}
+.roll__buttons {
+  margin-top: 10rem;
+  text-align: center;
+}
+.roll__buttons:before {
+  content: "roll with";
+  display: inline-block;
+  vertical-align: top;
+  margin: 1.2rem 1.2rem 0 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+  letter-spacing: 1px;
+}
+.roll__button {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 1.2rem;
+  padding: 1.2rem 2rem;
+  background-color: #0f0f13;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.roll__button:before {
+  content: "↺";
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.4rem 0 0;
+}
+.roll__button + .roll__button {
+  margin-left: 1.2rem;
+}
+.roll__button.-view {
+  position: relative;
+  margin-left: 11.6rem;
+}
+.roll__button.-view:before {
+  content: "✻";
+}
+.roll__button.-view:after {
+  content: "and view";
+  display: block;
+  position: absolute;
+  top: 1.2rem;
+  left: -9.2rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+  letter-spacing: 1px;
+}
+.roll__button:hover,
+.roll__button:focus {
+  box-shadow: 0 0 0 0.2rem #222429, 0 0 0 0.4rem #0f0f13;
+}
+.roll__guide {
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #999;
+  letter-spacing: 1px;
+}
+.roll__guide .-emphasis {
+  padding-left: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: red;
+}
+.roll__content.-active ~ .roll__guide .-emphasis,
+.roll__content.-passive ~ .roll__guide .-emphasis {
+  animation: emphasis-blink 2s steps(2, end) infinite;
+}
+@keyframes wheel-down {
+  0% {
+    opacity: 1;
+    transform: translateY(-2rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+}
+@keyframes wheel-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-2rem);
+  }
+}
+@keyframes emphasis-blink {
+  0% {
+    color: red;
+  }
+  100% {
+    color: rgba(255, 0, 0, 0.2);
+  }
+}

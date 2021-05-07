@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+.count-down {
+    @this: .count-down;
+
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #222429;
+
+    &__list {
+        margin-top: 5.6rem;
+    }
+
+    &__item {
+        & + & {
+            margin-top: 5.6rem;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        color: #999;
+        line-height: 2rem;
+    }
+
+    &__date-calc,
+    &__date-diff,
+    &__fieldset {
+        margin-top: 1.2rem;
+    }
+
+    &__date {
+        font-size: 1.6rem;
+        color: #fff;
+
+        &:before {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 .4rem 0 0;
+            text-transform: capitalize;
+            color: #666;
+        }
+
+        &.-base:before {
+            content: "base date:";
+        }
+        
+        &.-compare:before {
+            content: "compare date:";
+        }
+
+        &.-present:before {
+            content: "present date:";
+        }
+
+        &.-result:before {
+            content: "result date:";
+        }
+
+        &.-result:after {
+            content: "days difference";
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 0 0 .4rem;
+            text-transform: capitalize;
+            color: #666;
+        }
+
+        & + & {
+            margin-top: 1.2rem;
+        }
+    }
+
+    &__form {
+        display: inline-block;
+        vertical-align: top;
+        width: 25%;
+        height: auto;
+
+        & + & {
+            margin-left: 1.2rem;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 4.4rem;
+        padding: 0 1.2rem;
+        outline: 0;
+        border: 0;
+        border: 1px solid #fff;
+        background: none;
+        font-size: 1.6rem;
+        color: #fff;
+        line-height: 4.4rem;        
+
+        &::placeholder {
+            text-transform: capitalize;
+            color: #666;
+        }
+    }
+
+    &__set {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: .4rem;
+        border-bottom: 1px solid #666;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #666;
+        letter-spacing: 1px;
+        line-height: 1.6rem;
+
+        &:before {
+            content: "↑";
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 0 0 0;
+        }
+
+        & + & {
+            margin-left: .4rem;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: #fff;
+            color: #fff;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        vertical-align: top;
+        height: 4.4rem;
+        padding: 0 2rem;
+        background-color: #0f0f13;
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        line-height: 4.4rem;
+        letter-spacing: 1px;
+        
+        &.-diff {
+            margin-left: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow:
+                0 0 0 .2rem #222429,
+                0 0 0 .4rem #0f0f13;
+        }
+    }
+
+    &__result {
+        margin-top: 1.2rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: red;
+    }
+}

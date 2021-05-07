@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="../../resource/css/style.css" rel="stylesheet" />
+    <link href="css/count-down.css" rel="stylesheet" />
+
+    <script src="../../common/js/jquery-1.11.0.min.js"></script>
+    <script src="js/count-down.js"></script>
+</head>
+<body>
+    <div class="count-down">        
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">date - data</h4>
+            <p class="dashboard__publish-date">2021.3.1 23:37</p>
+            <ul class="count-down__list">
+                <li class="count-down__item">
+                    <h3 class="count-down__title">count down from yyyy.mm.dd to the yyyy.mm.dd</h3>
+                    <div class="count-down__date-calc">
+                        <p class="count-down__date -base">1995-10-23</p>
+                        <p class="count-down__date -compare">2021-3-1</p>
+                        <p class="count-down__date -result"><span aria-hidden="true" class="-offscreen">*</span></p>
+                    </div>
+                </li>
+                <li class="count-down__item">
+                    <h3 class="count-down__title">count down from yyyy.mm.dd to the present</h3>
+                    <div class="count-down__date-diff">
+                        <p class="count-down__date -base">1995-10-23</p>
+                        <p class="count-down__date -present"><span aria-hidden="true" class="-offscreen">*</span></p>
+                        <p class="count-down__date -result"><span aria-hidden="true" class="-offscreen">*</span></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">date - textfield</h4>
+            <p class="dashboard__publish-date">2021.3.2 14:44</p>
+            <ul class="count-down__list">
+                <li class="count-down__item">
+                    <h3 class="count-down__title">count down difference between dates input</h3>
+                    <div class="count-down__fieldset">
+                        <div class="count-down__form">
+                            <label for="base-date" class="-offscreen">기준일</label>
+                            <input type="text" placeholder="placeholder" id="base-date" class="count-down__input" value="1995-10-23" />
+                            <button type="button" class="count-down__set -present">set present</button>
+                            <button type="button" class="count-down__set -reset">reset</button>
+                        </div>
+                        <div class="count-down__form">
+                            <label for="compare-date" class="-offscreen">비교일</label>
+                            <input type="text" placeholder="placeholder" id="compare-date" class="count-down__input" />
+                            <button type="button" class="count-down__set -present">set present</button>
+                            <button type="button" class="count-down__set -reset">re set</button>
+                        </div>
+                        <button type="button" class="count-down__button -diff">count</button>
+                    </div>
+                    <p class="count-down__result">-</p>
+                </li>
+            </ul>
+            <div class="dashboard__article-refer">
+                <a href="https://jsfiddle.net/xmjb41a3/" target="_blank" class="dashboard__refer-link">jsfiddle - search keyword: javascript input masking</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
