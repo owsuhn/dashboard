@@ -1,0 +1,293 @@
+@charset "utf-8";
+
+.parameter {
+    @this: .parameter;
+    
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #222429;
+
+    &__list {
+        margin-top: 5.6rem;
+    }
+
+    &__item {
+        & + & {
+            margin-top: 5.6rem;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        color: #999;
+        line-height: 2rem;
+    }
+
+    &__content {
+        margin-top: 1.2rem;
+        padding: 4rem 0;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
+    }
+
+    &__aligner {
+        & + & {
+            margin-top: 4rem;
+        }
+    }
+
+    &__aligner-title {
+        margin-bottom: .4rem;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 1px;
+        line-height: 1.6rem;
+    }
+
+    &__original-url {
+        font-size: 1.6rem;
+        color: #74d2a8;
+        line-height: 2rem;
+    }
+
+    &__random-label {
+        display: inline-block;
+        vertical-align: top;
+        width: 25%;
+        height: auto;
+        margin-top: .6rem;
+    }
+
+    &__random-input {
+        width: 100%;
+        height: 4.4rem;
+        padding: 0 1.2rem;
+        outline: 0;
+        border: 0;
+        border: 1px solid #fff;
+        background: none;
+        font-size: 1.6rem;
+        color: #74d2a8;
+        text-align: center;
+        line-height: 4.4rem;
+
+        &::placeholder {
+            text-transform: capitalize;
+            color: #666;
+        }
+
+        &[readonly="readonly"] {
+            cursor: not-allowed;
+            border-color: #666;
+            background-color: #333;
+        }
+    }
+
+    &__random-button {
+        display: inline-block;
+        vertical-align: bottom;
+        height: 4.4rem;
+        margin-left: 1.2rem;
+        padding: 0 2rem;
+        background-color: #0f0f13;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        line-height: 4.4rem;
+        letter-spacing: 1px;
+
+        &:hover,
+        &:focus {
+            box-shadow:
+                0 0 0 .2rem #222429,
+                0 0 0 .4rem #0f0f13;
+        }
+    }
+
+    &__random-url {
+        & span {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 1.6rem;
+            color: #74d2a8;
+            line-height: 2rem;
+        }
+
+        & span + span {
+            display: none;
+
+            &.-active {
+                display: inline-block;
+            }
+            
+            &:before {
+                content: "+";
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 .8rem;
+                color: #999;
+            }
+        }
+    }
+
+    &__desc {
+        margin-top: .8rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #999;
+        line-height: 1.6rem;
+        letter-spacing: 1px;
+
+        & span {
+            margin: 0 .4rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: red;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__notice-list {
+        width: 53rem;
+        margin-top: 2rem;
+        padding: 2rem;
+        background-color: #0f0f13;
+    }
+
+    &__notice-item {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #666;
+        letter-spacing: 1px;
+        line-height: 1.6rem;
+
+        & span {
+            display: inline-block;
+            vertical-align: top;
+            width: 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: red;
+            text-align: center;
+        }
+
+        & + & {
+            margin-top: .2rem;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding-left: 1.6rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #666;
+        letter-spacing: 1px;
+        line-height: 1.6rem;
+
+        &:before {
+            content: "↪";
+            display: inline-block;
+            vertical-align: top;
+            width: 1.6rem;
+            height: 1.6rem;
+            margin: 0 0 0 -1.6rem;
+        }
+
+        &:hover,
+        &:focus {
+            color: #6f96d0;
+        }
+
+        &.-random {
+            cursor: not-allowed;
+            color: red;
+
+            &:hover,
+            &:focus {
+                color: red;
+            }
+
+            &.-active {
+                cursor: pointer;
+                color: #666;
+
+                &:hover,
+                &:focus {
+                    color: #6f96d0;
+                }
+            }
+        }
+    }
+
+    // parameter__access.html
+    &__access {
+        position: relative;
+        padding: 50rem 0;
+        background: url("../images/parameter__content--access.png") no-repeat center 32rem;
+        background-size: 24rem auto;
+
+        &:before,
+        &:after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        &:before {
+            margin-top: 4rem;
+            font-size: 4.8rem;
+            font-weight: bold;
+            color: #fff;
+            line-height: 6rem;
+        }
+
+        &:after {
+            margin-top: 16rem;
+            font-size: 2.4rem;
+            color: #666;
+            line-height: 3.2rem;
+        }
+
+        @{this}__content.-original & {
+            &:before {
+                content: "access to original url";
+            }
+    
+            &:after {
+                content: "the user accessed through the original url from dashboard";
+            }
+        }
+
+        @{this}__content.-random & {
+            &:before {
+                content: "access to original url + random parameter";
+            }
+    
+            &:after {
+                content: "the user accessed through the original url + random parameter from dashboard";
+            }
+        }
+    }
+}
