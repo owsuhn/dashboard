@@ -64,7 +64,7 @@ $(document).ready(function(){
     // 해당 함수의 값이 있을 때 => 현재 페이지가 파라미터를 가짐 => 특정 파라미터 붙은 좌표로 진입 시
     if (_getQueryString != undefined) {
         // 그 파라미터의 명이 값을 충족할 떄
-        if (_getQueryString.owsuhn === '') {
+        if (_getQueryString.param === 'random') {
             console.log('123');
         }
     }
