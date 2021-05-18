@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slick | owsuhn</title>
+    
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="../../common/css/slick.css" rel="stylesheet" />
+    <link href="../../resource/css/style.css" rel="stylesheet" />
+    <link href="css/slick.css" rel="stylesheet" />
+
+    <script src="../../common/js/jquery-1.11.0.min.js"></script>
+    <script src="../../common/js/slick.js"></script>
+    <script src="js/slick.js"></script>
+</head>
+<body>
+    <div class="slick">
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">horizon</h4>
+            <p class="dashboard__publish-date">2021.4.28 18:00</p>
+            <ul class="slick__list">
+                <li class="slick__item">
+                    <p class="slick__title">slide to one at a one</p>
+                    <div class="slick__content">
+                        <div class="slick-container -h -default">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    slide: 'div',<span class="slick__option-annotate"> // slide element(you don't have to fill it out)</span><br />
+                                    swipeToSlide: true,<span class="slick__option-annotate"> // do swipe?</span><br />
+                                    speed: 400,<span class="slick__option-annotate"> // slide speed</span><br />
+                                    slidesToShow: 1,<span class="slick__option-annotate"> // number of slides to show at a time</span><br />
+                                    slidesToScroll: 1,<span class="slick__option-annotate"> // number of slides to slide at a time</span><br />
+                                    centerPadding: '0',<span class="slick__option-annotate"> // default: '50px', '0' => full screen</span><br />
+                                    infinite: false,<span class="slick__option-annotate"> // default: true</span>
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">slide to n(4) at a n(4)</p>
+                    <div class="slick__content">
+                        <div class="slick-container -h -multiple">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                            <div class="slick-content">5</div>
+                            <div class="slick-content">6</div>
+                            <div class="slick-content">7</div>
+                            <div class="slick-content">8</div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    swipeToSlide: false,<span class="slick__option-annotate"> // default: false(you don't have to fill it out)</span><br />
+                                    speed: 400,<br />
+                                    slidesToShow: 4,<br />
+                                    slidesToScroll: 4,<span class="slick__option-annotate"> // if "swipeToSlide" is used, "slidesToScroll" does not work properly.</span><br />
+                                    <span class="slick__option-annotate -em"> // similar effect can be achieved with n(4) divs on one slide</span><br />
+                                    <span class="slick__option-annotate -em"> // column alignment is possible in the same way.</span><br />
+                                    centerPadding: '0',<br />
+                                    infinite: false,
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">slide with fluid width/height values</p>
+                    <div class="slick__content">
+                        <div class="slick-container -h -fluid">
+                            <div class="slick-content"><div class="slick-each" style="width: 50rem; height: 12.5rem;">1</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 12.5rem; height: 27rem;">2</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 27rem; height: 44rem;">3</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 44rem; height: 8rem;">4</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 8rem; height: 12.5rem;">5</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 12.5rem; height: 22rem;">6</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 22rem; height: 28rem;">7</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 28rem; height: 50rem;">8</div></div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        less option
+                        <span class="slick__option-tab">
+                            .slick {
+                                <span class="slick__option-tab">
+                                    @this: .slick;<br />
+                                    <br />
+                                    &-container {
+                                        <span class="slick__option-tab">
+                                            & @{this}-slide + @{this}-slide {<span class="slick__option-annotate"> // class you provide by default(not custom)</span>
+                                                <span class="slick__option-tab">
+                                                    margin-left: 4rem;
+                                                </span>
+                                            }
+                                        </span>
+                                    }<br />
+                                    <br />
+                                    &-content {
+                                        <span class="slick__option-tab">
+                                            width: auto !important;<span class="slick__option-annotate -em"> // essential</span><br />
+                                            <span class="slick__option-annotate -em"> // invalidate the slick plug-in's default value(slick.js => width: 100%;)</span><br />
+                                            <br />
+                                            & @{this}-each {
+                                                <span class="slick__option-tab">
+                                                    display: flex;<span class="slick__option-annotate"> // not essential(same syntax for all below)</span><br />
+                                                    justify-content: center;<br />
+                                                    align-items: center;<br />
+                                                    border: 1px solid red;<br />
+                                                    font-size: 1.2rem;<br />
+                                                    font-size: 4rem;<br />
+                                                    font-weight: bold;<br />
+                                                    color: #fff;<br />
+                                                    text-align: center;
+                                                </span>
+                                            }
+                                        </span>
+                                    }
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    speed: 400,<br />
+                                    variableWidth: true,<span class="slick__option-annotate"> // allow "width" custom in css</span><br />
+                                    adaptiveHeight: true,<span class="slick__option-annotate"> // allows the custom of fluid "height" for each slide</span><br />
+                                    centerMode: true,<span class="slick__option-annotate"> // center alignment</span><br />
+                                    slidesToScroll: 1,<br />
+                                    centerPadding: '0',<br />
+                                    infinite: false,<br />
+                                    focusOnSelect:true,<span class="slick__option-annotate"> // click on a next slide, moves to the center</span>
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">center alignment each slide</p>
+                    <div class="slick__content">
+                        <div class="slick-container -h -alignment">
+                            <div class="slick-content"><div class="slick-each" style="width: 50rem; height: 12.5rem;">1</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 12.5rem; height: 27rem;">2</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 27rem; height: 44rem;">3</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 44rem; height: 8rem;">4</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 8rem; height: 12.5rem;">5</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 12.5rem; height: 22rem;">6</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 22rem; height: 28rem;">7</div></div>
+                            <div class="slick-content"><div class="slick-each" style="width: 28rem; height: 50rem;">8</div></div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        less option
+                        <span class="slick__option-tab">
+                            .slick {
+                                <span class="slick__option-tab">
+                                    @this: .slick;<br />
+                                    <br />
+                                    &-container {
+                                        <span class="slick__option-tab">
+                                            & @{this}-slide + @{this}-slide {<span class="slick__option-annotate"> // class you provide by default(not custom)</span>
+                                                <span class="slick__option-tab">
+                                                    margin-left: 4rem;
+                                                </span>
+                                            }
+                                        </span>
+                                    }<br />
+                                    <br />
+                                    @{this}-container @{this}-track {
+                                        <span class="slick__option-tab">
+                                            display: flex;<span class="slick__option-annotate"> // alignment: flex</span><br />
+                                            justify-content: center;<br />
+                                            align-items: center;
+                                        </span>
+                                    }<br />
+                                    <br />
+                                    &-content {
+                                        <span class="slick__option-tab">
+                                            width: auto !important;<span class="slick__option-annotate -em"> // essential</span><br />
+                                            <span class="slick__option-annotate -em"> // invalidate the slick plug-in's default value(slick.js => width: 100%;)</span><br />
+                                            <br />
+                                            & @{this}-each {
+                                                <span class="slick__option-tab">
+                                                    display: flex;<span class="slick__option-annotate"> // not essential(same syntax for all below)</span><br />
+                                                    justify-content: center;<br />
+                                                    align-items: center;<br />
+                                                    border: 1px solid red;<br />
+                                                    font-size: 1.2rem;<br />
+                                                    font-size: 4rem;<br />
+                                                    font-weight: bold;<br />
+                                                    color: #fff;<br />
+                                                    text-align: center;<br />
+                                                    focusOnSelect:true,
+                                                </span>
+                                            }
+                                        </span>
+                                    }
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    speed: 400,<br />
+                                    variableWidth: true,<span class="slick__option-annotate"> // allow "width" custom in css</span><br />
+                                    adaptiveHeight: true,<span class="slick__option-annotate"> // allows the custom of fluid "height" for each slide</span><br />
+                                    centerMode: true,<span class="slick__option-annotate"> // center alignment</span><br />
+                                    slidesToScroll: 1,<br />
+                                    centerPadding: '0',<br />
+                                    infinite: false,
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">slide to n(8) at A n(8) - column alignment</p>
+                    <div class="slick__content">
+                        <div class="slick-container -h -column">
+                            <div class="slick-content">
+                                <div class="slick-cell">1</div>
+                                <div class="slick-cell">2</div>
+                            </div>
+                            <div class="slick-content">
+                                <div class="slick-cell">3</div>
+                                <div class="slick-cell">4</div>
+                            </div>
+                            <div class="slick-content">
+                                <div class="slick-cell">5</div>
+                                <div class="slick-cell">6</div>
+                            </div>
+                            <div class="slick-content">
+                                <div class="slick-cell">7</div>
+                                <div class="slick-cell">8</div>
+                            </div>
+                            <div class="slick-content">
+                                <div class="slick-cell">9</div>
+                                <div class="slick-cell">10</div>
+                            </div>
+                            <div class="slick-content">
+                                <div class="slick-cell">11</div>
+                                <div class="slick-cell">12</div>
+                            </div>
+                            <div class="slick-content">
+                                <div class="slick-cell">13</div>
+                                <div class="slick-cell">14</div>
+                            </div>
+                            <div class="slick-content">
+                                <div class="slick-cell">15</div>
+                                <div class="slick-cell">16</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    swipeToSlide: false,<br />
+                                    speed: 400,<br />
+                                    slidesToShow: 4,<br />
+                                    slidesToScroll: 4,<br />
+                                    centerPadding: '0',<br />
+                                    infinite: false,<br />
+                                    <span class="slick__option-annotate -em"> // slick plug-in does not support the column alignment option</span><br />
+                                    <span class="slick__option-annotate -em"> // thus as mentioned above, similar effect can be achieved with n(4) divs on one slide</span><br />
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">slide to n(3) at a one - center</p>
+                    <div class="slick__content">
+                        <div class="slick-container -h -center">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                            <div class="slick-content">5</div>
+                            <div class="slick-content">6</div>
+                            <div class="slick-content">7</div>
+                            <div class="slick-content">8</div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        less option
+                        <span class="slick__option-tab">
+                            .slick {
+                                <span class="slick__option-tab">
+                                    @this: .slick;<br />
+                                    <br />
+                                    &-content {
+                                        <span class="slick__option-tab">
+                                            color: #666;<br />
+                                            transition: .4s;<br />
+                                            transform: scale(.5);<br />
+                                            <br />
+                                            @{this}-current@{this}-center & {
+                                                <span class="slick__option-tab">
+                                                    color: #fff;<br />
+                                                    transform: scbale(1);
+                                                </span>
+                                            }
+                                        </span>
+                                    }
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    speed: 400,<br />
+                                    slidesToShow: 3,<span class="slick__option-annotate"> // unable to centralize when even number of slides are exposed</span><br />
+                                    slidesToScroll: 1,<br />
+                                    centerPadding: '0',<br />
+                                    centerMode: true,<br />
+                                    infinite: false,
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">slide To n(3) at a one - loop and auto</p>
+                    <div class="slick__content">
+                        <div class="slick-container -h -autoplay">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                        <button type="button" class="slick-controller">stop</button>
+                        <p class="slick-alert"><span>stop</span> auto-play on the carousel</p>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    autoplay: true,<br />
+                                    autoplaySpeed: 400,<span class="slick__option-annotate"> // option "speed" is not required</span><br />
+                                    slidesToShow: 3,<br />
+                                    slidesToScroll: 1,<br />
+                                    centerPadding: '0',<br />
+                                    centerMode: true,<br />
+                                    infinite: true,
+                                </span>
+                            });<br />
+                            <br />
+                            $('.slick-controller').click(function(){
+                                <span class="slick__option-tab">
+                                    var _this = $(this),
+                                    <span class="slick__option-tab" style="padding-left: 3rem;">
+                                        _thisAlert = _this.siblings('.slick-alert');<span class="slick__option-annotate"> // use in the 'setTimeout' function below</span>
+                                    </span>
+                                    <br />
+                                    _this.text() === 'stop' ? (<span class="slick__option-annotate"> // conditional operator</span>
+                                    <span class="slick__option-tab">
+                                        <span class="slick__option-annotate"> // syntax default : condition ? if : else</span><br />
+                                        <span class="slick__option-annotate"> // syntax group : condition ? (</span><br />
+                                        <span class="slick__option-tab">
+                                            <span class="slick__option-annotate -em"> // syntax in jason,</span><br />
+                                            <span class="slick__option-annotate -em"> // semi-colon at the end of the code is not available,</span><br />
+                                            <span class="slick__option-annotate -em"> // however semi-colon is available within functions,</span><br />
+                                            <span class="slick__option-annotate -em"> // last code must be semi-colon removed</span>
+                                        </span>
+                                        <span class="slick__option-annotate"> // ) : (</span><br />
+                                        <span class="slick__option-tab">
+                                            <span class="slick__option-annotate"> // do something</span>
+                                        </span>
+                                        <span class="slick__option-annotate"> // );</span>
+                                    </span>
+                                    <span class="slick__option-tab">
+                                        _this.text('play').siblings('.slick-container').slick('slickPause'),<span class="slick__option-annotate"> // slick option, syntax: el.slick('slickPause');</span><br />
+                                        _thisAlert.addClass('-active').find('span').text('stop'),<br />
+                                        setTimeout(function(){
+                                            <span class="slick__option-tab">
+                                                _thisAlert.removeClass('-active');
+                                            </span>
+                                        }, 800)
+                                    </span>
+                                    ) : (
+                                    <span class="slick__option-tab">
+                                        _this.text('stop').siblings('.slick-container').slick('slickPlay'),<span class="slick__option-annotate"> // slick option, syntax: el.slick('slickPlay');</span><br />
+                                        _thisAlert.addClass('-active').find('span').text('play'),<br />
+                                        setTimeout(function(){
+                                            <span class="slick__option-tab">
+                                                _thisAlert.removeClass('-active');
+                                            </span>
+                                        }, 800)
+                                    </span>
+                                    );
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">arrow navigation and dot pagination</p>
+                    <div class="slick__content">
+                        <div class="slick-container -h -controller">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        less option
+                        <span class="slick__option-tab">
+                            .slick {
+                                <span class="slick__option-tab">
+                                    @this: .slick;<br />
+                                    <br />
+                                    &-arrow {<span class="slick__option-annotate"> // class you provide by default(not custom)</span>
+                                        <span class="slick__option-tab">
+                                        position: absolute;<br />
+                                        z-index: 1;<br />
+                                        top: 50%;<br />
+                                        margin-top: -1rem;<br />
+                                        border-top: 1rem solid transparent;<br />
+                                        border-bottom: 1rem solid transparent;<br />
+                                        <br />
+                                        &@{this}-prev {<span class="slick__option-annotate"> // class you provide by default(not custom)</span>
+                                            <span class="slick__option-tab">
+                                                left: 0;<br />
+                                                border-right: 1rem solid #fff;
+                                            </span>
+                                        }<br />
+                                        <br />
+                                        &@{this}-next {<span class="slick__option-annotate"> // class you provide by default(not custom)</span>
+                                            <span class="slick__option-tab">
+                                                right: 0;<br />
+                                                border-left: 1rem solid #fff;
+                                            </span>
+                                        }<br />
+                                        <br />
+                                        &[aria-disabled="true"] {
+                                            <span class="slick__option-tab">
+                                                display: none !important;
+                                            </span>
+                                        }
+                                        </span>
+                                    }<br />
+                                    <br />
+                                    &-dots {<span class="slick__option-annotate"> // class you provide by default(not custom)</span>
+                                        <span class="slick__option-tab">
+                                            display: block;<br />
+                                            position: absolute;<br />
+                                            right: 0;<br />
+                                            bottom: 2rem;<br />
+                                            left: 0;<br />
+                                            text-align: center;<br />
+                                            <br />
+                                            & li {<span class="slick__option-annotate"> // tag you provide by default(not custom)</span>
+                                                <span class="slick__option-tab">
+                                                    display: inline-block;<br />
+                                                    vertical-align: top;<br />
+                                                    width: 1rem;<br />
+                                                    height: 1rem;<br />
+                                                    border-radius: 4rem;<br />
+                                                    background-color: #fff;<br />
+                                                    transition: .4s;<br />
+                                                    <br />
+                                                    &@{this}-active {
+                                                        <span class="slick__option-tab">
+                                                            width: 4rem;
+                                                        </span>
+                                                    }
+                                                </span>
+                                            }<br />
+                                            <br />
+                                            & li + li {
+                                                <span class="slick__option-tab">
+                                                    margin-left: 1rem;
+                                                </span>
+                                            }
+                                        </span>
+                                    }
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    swipeToSlide: true,<br />
+                                    speed: 400,<br />
+                                    slidesToShow: 1,<br />
+                                    slidesToScroll: 1,<br />
+                                    centerPadding: '0',<br />
+                                    infinite: false,<br />
+                                    dots: true,<span class="slick__option-annotate"> // option slick provides by default(default: true)</span><br />
+                                    arrows: true,<span class="slick__option-annotate"> // option slick provides by default(default: true)</span>
+                                </span>
+                            });<br />
+                            <br />
+                            <span class="slick__option-annotate"> // string that exists by default within an element</span><br />
+                            $('.slick-arrow.slick-prev').text('');<span class="slick__option-annotate"> // ".slick-arrow", ".slick-prev" => class you provide by default(not custom)</span><br />
+                            $('.slick-arrow.slick-prev').text('');
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">bullet pagination</p>
+                    <div class="slick__content">
+                        <div class="slick-container -h -bullet">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        less option
+                        <span class="slick__option-tab">
+                            .slick {
+                                <span class="slick__option-tab">
+                                    @this: .slick;<br />
+                                    <br />
+                                    &-dots {
+                                        <span class="slick__option-tab">
+                                            display: block;<br />
+                                            position: absolute;<br />
+                                            right: 0;<br />
+                                            bottom: 2rem;<br />
+                                            left: 0;<br />
+                                            text-align: center;<br />
+                                            <br />
+                                            & li {
+                                                <span class="slick__option-tab">
+                                                    display: inline-block;<br />
+                                                    vertical-align: top;
+                                                </span>
+                                            }<br />
+                                            <br />
+                                            & li button {
+                                                <span class="slick__option-tab">
+                                                    display: block;<br />
+                                                    width: 2rem;<br />
+                                                    height: 2rem;<br />
+                                                    font-size: 1.2rem;<br />
+                                                    font-weight: bold;<br />
+                                                    color: #666;<br />
+                                                    text-align: center;<br />
+                                                    line-height: 1rem;
+                                                </span>
+                                            }<br />
+                                            <br />
+                                            & li@{this}-active button {
+                                                <span class="slick__option-tab">
+                                                    color: #fff;
+                                                </span>
+                                            }
+                                        </span>
+                                    }
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    swipeToSlide: true,<br />
+                                    speed: 400,<br />
+                                    slidesToShow: 1,<br />
+                                    slidesToScroll: 1,<br />
+                                    centerPadding: '0',<br />
+                                    infinite: false,<br />
+                                    dots: true,
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+            </ul>
+            <div class="dashboard__article-refer">
+                <a href="https://kenwheeler.github.io/slick/" target="_blank" class="dashboard__refer-link">slick official site</a><br />
+                <a href="https://css-tricks.com/snippets/css/css-triangle/" target="_blank" class="dashboard__refer-link">css trick - search keyword: css triangle</a>
+            </div>
+        </div>
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">vertical</h4>
+            <p class="dashboard__publish-date">2021.5.3 16:36</p>
+            <ul class="slick__list">
+                <li class="slick__item">
+                    <p class="slick__title">slide to one at a one</p>
+                    <div class="slick__content">
+                        <div class="slick-container -v -default">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    vertical: true,<span class="slick__option-annotate"> // slide direction: vertical</span><br />
+                                    verticalSwiping: true,<span class="slick__option-annotate"> // slide direction: vertical => swipe action</span><br />
+                                    draggable: true,<span class="slick__option-annotate"> // slide direction: vertical => drag action</span><br />
+                                    speed: 400,<br />
+                                    slidesToShow: 1,<br />
+                                    slidesToScroll: 1,<br />
+                                    centerPadding: '0',<br />
+                                    infinite: false,<br />
+                                    dots: false,<br />
+                                    arrows: false,
+                                </span>
+                            });<br />
+                            <br />
+                            <span class="slick__option-annotate"> // mouse wheel control</span><br />
+                            $('.slick-container').hover(function(){<span class="slick__option-annotate -em"> // when you enter a particular area,</span>
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'hidden');<span class="slick__option-annotate"> // stop scroll</span><br />
+                                    this.addEventListener('wheel', function(e){
+                                        <span class="slick__option-tab">
+                                            var _this = $(this),
+                                                <span class="slick__option-tab" style="padding-left: 3rem;">
+                                                    _wheelDetect = Math.sign(e.deltaY);
+                                                </span>
+                                            if (_wheelDetect > 0) _this.slick('slickNext');<span class="slick__option-annotate"> // slick option, syntax: el.slick('slickNext');</span><br />
+                                            else _this.slick('slickPrev');<span class="slick__option-annotate"> // slick option, syntax: el.slick('slickPrev');</span>
+                                        </span>
+                                    });
+                                </span>
+                            }, function(){
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'auto');<span class="slick__option-annotate"> // turn off stop scroll</span>
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">slide to n(4) at a n(4)</p>
+                    <div class="slick__content">
+                        <div class="slick-container -v -multiple">
+                            <div class="slick-content">
+                                <div class="slick-cell">1</div>
+                                <div class="slick-cell">2</div>
+                                <div class="slick-cell">3</div>
+                                <div class="slick-cell">4</div>
+                            </div>
+                            <div class="slick-content">
+                                <div class="slick-cell">5</div>
+                                <div class="slick-cell">6</div>
+                                <div class="slick-cell">7</div>
+                                <div class="slick-cell">8</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        less option
+                        <span class="slick__option-tab">
+                            .slick {
+                                <span class="slick__option-tab">
+                                    @this: .slick;<br />
+                                    <br />
+                                    &-content {
+                                        <span class="slick__option-tab">
+                                            padding: 0;<br />
+                                            font-size: 0;
+                                        </span>
+                                    }<br />
+                                    <br />
+                                    &-cell {
+                                        <span class="slick__option-tab">
+                                            display: inline-block;<br />
+                                            vertical-align: top;<br />
+                                            width: 25%;<span class="slick__option-annotate -em"> // width value: 100% / n(4)</span><br />
+                                            padding: 10rem 0;<br />
+                                            font-size: 4rem;<br />
+                                            font-weight: bold;<br />
+                                            color: #fff;<br />
+                                            text-align: center;
+                                        </span>
+                                    }
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    vertical: true,<br />
+                                    verticalSwiping: true,<br />
+                                    draggable: true,<br />
+                                    speed: 400,<br />
+                                    slidesToShow: 1,<span class="slick__option-annotate -em"> // slide direction: vertical => row alignment: less control</span><br />
+                                    slidesToScroll: 1,<br />
+                                    centerPadding: '0',<br />
+                                    infinite: false,<br />
+                                    dots: false,<br />
+                                    arrows: false,
+                                </span>
+                            });<br />
+                            <br />
+                            $('.slick-container').hover(function(){
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'hidden');<br />
+                                    this.addEventListener('wheel', function(e){
+                                        <span class="slick__option-tab">
+                                            var _this = $(this),
+                                                <span class="slick__option-tab" style="padding-left: 3rem;">
+                                                    _wheelDetect = Math.sign(e.deltaY);
+                                                </span>
+                                            if (_wheelDetect > 0) _this.slick('slickNext');<br />
+                                            else _this.slick('slickPrev');
+                                        </span>
+                                    });
+                                </span>
+                            }, function(){
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'auto');
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">slide to n(8) at a n(8) - column alignment</p>
+                    <div class="slick__content">
+                        <div class="slick-container -v -column">
+                            <div class="slick-content">
+                                <div class="slick-cell">1</div>
+                                <div class="slick-cell">2</div>
+                                <div class="slick-cell">3</div>
+                                <div class="slick-cell">4</div>
+                            </div>
+                            <div class="slick-content">
+                                <div class="slick-cell">5</div>
+                                <div class="slick-cell">6</div>
+                                <div class="slick-cell">7</div>
+                                <div class="slick-cell">8</div>
+                            </div>
+                            <div class="slick-content">
+                                <div class="slick-cell">9</div>
+                                <div class="slick-cell">10</div>
+                                <div class="slick-cell">11</div>
+                                <div class="slick-cell">12</div>
+                            </div>
+                            <div class="slick-content">
+                                <div class="slick-cell">13</div>
+                                <div class="slick-cell">14</div>
+                                <div class="slick-cell">15</div>
+                                <div class="slick-cell">16</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        less option
+                        <span class="slick__option-tab">
+                            .slick {
+                                <span class="slick__option-tab">
+                                    @this: .slick;<br />
+                                    <br />
+                                    &-content {
+                                        <span class="slick__option-tab">
+                                            padding: 0;<br />
+                                            font-size: 0;
+                                        </span>
+                                    }<br />
+                                    <br />
+                                    &-cell {
+                                        <span class="slick__option-tab">
+                                            display: inline-block;<br />
+                                            vertical-align: top;<br />
+                                            width: 25%;<span class="slick__option-annotate -em"> // width value: 100% / n(4)</span><br />
+                                            padding: 10rem 0;<br />
+                                            font-size: 4rem;<br />
+                                            font-weight: bold;<br />
+                                            color: #fff;<br />
+                                            text-align: center;
+                                        </span>
+                                    }
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">
+                                    vertical: true,<br />
+                                    verticalSwiping: true,<br />
+                                    draggable: true,<br />
+                                    speed: 400,<br />
+                                    slidesToShow: 2,<span class="slick__option-annotate -em"> // slide direction: vertical => row alignment: less control, colum alignment: js control</span><br />
+                                    slidesToScroll: 2,<br />
+                                    centerPadding: '0',<br />
+                                    infinite: false,<br />
+                                    dots: false,<br />
+                                    arrows: false,
+                                </span>
+                            });<br />
+                            <br />
+                            $('.slick-container').hover(function(){
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'hidden');<br />
+                                    this.addEventListener('wheel', function(e){
+                                        <span class="slick__option-tab">
+                                            var _this = $(this),
+                                                <span class="slick__option-tab" style="padding-left: 3rem;">
+                                                    _wheelDetect = Math.sign(e.deltaY);
+                                                </span>
+                                            if (_wheelDetect > 0) _this.slick('slickNext');<br />
+                                            else _this.slick('slickPrev');
+                                        </span>
+                                    });
+                                </span>
+                            }, function(){
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'auto');
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">slide to one at a one - loop and auto</p>
+                    <div class="slick__content">
+                        <div class="slick-container -v -autoplay">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                        <button type="button" class="slick-controller">stop</button>
+                        <p class="slick-alert"><span>stop</span> auto-play on the carousel</p>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">                       
+                                    vertical: true,<br />
+                                    verticalSwiping: true,<br />
+                                    draggable: true,<br />
+                                    autoplay: true,<br />
+                                    autoplaySpeed: 400,<br />
+                                    slidesToShow: 1,<br />
+                                    slidesToScroll: 1,<br />
+                                    centerPadding: '0',<br />
+                                    infinite: true,<br />
+                                    dots: false,<br />
+                                    arrows: false,
+                                </span>
+                            });<br />
+                            <br />
+                            $('.slick-container').hover(function(){
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'hidden');<br />
+                                    this.addEventListener('wheel', function(e){
+                                        <span class="slick__option-tab">
+                                            var _this = $(this),
+                                                <span class="slick__option-tab" style="padding-left: 3rem;">
+                                                    _wheelDetect = Math.sign(e.deltaY);
+                                                </span>
+                                            if (_wheelDetect > 0) _this.slick('slickNext');<br />
+                                            else _this.slick('slickPrev');
+                                        </span>
+                                    });
+                                </span>
+                            }, function(){
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'auto');
+                                </span>
+                            });<br />
+                            <br />
+                            $('.slick-controller').click(function(){
+                                <span class="slick__option-tab">
+                                    var _this = $(this),
+                                    <span class="slick__option-tab" style="padding-left: 3rem;">
+                                        _thisAlert = _this.siblings('.slick-alert');
+                                    </span>
+                                    <br />
+                                    _this.text() === 'stop' ? (
+                                    <span class="slick__option-tab">
+                                        _this.text('play').siblings('.slick-container').slick('slickPause'),<br />
+                                        _thisAlert.addClass('-active').find('span').text('stop'),<br />
+                                        setTimeout(function(){
+                                            <span class="slick__option-tab">
+                                                _thisAlert.removeClass('-active');
+                                            </span>
+                                        }, 800)
+                                    </span>
+                                    ) : (
+                                    <span class="slick__option-tab">
+                                        _this.text('stop').siblings('.slick-container').slick('slickPlay'),<br />
+                                        _thisAlert.addClass('-active').find('span').text('play'),<br />
+                                        setTimeout(function(){
+                                            <span class="slick__option-tab">
+                                                _thisAlert.removeClass('-active');
+                                            </span>
+                                        }, 800)
+                                    </span>
+                                    );
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">arrow navigation and dot pagination</p>
+                    <div class="slick__content">
+                        <div class="slick-container -v -controller">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        less option
+                        <span class="slick__option-tab">
+                            .slick {
+                                <span class="slick__option-tab">
+                                    @this: .slick;<br />
+                                    <br />
+                                    &-arrow {
+                                        <span class="slick__option-tab">
+                                        position: absolute;<br />
+                                        z-index: 1;<br />
+                                        left: 50%;<br />
+                                        margin-left: -1rem;<br />
+                                        border-right: 1rem solid transparent;<br />
+                                        border-left: 1rem solid transparent;<br />
+                                        <br />
+                                        &@{this}-prev {
+                                            <span class="slick__option-tab">
+                                                top: 1rem;<br />
+                                                border-bottom: 1rem solid #fff;
+                                            </span>
+                                        }<br />
+                                        <br />
+                                        &@{this}-next {
+                                            <span class="slick__option-tab">
+                                                bottom: 1rem;<br />
+                                                border-top: 1rem solid #fff;
+                                            </span>
+                                        }<br />
+                                        <br />
+                                        &[aria-disabled="true"] {
+                                            <span class="slick__option-tab">
+                                                display: none !important;
+                                            </span>
+                                        }
+                                        </span>
+                                    }<br />
+                                    <br />
+                                    &-dots {
+                                        <span class="slick__option-tab">
+                                            display: block;<br />
+                                            position: absolute;<br />
+                                            top: 50%;<br />
+                                            right: 0;<br />
+                                            transform: translate(0, -50%);<br />
+                                            <br />
+                                            & li {
+                                                <span class="slick__option-tab">
+                                                    display: block;<br />
+                                                    width: 1rem;<br />
+                                                    height: 1rem;<br />
+                                                    border-radius: 4rem;<br />
+                                                    background-color: #fff;<br />
+                                                    transition: .4s;<br />
+                                                    <br />
+                                                    &@{this}-active {
+                                                        <span class="slick__option-tab">
+                                                            height: 4rem;
+                                                        </span>
+                                                    }
+                                                </span>
+                                            }<br />
+                                            <br />
+                                            & li + li {
+                                                <span class="slick__option-tab">
+                                                    margin-top: 1rem;
+                                                </span>
+                                            }
+                                        </span>
+                                    }
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">                       
+                                    vertical: true,<br />
+                                    verticalSwiping: true,<br />
+                                    draggable: true,<br />
+                                    speed: 400,<br />
+                                    slidesToShow: 1,<br />
+                                    slidesToScroll: 1,<br />
+                                    centerPadding: '0',<br />
+                                    infinite: false,<br />
+                                    dots: true,<br />
+                                    arrows: true,
+                                </span>
+                            });<br />
+                            <br />
+                            $('.slick-container').hover(function(){
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'hidden');<br />
+                                    this.addEventListener('wheel', function(e){
+                                        <span class="slick__option-tab">
+                                            var _this = $(this),
+                                                <span class="slick__option-tab" style="padding-left: 3rem;">
+                                                    _wheelDetect = Math.sign(e.deltaY);
+                                                </span>
+                                            if (_wheelDetect > 0) _this.slick('slickNext');<br />
+                                            else _this.slick('slickPrev');
+                                        </span>
+                                    });
+                                </span>
+                            }, function(){
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'auto');
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">bullet pagination</p>
+                    <div class="slick__content">
+                        <div class="slick-container -v -bullet">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        less option
+                        <span class="slick__option-tab">
+                            .slick {
+                                <span class="slick__option-tab">
+                                    @this: .slick;<br />
+                                    <br />
+                                    &-dots {
+                                        <span class="slick__option-tab">
+                                            display: block;<br />
+                                            position: absolute;<br />
+                                            top: 50%;<br />
+                                            right: 0;<br />
+                                            transform: translate(0, -50%);<br />
+                                            <br />
+                                            & li {
+                                                <span class="slick__option-tab">
+                                                    display: block;<br />
+                                                    width: 1rem;<br />
+                                                    height: 1rem;<br />
+                                                    border-radius: 4rem;<br />
+                                                    background-color: #fff;<br />
+                                                    transition: .4s;<br />
+                                                    <br />
+                                                    &@{this}-active {
+                                                        <span class="slick__option-tab">
+                                                            height: 4rem;
+                                                        </span>
+                                                    }
+                                                </span>
+                                            }<br />
+                                            <br />
+                                            & li + li {
+                                                <span class="slick__option-tab">
+                                                    margin-top: 1rem;
+                                                </span>
+                                            }
+                                        </span>
+                                    }
+                                </span>
+                            }
+                        </span>
+                    </p>
+                     <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container').slick({
+                                <span class="slick__option-tab">                       
+                                    vertical: true,<br />
+                                    verticalSwiping: true,<br />
+                                    draggable: true,<br />
+                                    speed: 400,<br />
+                                    slidesToShow: 1,<br />
+                                    slidesToScroll: 1,<br />
+                                    centerPadding: '0',<br />
+                                    infinite: false,<br />
+                                    dots: true,<br />
+                                    arrows: false,
+                                </span>
+                            });<br />
+                            <br />
+                            $('.slick-container').hover(function(){
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'hidden');<br />
+                                    this.addEventListener('wheel', function(e){
+                                        <span class="slick__option-tab">
+                                            var _this = $(this),
+                                                <span class="slick__option-tab" style="padding-left: 3rem;">
+                                                    _wheelDetect = Math.sign(e.deltaY);
+                                                </span>
+                                            if (_wheelDetect > 0) _this.slick('slickNext');<br />
+                                            else _this.slick('slickPrev');
+                                        </span>
+                                    });
+                                </span>
+                            }, function(){
+                                <span class="slick__option-tab">
+                                    $('body').css('overflow', 'auto');
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+            </ul>
+            <div class="dashboard__article-refer">
+                <a href="https://kenwheeler.github.io/slick/" target="_blank" class="dashboard__refer-link">slick official site</a><br />
+                <a href="https://css-tricks.com/snippets/css/css-triangle/" target="_blank" class="dashboard__refer-link">css trick - search keyword: css triangle</a><br />
+                <a href="http://bamtol.net/v5/bbs/board.php?bo_table=pp_js&wr_id=45&sst=wr_hit&sod=desc" target="_blank" class="dashboard__refer-link">etc site - search keyword: javascript addEventListenter removeEventListener</a><br />
+                <a href="https://blog.edit.kr/entry/addEventListener%EC%97%90-%ED%98%B8%EC%B6%9C-%ED%95%A8%EC%88%98%EC%97%90-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-%EB%84%A3%EA%B8%B0" target="_blank" class="dashboard__refer-link">etc site - search keyword: javascript addEventListenter parameter</a>
+            </div>
+        </div>
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">combination and development</h4>
+            <p class="dashboard__publish-date">2021.5.3 17:49</p>
+            <ul class="slick__list">
+                <li class="slick__item">
+                    <p class="slick__title">gallery</p>
+                    <div class="slick__content">
+                        <div class="slick-container -gallery -item">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                            <div class="slick-content">5</div>
+                            <div class="slick-content">6</div>
+                            <div class="slick-content">7</div>
+                            <div class="slick-content">8</div>
+                        </div>
+                        <div class="slick-container -gallery -list">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                            <div class="slick-content">5</div>
+                            <div class="slick-content">6</div>
+                            <div class="slick-content">7</div>
+                            <div class="slick-content">8</div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container.-gallery.-item').slick({
+                                <span class="slick__option-tab">
+                                    asNavFor: '.slick-container.-gallery.-list',<span class="slick__option-annotate -em"> // essential: connected</span>
+                                </span>
+                            });<br />
+                            <br />
+                            $('.slick-container.-gallery.-list').slick({
+                                <span class="slick__option-tab">
+                                    asNavFor: '.slick-container.-gallery.-item',<span class="slick__option-annotate -em"> // essential: connected</span><br />
+                                    focusOnSelect: true,<span class="slick__option-annotate -em"> // essential: click => focus</span>
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">connect</p>
+                    <div class="slick__content">
+                        <div class="slick-container -v -connect -ed">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                        <div class="slick-container -v -connect -ion">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container.-connect.-ed').slick({
+                                <span class="slick__option-tab">
+                                    asNavFor: '.slick-container.-connect.-ion',
+                                </span>
+                            });<br />
+                            <br />
+                            $('.slick-container.-connect.-ion').slick({
+                                <span class="slick__option-tab">
+                                    asNavFor: '.slick-container.-connect.-ed',
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+                <li class="slick__item">
+                    <p class="slick__title">mismatch - n(2) row vertical</p>
+                    <div class="slick__content">
+                        <div class="slick-container -mismatch -v -left">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                        <div class="slick-container -mismatch -v -right">
+                            <div class="slick-content">1</div>
+                            <div class="slick-content">2</div>
+                            <div class="slick-content">3</div>
+                            <div class="slick-content">4</div>
+                        </div>
+                    </div>
+                    <p aria-hidden="ture" class="slick__option">
+                        less option
+                        <span class="slick__option-tab">
+                            .slick {
+                                <span class="slick__option-tab">
+                                    @this: .slick;<br />
+                                    <br />
+                                    &-container {
+                                        <span class="slick__option-tab">
+                                            display: inline-block;<br />
+                                            vertical-align: top;<br />
+                                            width: 50%;<br />
+                                            <br />
+                                            &.-right {
+                                                <span class="slick__option-tab">
+                                                    border-top: 1px solid #666;<br />
+                                                    border-bottom: 0;<br />
+                                                    transform: rotate(180deg);<span class="slick__option-annotate -em"> // reverse: container</span>
+                                                </span>
+                                            }
+                                        </span>
+                                    }<br />
+                                    <br />
+                                    &-content {
+                                        <span class="slick__option-tab">
+                                            transform: rotate(180deg);<span class="slick__option-annotate -em"> // re-reverse: slide</span>
+                                        </span>
+                                    }
+                                </span>
+                            }
+                        </span>
+                    </p>
+                    <p aria-hidden="ture" class="slick__option">
+                        js option
+                        <span class="slick__option-tab">
+                            $('.slick-container.-mismatch.-left').slick({
+                                <span class="slick__option-tab">
+                                    asNavFor: '.slick-container.-mismatch.-right',
+                                </span>
+                            });<br />
+                            <br />
+                            $('.slick-container.-mismatch.-right').slick({
+                                <span class="slick__option-tab">
+                                    asNavFor: '.slick-container.-mismatch.-left',
+                                </span>
+                            });
+                        </span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body> 
+</html>

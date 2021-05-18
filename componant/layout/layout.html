@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout | owsuhn</title>
+    
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="../../resource/css/style.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="layout">
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">curved</h4>
+            <p class="dashboard__publish-date">2021.5.12 18:00</p>
+            <ul class="layout__list">
+                <li class="layout__item">
+                    <p class="layout__title">ticket</p>
+                    <div class="layout__content">
+                        <div class="ticket">
+                            <div class="ticket__store">
+                                <div class="ticket__store-head">
+                                    <h1 class="ticket__store-logo">airlines<span class="-offscreen">&nbsp;탑승권</span></h1>
+                                    <h2 class="ticket__store-grade"><span class="-offscreen">seat grade&nbsp;</span>first</h2>
+                                    <h3 aria-hidden="true" class="ticket__store-title">boarding pass</h3>
+                                </div>
+                                <h4 id="store" class="-offscreen">탑승권 정보</h4>
+                                <ul class="ticket__store-list" aria-labelledby="store">
+                                    <li class="ticket__store-item">
+                                        <p class="ticket__store-key">name</p>
+                                        <p class="ticket__store-value">kim daehan</p>
+                                    </li>
+                                    <li class="ticket__store-item -break">
+                                        <p class="-offscreen">nation</p>
+                                        <p class="ticket__store-value">kr</p>
+                                    </li>
+                                    <li class="ticket__store-item">
+                                        <p class="ticket__store-key">flight</p>
+                                        <p class="ticket__store-value">ke659</p>
+                                    </li>
+                                    <li class="ticket__store-item">
+                                        <p class="-offscreen">departure date</p>
+                                        <p class="ticket__store-value">19 jan 16</p>
+                                    </li>
+                                    <li class="ticket__store-item -break -from">
+                                        <p class="ticket__store-key -inline">to</p>
+                                        <p class="ticket__store-value">bkk bangkok</p>
+                                    </li>
+                                    <li class="ticket__store-item -break">
+                                        <p class="ticket__store-key">dep time</p>
+                                        <p class="ticket__store-value">20:15</p>
+                                    </li>
+                                    <li class="ticket__store-item -time">
+                                        <p class="ticket__store-key">boarding</p>
+                                        <p class="ticket__store-value">19 : 45</p>
+                                    </li>
+                                    <li class="ticket__store-item -gate">
+                                        <p class="ticket__store-key">gate</p>
+                                        <p class="ticket__store-value">c 22</p>
+                                    </li>
+                                </ul>
+                                <div class="ticket__store-scan">
+                                    <img src="images/ticket__store-barcode.png" class="ticket__store-barcode" alt="탑승권 바코드" />
+                                </div>
+                                <div class="ticket__store-attach">
+                                    <p class="ticket__store-code"><span class="-offscreen">탑승권 고유 코드&nbsp;</span>180 2301234567c1</p>
+                                    <p class="ticket__store-code"><span class="-offscreen">탑승권 고유 정보&nbsp;</span>149/y/28b/sel/h</p>
+                                    <p class="ticket__store-notice">Boarding gate closes at 10minutes before departure.</p>
+                                </div>
+                            </div>
+                            <div class="ticket__submit">
+                                <div class="ticket__submit-head">
+                                    <h3 aria-hidden="true" class="ticket__submit-title">boarding pass</h3>
+                                </div>
+                                <h4 id="submit" class="-offscreen">탑승권 상세 정보</h4>
+                                <ul class="ticket__submit-list" aria-labelledby="submit">
+                                    <li class="ticket__submit-item">
+                                        <p class="ticket__submit-key">name</p>
+                                        <p class="ticket__submit-value">kim daehan</p>
+                                    </li>
+                                    <li class="ticket__submit-item -break">
+                                        <p class="-offscreen">nation</p>
+                                        <p class="ticket__submit-value">kr</p>
+                                    </li>
+                                    <li class="ticket__submit-item -break">
+                                        <p class="ticket__submit-key">flight</p>
+                                        <p class="ticket__submit-value">seoul / inchoen</p>
+                                    </li>
+                                    <li class="ticket__submit-item -break">
+                                        <p class="ticket__submit-key">to</p>
+                                        <p class="ticket__submit-value">bangkok</p>
+                                    </li>
+                                    <li class="ticket__submit-item">
+                                        <p class="ticket__submit-key">date</p>
+                                        <p class="ticket__submit-value">19 jan 16</p>
+                                    </li>
+                                    <li class="ticket__submit-item">
+                                        <p class="-offscreen">validity</p>
+                                        <p class="ticket__submit-value">y</p>
+                                    </li>
+                                    <li class="ticket__submit-item -seat">
+                                        <p class="ticket__submit-key">seat</p>
+                                        <p class="ticket__submit-value">28b</p>
+                                    </li>
+                                    <li class="ticket__submit-item -flight">
+                                        <p class="ticket__submit-key">slight</p>
+                                        <p class="ticket__submit-value">ke659</p>
+                                    </li>
+                                </ul>
+                                <div class="ticket__submit-attach">
+                                    <p class="ticket__submit-code"><span class="-offscreen">탑승권 고유 표시&nbsp;</span>aisle</p>
+                                    <p class="ticket__submit-code"><span class="-offscreen">탑승권 고유 코드&nbsp;</span>1802301234567c1</p>
+                                    <p aria-hidden="true" class="ticket__submit-logo">airlines</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="layout__item">
+                    <p class="layout__title">coupon</p>
+                    <div class="layout__content">
+                        <div class="coupon">
+                            <div class="coupon__store">
+                                <h1 class="coupon__store-logo">airlines<span class="-offscreen">&nbsp;쿠폰</span></h1>
+                                <div class="coupon__store-info">
+                                    <h2 id="departure" class="-offscreen">출발지 정보</h2>
+                                    <ul class="coupon__store-departure" aria-labelledby="departure">
+                                        <li class="coupon__store-nation"><span class="-offscreen">국가&nbsp;</span>los angeles</li>
+                                        <li class="coupon__store-airport"><span class="-offscreen">공항&nbsp;</span>lax</li>
+                                        <li class="coupon__store-time"><span class="-offscreen">시간&nbsp;</span>9:35<span class="coupon__store-time-unit">am</span></li>
+                                        <li class="coupon__store-date"><span class="-offscreen">날짜&nbsp;</span>wed, apr 4</li>
+                                    </ul>
+                                    <h2 id="arrival" class="-offscreen">도착지 정보</h2>
+                                    <ul class="coupon__store-arrival" aria-labelledby="arrival">
+                                        <li class="coupon__store-nation"><span class="-offscreen">국가&nbsp;</span>san francisco</li>
+                                        <li class="coupon__store-airport"><span class="-offscreen">공항&nbsp;</span>sfo</li>
+                                        <li class="coupon__store-time"><span class="-offscreen">시간&nbsp;</span>10:15<span class="coupon__store-time-unit">am</span></li>
+                                        <li class="coupon__store-date"><span class="-offscreen">날짜&nbsp;</span>thu, apr 5</li>
+                                    </ul>
+                                </div>
+                                <div class="coupon__store-detail">
+                                    <h2 id="detail" class="-offscreen">탑승권 상세 정보</h2>
+                                    <ul class="coupon__store-list" aria-labelledby="detail">
+                                        <li class="coupon__store-item"><p class="coupon__store-key">terminal</p><p class="coupon__store-value">3</p></li>
+                                        <li class="coupon__store-item"><p class="coupon__store-key">seat</p><p class="coupon__store-value">12c</p></li>
+                                        <li class="coupon__store-item"><p class="coupon__store-key">boarding</p><p class="coupon__store-value">9:05<span class="coupon__store-value-unit">AM</span></p></li>
+                                        <li class="coupon__store-item"><p class="coupon__store-key">flight</p><p class="coupon__store-value">s75122</p></li>
+                                        <li class="coupon__store-item"><p class="coupon__store-key">gate</p><p class="coupon__store-value">b71</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="coupon__submit">
+                                <div class="coupon__submit-scan"><img src="images/coupon__submit-barcode.png" class="coupon__submit-barcode" alt="탑승권 바코드" /><br /></div>
+                                <a href="#n" download class="coupon__submit-link"><span class="-offscreen">온라인 탑승권 내려받기</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">watermark</h4>
+            <p class="dashboard__publish-date">2021.5.12 18:00</p>
+            <ul class="layout__list">
+                <li class="layout__item">
+                    <p class="layout__title">receipt</p>
+                    <div class="layout__content">
+                        <div class="receipt">
+                            <h1 class="receipt__logo">corporation</h1>
+                            <h2 class="receipt__title">e-receipt</h2>
+                            <!-- store -->
+                            <h3 id="store" class="-offscreen">매장 정보</h3>
+                            <ul class="receipt__store-list" aria-labelledby="store">
+                                <li class="receipt__store-item"><span class="-offscreen">지점명&nbsp;</span>마포염리점</li>
+                                <li class="receipt__store-item"><span class="-offscreen">전화번호&nbsp;</span>T:1522-3232</li>
+                                <li class="receipt__store-item -address"><span class="-offscreen">주소&nbsp;</span>서울 마포구 독막로311</li>
+                                <li class="receipt__store-item"><span class="-offscreen">점장&nbsp;</span>대표 : 송데이비드호섭</li>
+                                <li class="receipt__store-item"><span class="-offscreen">사업자번호&nbsp;</span>201-81-21515</li>
+                                <li class="receipt__store-item"><span class="-offscreen">결제 단말기&nbsp;</span>[매장#3332, POS 01]</li>
+                                <li class="receipt__store-item"><span class="-offscreen">결제일&nbsp;</span>2021-05-03 11:08:32</li>
+                            </ul>
+                            <!--// store -->
+                            <!-- order -->
+                            <h3 id="order" class="-offscreen">주문 정보</h3>
+                            <ul class="receipt__fieldset" aria-labelledby="order">
+                                <h4 class="receipt__customer"><span class="-offscreen">성명&nbsp;</span>customer</h4>
+                                <li class="receipt__field">
+                                    <p class="receipt__key"><span class="-offscreen">메뉴&nbsp;</span>V)쿨라임 Fixx</p>
+                                    <p class="receipt__value">
+                                        <span class="receipt__detail"><span class="-offscreen">갯수&nbsp;</span>1</span>
+                                        <span class="receipt__detail"><span class="-offscreen">단가&nbsp;</span>6,900</span>
+                                    </p>
+                                </li>
+                                <li class="receipt__field">
+                                    <p class="receipt__key -arrow">합계</p>
+                                    <p class="receipt__value">6,900</p>
+                                </li>
+                                <li class="receipt__field">
+                                    <p class="receipt__key -em">amount<span class="receipt__attach">&nbsp;(부가세포함)</span></p>
+                                    <p class="receipt__value -em">6,900<span class="receipt__attach">(<span class="-offscreen">부가세&nbsp;</span>627)</span></p>
+                                </li>
+                                <li class="receipt__field -merge">
+                                    <p class="receipt__key">결제 금액</p>
+                                    <p class="receipt__value">6,900</p>
+                                </li>
+                                <li class="receipt__field -merge">
+                                    <p class="receipt__key">주문번호</p>
+                                    <p class="receipt__value">20210513-5(17)-56</p>
+                                </li>
+                                <li class="receipt__field">
+                                    <p class="receipt__key"><span class="-offscreen">결제 수단&nbsp;</span>스타벅스카드</p>
+                                    <p class="receipt__value"><span class="-offscreen">결제된 금액&nbsp;</span>6,900</p>
+                                    <h5 id="payment" class="-offscreen">결제 수단 정보</h5>
+                                    <ul class="receipt__payment-list" aria-labelledby="payment">
+                                        <li class="receipt__payment-item"><span class="-offscreen">고객 아이디&nbsp;</span>스타벅스 리워드 (OWSU**)</li>
+                                        <li class="receipt__payment-item"><span class="-offscreen">고객 등급&nbsp;</span>그린레벨</li>
+                                        <li class="receipt__payment-item"><span class="-offscreen">고객 등급 정보&nbsp;</span>쿠폰: 0 별: 16 (골드레벨까지 9개 필요)</li>
+                                        <li class="receipt__payment-item"><span class="-offscreen">적립 정보&nbsp;</span>방문별: 1 이벤트별 : 1 적립</li>
+                                    </ul>
+                                </li>
+                                <li class="receipt__field -group">
+                                    <p class="receipt__key">현금영수증 발급</p>
+                                    <p class="receipt__value">010-****-1995</p>
+                                </li>
+                                <li class="receipt__field -group">
+                                    <p class="receipt__key"><span class="-offscreen">현금영수증&nbsp;</span>승인금액</p>
+                                    <p class="receipt__value">6,900</p>
+                                </li>
+                                <li class="receipt__field -group">
+                                    <p class="receipt__key"><span class="-offscreen">현금영수증&nbsp;</span>승인번호</p>
+                                    <p class="receipt__value">19951023</p>
+                                </li>
+                                <li class="receipt__field -group -center">
+                                    <p class="receipt__key">현금영수증 문의 :&nbsp;</p>
+                                    <p class="receipt__value">126-1-1</p>
+                                </li>
+                            </ul>
+                            <!--// order -->
+                            <!-- notice -->
+                            <h3 class="-offscreen">유의 사항</h3>
+                            <ul id="notice" class="receipt__notice-list">
+                                <li class="receipt__notice-item">결제수단 변경은 구입하신 매장에서 가능하며, 반드시 구매 영수증과 원거래 결제수간을 지참하셔야 합니다.</li>
+                                <li class="receipt__notice-item">(변경 가능 기간 : ~ 2021-05-17)</li>
+                            </ul>
+                            <!--// notice -->
+                            <!-- attach -->
+                            <div class="receipt__attach">
+                                <p class="receipt__corp-site"><span class="-offscreen">홈페이지 주소&nbsp;</span>www.corporation.com</p>
+                                <div class="receipt__scan">
+                                    <img src="images/receipt__barcode.png" alt="영수증 바코드" class="receipt__barcode" />
+                                    <p class="receipt__code"><span class="-offscreen">바코드 넘버&nbsp;</span>*19951023003130323*</p>
+                                </div>
+                            </div>
+                            <!--// attach -->
+                            <!-- wifi -->
+                            <div class="receipt__wifi">
+                                <p class="receipt__wifi-id">Wi-fi SSID : KT_starbucks</p>
+                                <p class="receipt__wifi-pw">비밀번호 : 없음</p>
+                                <p class="receipt__wifi-notice">가입된 통신사와 관계없이 전고객 사용가능</p>
+                                <p class="receipt__wifi-notice">KT외 고객은 약관동의 및 인증 후 사용가능</p>
+                            </div>
+                            <!--// wifi -->
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

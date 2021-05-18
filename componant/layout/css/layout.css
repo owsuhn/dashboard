@@ -1,0 +1,752 @@
+@charset "utf-8";
+.layout {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #222429;
+}
+.layout__list {
+  margin-top: 5.6rem;
+}
+.layout__item + .layout__item {
+  margin-top: 5.6rem;
+}
+.layout__title {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  color: #999;
+  line-height: 2rem;
+}
+.layout__content {
+  margin-top: 1.2rem;
+}
+.layout .ticket {
+  overflow: hidden;
+  width: 96rem;
+  height: auto;
+  border-radius: 2rem;
+  background-color: #fff;
+}
+.layout .ticket__store {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 75%;
+  height: 100%;
+  border-right: 0.2rem dashed #222429;
+}
+.layout .ticket__store-head {
+  padding: 1rem 4rem;
+  border-bottom: 0.2rem solid #333;
+  background-color: #c7f3ff;
+}
+.layout .ticket__store-logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.333333%;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #00256c;
+  line-height: 3rem;
+}
+.layout .ticket__store-logo:after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0 0 1rem;
+  background-color: #00256c;
+}
+.layout .ticket__store-grade {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.333333%;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #00256c;
+  line-height: 3rem;
+}
+.layout .ticket__store-title {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.333333%;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  color: #00256c;
+  line-height: 3rem;
+}
+.layout .ticket__store-list {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+}
+.layout .ticket__store-item {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 1rem;
+}
+.layout .ticket__store-item + .ticket__store-item {
+  margin-left: 2rem;
+}
+.layout .ticket__store-item.-break {
+  margin-right: 60%;
+}
+.layout .ticket__store-item.-break + .ticket__store-item {
+  margin-left: 0;
+}
+.layout .ticket__store-item.-from {
+  margin-right: 10%;
+  margin-left: 4rem;
+}
+.layout .ticket__store-item:last-child {
+  margin-bottom: 0;
+}
+.layout .ticket__store-item.-time,
+.layout .ticket__store-item.-gate {
+  margin-bottom: 0;
+  padding: 1rem 2rem;
+  border: 0.2rem solid #333;
+  border-radius: 4.4rem;
+}
+.layout .ticket__store-item.-time .ticket__store-key,
+.layout .ticket__store-item.-gate .ticket__store-key {
+  width: 8rem;
+}
+.layout .ticket__store-item.-time .ticket__store-value,
+.layout .ticket__store-item.-gate .ticket__store-value {
+  width: 8rem;
+  font-size: 2.4rem;
+  text-align: center;
+}
+.layout .ticket__store-item.-time {
+  margin-left: 10rem !important;
+}
+.layout .ticket__store-key {
+  display: inline-block;
+  vertical-align: top;
+  width: 10rem;
+  height: auto;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #666;
+  letter-spacing: 1px;
+  line-height: 2rem;
+}
+.layout .ticket__store-key.-inline {
+  width: auto;
+  padding-right: 2rem;
+}
+.layout .ticket__store-value {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 2rem;
+}
+.layout .ticket__store-scan {
+  position: absolute;
+  right: 4rem;
+  bottom: 4.6rem;
+}
+.layout .ticket__store-barcode,
+.layout .ticket__store-qrcode {
+  display: inline-block;
+  vertical-align: top;
+}
+.layout .ticket__store-attach {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+.layout .ticket__store-code {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 1px;
+  line-height: 2rem;
+}
+.layout .ticket__store-code + .ticket__store-code {
+  margin-top: 0.4rem;
+}
+.layout .ticket__store-notice {
+  margin: 1rem 0 0 2rem;
+  font-size: 1.2rem;
+  color: #666;
+  letter-spacing: 1px;
+  line-height: 1.6rem;
+}
+.layout .ticket__submit {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 25%;
+  height: 100%;
+}
+.layout .ticket__submit-head {
+  padding: 1rem 2rem;
+  border-bottom: 0.2rem solid #333;
+  background-color: #c7f3ff;
+}
+.layout .ticket__submit-title {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #00256c;
+  line-height: 3rem;
+}
+.layout .ticket__submit-list {
+  padding: 2rem 2rem 4rem 2rem;
+}
+.layout .ticket__submit-item {
+  display: inline-block;
+  vertical-align: top;
+}
+.layout .ticket__submit-item + .ticket__submit-item {
+  margin-left: 1rem;
+}
+.layout .ticket__submit-item.-break {
+  margin-right: 1%;
+}
+.layout .ticket__submit-item.-break + .ticket__submit-item {
+  margin-left: 0;
+}
+.layout .ticket__submit-item.-seat,
+.layout .ticket__submit-item.-flight {
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+  border: 0.2rem solid #333;
+}
+.layout .ticket__submit-item.-seat .ticket__submit-key,
+.layout .ticket__submit-item.-flight .ticket__submit-key {
+  width: auto;
+  font-size: 1rem;
+  letter-spacing: unset;
+}
+.layout .ticket__submit-item.-seat .ticket__submit-value,
+.layout .ticket__submit-item.-flight .ticket__submit-value {
+  margin-left: 0.4rem;
+  font-size: 2rem;
+}
+.layout .ticket__submit-item.-seat {
+  width: 42%;
+  padding-right: 0.2rem;
+  padding-left: 1.4rem;
+  border-right: 0;
+  border-radius: 4.4rem 0 0 4.4rem;
+}
+.layout .ticket__submit-item.-flight {
+  width: 58%;
+  padding-left: 0.2rem;
+  border-left: 0;
+  border-radius: 0 4.4rem 4.4rem 0;
+}
+.layout .ticket__submit-key {
+  display: inline-block;
+  vertical-align: top;
+  width: 6rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #666;
+  letter-spacing: 1px;
+  line-height: 2rem;
+}
+.layout .ticket__submit-value {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 2rem;
+}
+.layout .ticket__submit-attach {
+  width: 100%;
+  height: 11rem;
+  position: relative;
+  padding: 2rem;
+}
+.layout .ticket__submit-code {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 2rem;
+}
+.layout .ticket__submit-code:first-child {
+  position: absolute;
+  top: -4rem;
+  left: 6.4rem;
+  width: auto;
+}
+.layout .ticket__submit-logo {
+  margin-top: 2.2rem;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #00256c;
+  line-height: 3rem;
+}
+.layout .ticket__submit-logo:after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0 0 1rem;
+  background-color: #00256c;
+}
+.layout .coupon {
+  display: inline-block;
+  vertical-align: top;
+  width: 32rem;
+  height: auto;
+  border-radius: 0 0 2rem 2rem;
+  background-color: #fff;
+}
+.layout .coupon__store {
+  width: 100%;
+  height: auto;
+  background-color: #c7f3ff;
+}
+.layout .coupon__store-logo {
+  padding: 2rem 2rem 2rem 4.4rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #00256c;
+  line-height: 1.8rem;
+}
+.layout .coupon__store-logo:before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0 0.6rem 0 -2.4rem;
+  background-color: #00256c;
+}
+.layout .coupon__store-info {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+}
+.layout .coupon__store-departure {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 50%;
+  height: auto;
+  padding-right: 4rem;
+  text-align: left;
+}
+.layout .coupon__store-departure:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4rem;
+  left: 100%;
+  width: 8rem;
+  margin-left: -4rem;
+  border-top: 1px dashed #118FE4;
+}
+.layout .coupon__store-arrival {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 50%;
+  height: auto;
+  padding-left: 4rem;
+  text-align: right;
+}
+.layout .coupon__store-arrival:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3rem;
+  left: -2rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0 1rem;
+  background: #c7f3ff url("../images/coupon__store-arrival--before.png") no-repeat center;
+}
+.layout .coupon__store-nation {
+  width: 100%;
+  height: 1.6rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.layout .coupon__store-airport {
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 4rem;
+}
+.layout .coupon__store-time {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 3rem;
+}
+.layout .coupon__store-time-unit {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.6rem;
+}
+.layout .coupon__store-date {
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+}
+.layout .coupon__store-detail {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  background-color: #fff;
+}
+.layout .coupon__store-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 28%;
+  height: auto;
+  margin: 2rem 0 0 8%;
+}
+.layout .coupon__store-item:nth-of-type(1),
+.layout .coupon__store-item:nth-of-type(2),
+.layout .coupon__store-item:nth-of-type(3) {
+  margin-top: 0;
+}
+.layout .coupon__store-item:nth-of-type(3n + 1) {
+  margin-left: 0;
+}
+.layout .coupon__store-key {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+  letter-spacing: 1px;
+  line-height: 1.6rem;
+}
+.layout .coupon__store-value {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 3rem;
+}
+.layout .coupon__store-value-unit {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.6rem;
+}
+.layout .coupon__submit {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 2.2rem 2rem 4rem 2rem;
+  border-top: 0.2rem dashed #222429;
+}
+.layout .coupon__submit:before,
+.layout .coupon__submit:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2rem;
+  width: 2rem;
+  height: 4rem;
+  background-color: #222429;
+}
+.layout .coupon__submit:before {
+  left: 0;
+  border-radius: 0 4rem 4rem 0;
+}
+.layout .coupon__submit:after {
+  right: 0;
+  border-radius: 4rem 0 0 4rem;
+}
+.layout .coupon__submit-scan {
+  text-align: center;
+}
+.layout .coupon__submit-barcode,
+.layout .coupon__submit-qrcode {
+  display: inline-block;
+  vertical-align: top;
+}
+.layout .coupon__submit-link {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  margin: 2rem auto 0 auto;
+  background: url("../images/coupon__submit-link.png") no-repeat center;
+}
+.layout .receipt {
+  overflow: hidden;
+  position: relative;
+  width: 32rem;
+  height: auto;
+  padding: 4rem 4rem 8rem 4rem;
+  background: #fff url("../images/receipt.png") repeat-y center;
+}
+.layout .receipt:before,
+.layout .receipt:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  background: url("../images/receipt--pseudo.png") repeat-x center top;
+}
+.layout .receipt:before {
+  top: -0.5rem;
+}
+.layout .receipt:after {
+  bottom: -0.5rem;
+}
+.layout .receipt__logo {
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  line-height: 4rem;
+}
+.layout .receipt__title {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  line-height: 3rem;
+}
+.layout .receipt__store-list {
+  width: 100%;
+  height: auto;
+  margin-top: 4rem;
+}
+.layout .receipt__store-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6rem;
+}
+.layout .receipt__store-item.-address {
+  display: block;
+  width: 100%;
+}
+.layout .receipt__store-item:nth-of-type(1),
+.layout .receipt__store-item:nth-of-type(2) {
+  margin-top: 0;
+}
+.layout .receipt__store-item:nth-of-type(2),
+.layout .receipt__store-item:nth-of-type(5),
+.layout .receipt__store-item:nth-of-type(7) {
+  text-align: right;
+}
+.layout .receipt__fieldset {
+  width: 100%;
+  height: auto;
+  margin-top: 4rem;
+  border-top: 0.2rem dashed #333;
+  border-bottom: 0.2rem dashed #333;
+}
+.layout .receipt__customer {
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  line-height: 3rem;
+}
+.layout .receipt__field {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 0.2rem dashed #333;
+}
+.layout .receipt__field:nth-of-type(1) {
+  margin-top: 0;
+}
+.layout .receipt__field:last-child {
+  padding-bottom: 1rem;
+}
+.layout .receipt__field.-merge + .receipt__field.-merge {
+  margin-top: 0.4rem;
+  padding-top: 0;
+  border: 0;
+}
+.layout .receipt__field.-group + .receipt__field.-group {
+  margin-top: 0.4rem;
+  padding-top: 0;
+  border: 0;
+}
+.layout .receipt__field.-center {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.layout .receipt__field.-center .receipt__key,
+.layout .receipt__field.-center .receipt__value {
+  width: auto;
+}
+.layout .receipt__key {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6rem;
+}
+.layout .receipt__key.-arrow {
+  position: relative;
+}
+.layout .receipt__key.-arrow:after {
+  content: "➝";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -0.8rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  text-align: center;
+}
+.layout .receipt__key.-em {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 3rem;
+}
+.layout .receipt__value {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+  line-height: 1.6rem;
+}
+.layout .receipt__value.-em {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 3rem;
+}
+.layout .receipt__detail {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  font-size: 1.2rem;
+}
+.layout .receipt__attach {
+  display: block;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6rem;
+}
+.layout .receipt__payment-list {
+  margin-top: 0.4rem;
+}
+.layout .receipt__payment-item {
+  padding-left: 1.6rem;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6rem;
+}
+.layout .receipt__payment-item:before {
+  content: "☆";
+  display: inline-block;
+  vertical-align: top;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 0 0 -1.6rem;
+}
+.layout .receipt__payment-item:first-child:before {
+  content: "■";
+}
+.layout .receipt__payment-item + .receipt__payment-item {
+  margin-top: 0.4rem;
+}
+.layout .receipt__notice-list {
+  margin-top: 0.4rem;
+}
+.layout .receipt__notice-item {
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 2rem;
+}
+.layout .receipt__notice-item + .receipt__notice-item {
+  margin-top: 0.4rem;
+}
+.layout .receipt__corp-site {
+  padding-top: 4rem;
+  font-size: 1.6rem;
+  color: #333;
+  text-align: center;
+  line-height: 2rem;
+}
+.layout .receipt__scan {
+  margin-top: 2rem;
+  text-align: center;
+}
+.layout .receipt__barcode {
+  display: inline-block;
+  vertical-align: top;
+}
+.layout .receipt__code {
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6rem;
+}
+.layout .receipt__wifi {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 0.2rem dashed #333;
+}
+.layout .receipt__wifi-id,
+.layout .receipt__wifi-pw,
+.layout .receipt__wifi-notice {
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  line-height: 1.6rem;
+}
+.layout .receipt__wifi-id:first-child,
+.layout .receipt__wifi-pw:first-child,
+.layout .receipt__wifi-notice:first-child {
+  margin-top: 0;
+}

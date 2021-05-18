@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pour | owsuhn</title>
+    
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="../../resource/css/style.css" rel="stylesheet" />
+    <link href="css/pour.css" rel="stylesheet" />
+
+    <script src="../../common/js/jquery-1.11.0.min.js"></script>
+    <script src="js/pour.js"></script>
+</head>
+<body>
+    <div class="pour">
+        <div class="dashboard__article">
+            <h4 class="dashboard__article-title">string</h4>
+            <p class="dashboard__publish-date">2021.5.14 18:00</p>
+            <ul class="pour__list">
+                <li class="pour__item">
+                    <p class="pour__title">paragraph</p>
+                    <div class="pour__content -paragraph">
+                        <div class="pour__aligner">
+                            <div class="pour__aligner">
+                                <p class="pour__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu commodo arcu. Duis a ante et lacus ornare suscipit sit amet at ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla nec felis eu lacus sollicitudin posuere varius non dolor. Donec ut interdum ante. Praesent at mattis felis. Vestibulum massa turpis, posuere a consectetur ut, efficitur a augue. Sed et malesuada lacus. Donec mattis tortor vel ullamcorper cursus. Nulla vel pellentesque odio. Proin ac hendrerit libero. Mauris a enim facilisis augue faucibus tempor nec eget eros. Donec id malesuada odio. Quisque orci massa, rhoncus at diam posuere, varius egestas risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam ligula nulla, mollis vel gravida sit amet, sagittis sit amet augue. Curabitur viverra nibh ac urna ullamcorper, eget semper sapien dictum. Cras maximus congue massa at luctus. Maecenas tincidunt ultrices tortor, sed pharetra ex commodo eget. Fusce at libero mollis nulla fermentum consequat. Pellentesque sit amet urna ut nisi scelerisque tempus. Nunc eu aliquam arcu. Nullam eu nibh vitae leo pretium congue et at tortor. Aliquam interdum magna metus, tristique tincidunt nisl hendrerit in. In non nisl eu diam imperdiet ornare. Donec pellentesque scelerisque placerat. Pellentesque eget porta mi. Donec pretium molestie pretium. Suspendisse semper libero eget sollicitudin posuere. Nullam vehicula lorem sed magna hendrerit pretium. Morbi dapibus enim mauris, eget tristique mi dapibus a. Nam et tempor arcu. In vestibulum, felis non scelerisque gravida, ligula lacus auctor quam, nec varius diam ligula nec mauris. Sed eleifend porttitor ornare. Integer rhoncus neque non sapien sagittis sollicitudin. Etiam ut velit ornare, rhoncus nunc interdum, mattis magna. Nullam in neque vel urna malesuada sagittis. Nunc sagittis, sapien sed consequat mollis, odio orci aliquam orci, nec facilisis nunc nisi eget elit. Quisque nisl nisl, porttitor nec placerat non, condimentum sit amet velit. Etiam rutrum, nibh nec aliquam sagittis, magna lectus porta risus, pulvinar aliquam libero arcu ac dui. Suspendisse bibendum nisl nec pharetra mollis.  Maecenas eu hendrerit nisl. Suspendisse a tincidunt purus. Maecenas molestie dolor erat, vitae dictum ligula venenatis quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse nisl nisi, pellentesque eget auctor at, faucibus nec est. Nulla vestibulum nec augue nec tempor. In interdum lacinia nulla sed faucibus. Morbi sagittis hendrerit lacus, quis posuere dolor feugiat ut. Ut nibh tortor, auctor at est et, volutpat interdum nisi. Praesent accumsan enim non diam pharetra, sed volutpat magna rutrum. Sed consectetur rhoncus nunc, vel lacinia metus vulputate eu. Nullam tempus aliquet nulla ac volutpat. In ut orci ac tellus facilisis maximus. Nulla mattis ligula non mollis lobortis. Curabitur libero ipsum, lobortis sed eleifend vitae, mollis vel eros. Suspendisse dictum ullamcorper viverra.</p>
+                            </div>
+                            <div class="pour__aligner">
+                                <p class="pour__paragraph" aria-disabled="true">no content</p>
+                            </div>
+                        </div>
+                        <div class="pour__controller">
+                            <div class="pour__form">
+                                <label for="paragraph" class="pour__label">controller</label>
+                                <input type="text" placeholder="placeholder" id="paragraph" class="pour__input" />
+                                <button type="button" class="pour__button -apply">apply</button>
+                                <button type="button" class="pour__button -half">auto half</button>
+                                <button type="button" class="pour__button -reset">reset</button>
+                            </div>
+                            <p class="pour__desc">number of bytes in the original-paragraph: <span>n</span></p>
+                            <p aria-hidden="true" class="pour__desc">number of bytes in the edited-paragraph: <span>n</span> and the rest bytes: <span>n</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="pour__item">
+                    <p class="pour__title">textarea</p>
+                    <div class="pour__content -textarea">
+                        <div class="pour__aligner">
+                            <div class="pour__aligner">
+                                <label for="textarea1-1" class="pour__textarea-label">
+                                    <span class="-offscreen">문자열 입력</span>
+                                    <textarea placeholder="placeholder" id="textarea1-1" class="pour__textarea"></textarea>
+                                </label>
+                            </div>
+                            <div class="pour__aligner">
+                                <p class="pour__paragraph" aria-disabled="true">no content</p>
+                            </div>
+                        </div>
+                        <div class="pour__controller">
+                            <div class="pour__form">
+                                <label for="textarea" class="pour__label">controller</label>
+                                <input type="text" placeholder="placeholder" id="textarea" class="pour__input" />
+                                <button type="button" class="pour__button -apply">apply</button>
+                                <button type="button" class="pour__button -half">auto half</button>
+                                <button type="button" class="pour__button -reset">reset</button>
+                            </div>
+                            <p class="pour__desc">number of bytes in the original-paragraph: <span>n</span></p>
+                            <p aria-hidden="true" class="pour__desc">number of bytes in the edited-paragraph: <span>n</span> and the rest bytes: <span>n</span></p>
+                        </div>
+                    </div>
+                    <!-- drawer -->
+                    <div class="pour__drawer">
+                        <h5 class="pour__drawer-title">bytes in string in charset="utf-8" settings</h5>
+                        <button type="button" class="pour__drawer-button">111</button>
+                        <div class="pour__drawer-content">
+                            <table class="pour__drawer-table">
+                                <caption class="pour__drawer-caption">detailed information</caption>
+                                <colgroup>
+                                    <col style="width: 228px;" />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <thead class="pour__drawer-thead">
+                                    <tr class="pour__drawer-tr">
+                                        <th scope="col" class="pour__drawer-th"><span class="-offscreen">*</span></th>
+                                        <th scope="col" class="pour__drawer-th">korean</th>
+                                        <th scope="col" class="pour__drawer-th">english</th>
+                                        <th scope="col" class="pour__drawer-th">chinese</th>
+                                        <th scope="col" class="pour__drawer-th">integer</th>
+                                        <th scope="col" class="pour__drawer-th">special</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="pour__drawer-tbody">
+                                    <tr class="pour__drawer-tr">
+                                        <th scope="row" class="pour__drawer-th">length</th>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">대한민국</p>
+                                            <p class="pour__drawer-value">4</p>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">Korea</p>
+                                            <p class="pour__drawer-value">5</p>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">你好</p>
+                                            <p class="pour__drawer-value">2</p>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">951023</p>
+                                            <p class="pour__drawer-value">6</p>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">!@#$%^&</p>
+                                            <p class="pour__drawer-value">7</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="pour__drawer-tr">
+                                        <th scope="row" class="pour__drawer-th">bytes in utf-8</th>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">대한민국</p>
+                                            <p class="pour__drawer-value">12</p>
+                                            <div class="pour__drawer-explan">
+                                                <p class="pour__drawer-desc">1length = 3bytes in charset="utf-8"</p>
+                                                <p class="pour__drawer-desc">4 * 3 = 12bytes</p>
+                                            </div>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">Korea</p>
+                                            <p class="pour__drawer-value">5</p>
+                                            <div class="pour__drawer-explan">
+                                                <p class="pour__drawer-desc">1length = 1bytes in charset="utf-8"</p>
+                                                <p class="pour__drawer-desc">5 * 1 = 5bytes</p>
+                                            </div>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">你好</p>
+                                            <p class="pour__drawer-value">6</p>
+                                            <div class="pour__drawer-explan">
+                                                <p class="pour__drawer-desc">1length = 3bytes in charset="utf-8"</p>
+                                                <p class="pour__drawer-desc">2 * 3 = 6bytes</p>
+                                            </div>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">951023</p>
+                                            <p class="pour__drawer-value">6</p>
+                                            <div class="pour__drawer-explan">
+                                                <p class="pour__drawer-desc">1length = 1bytes in charset="utf-8"</p>
+                                                <p class="pour__drawer-desc">6 * 1 = 6bytes</p>
+                                            </div>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">!@#$%^&</p>
+                                            <p class="pour__drawer-value">7</p>
+                                            <div class="pour__drawer-explan">
+                                                <p class="pour__drawer-desc">1length = 1bytes in charset="utf-8"</p>
+                                                <p class="pour__drawer-desc">7 * 1 = 7bytes</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="pour__drawer-tr">
+                                        <th scope="row" class="pour__drawer-th">bytes in euc-kr</th>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">대한민국</p>
+                                            <p class="pour__drawer-value">8</p>
+                                            <div class="pour__drawer-explan">
+                                                <p class="pour__drawer-desc">1length = 2bytes in charset="euc-kr"</p>
+                                                <p class="pour__drawer-desc">4 * 2 = 8bytes</p>
+                                            </div>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">Korea</p>
+                                            <p class="pour__drawer-value">5</p>
+                                            <div class="pour__drawer-explan">
+                                                <p class="pour__drawer-desc">1length = 1bytes in charset="euc-kr"</p>
+                                                <p class="pour__drawer-desc">5 * 1 = 5bytes</p>
+                                            </div>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">你好</p>
+                                            <p class="pour__drawer-value">4</p>
+                                            <div class="pour__drawer-explan">
+                                                <p class="pour__drawer-desc">1length = 2bytes in charset="euc-kr"</p>
+                                                <p class="pour__drawer-desc">2 * 2 = 4bytes</p>
+                                            </div>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">951023</p>
+                                            <p class="pour__drawer-value">6</p>
+                                            <div class="pour__drawer-explan">
+                                                <p class="pour__drawer-desc">1length = 1bytes in charset="euc-kr"</p>
+                                                <p class="pour__drawer-desc">6 * 1 = 5bytes</p>
+                                            </div>
+                                        </td>
+                                        <td class="pour__drawer-td">
+                                            <p class="pour__drawer-key">!@#$%^&</p>
+                                            <p class="pour__drawer-value">7</p>
+                                            <div class="pour__drawer-explan">
+                                                <p class="pour__drawer-desc">1length = 1bytes in charset="euc-kr"</p>
+                                                <p class="pour__drawer-desc">7 * 1 = 7bytes</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="pour__drawer-tr">
+                                        <th scope="row" class="pour__drawer-th">comment</th>
+                                        <td class="pour__drawer-td"><span aria-hidden="true">-</span><span class="-offscreen">내용 없음</span></td>
+                                        <td class="pour__drawer-td"><span aria-hidden="true">-</span><span class="-offscreen">내용 없음</span></td>
+                                        <td class="pour__drawer-td"><span aria-hidden="true">-</span><span class="-offscreen">내용 없음</span></td>
+                                        <td class="pour__drawer-td"><span aria-hidden="true">-</span><span class="-offscreen">내용 없음</span></td>
+                                        <td class="pour__drawer-td"><span aria-hidden="true">-</span><span class="-offscreen">내용 없음</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pour__drawer-links">
+                                <a href="https://bloodguy.tistory.com/entry/%EC%9D%B8%EC%BD%94%EB%94%A9-%EB%B3%84-%EC%96%B8%EC%96%B4-%EB%B0%94%EC%9D%B4%ED%8A%B8-%EC%88%98" target="_blank" class="pour__drawer-link">etc site - search keyword: utf-8 문자열 바이트</a><br />
+                                <a href="https://ko.wikipedia.org/wiki/UTF-8" target="_blank" class="pour__drawer-link">위키백과 - search keyword: utf-8 특수문자 바이트</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// drawer -->
+                </li>
+            </ul>
+            <div class="dashboard__article-refer">
+                <a href="http://textcount.sawoo.com/" target="_blank" class="dashboard__refer-link">etc site - search keyword: 문자열 바이트 계산기</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
